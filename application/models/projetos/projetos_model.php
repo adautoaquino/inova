@@ -50,6 +50,24 @@ class Projetos_model extends CI_Model
         return 1;
     }
 
+    public function get_primary_key2()
+    {
+        $this->db->select('codmicrofase');
+        $this->db->order_by('codmicrofase', 'DESC');
+        $query = $this->db->get('microfases');
+        $result = $query->row()->codmicrofase;
+        return $result;
+    }
+
+    public function criar_microfase($input)
+    {
+        $primary_key = self::get_primary_key2();
+        $input['codmicrofase'] = $primary_key + 1;
+        $input['ativo'] = 1;
+        $this->db->insert("microfases", $input);
+        return 1;
+    }
+
     public function get_macrofases_projeto($codprojeto)
     {
         $this->db->where('codprojeto', $codprojeto);

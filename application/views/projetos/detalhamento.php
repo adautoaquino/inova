@@ -112,61 +112,56 @@
                             }
                             ?>
                         </div>
-                        <?php foreach ($microfases as $microfase) {
-                            if ($microfase['codmacrofase'] == $macrofase['codmacrofase']) { ?>
+                        <div class="table-responsive">
+                            <table class="table table-light table-striped">
+                                <thead>
+                                    <tr class="text-center">
+                                        <th colspan="5">Microfases da <?php echo $macrofase['nome_macrofase'] ?></th>
+                                    </tr>
+                                    <tr class="text-center">
+                                        <th class="align-middle text-center">Microfase</th>
+                                        <th class="align-middle text-center">Início</th>
+                                        <th class="align-middle text-center">Fim</th>
+                                        <th class="align-middle text-center">Status</th>
+                                        <th class="align-middle text-center">Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php
+                                    foreach ($microfases as $microfase) {
+                                        if ($microfase['codmacrofase'] == $macrofase['codmacrofase']) { ?>
+                                            <tr>
+                                                <td class="align-middle text-center"><?php echo $microfase['nome_microfase'] ?></td>
+                                                <td class="align-middle text-center"><?php echo $microfase['data_inicio'] ?></td>
+                                                <td class="align-middle text-center"><?php echo $microfase['data_prevista_termino'] ?></td>
+                                                <td class="align-middle text-center">
+                                                    <?php
+                                                    if ($microfase['ativo'] == 1) {
+                                                        // $date=date('m/d/Y');
+                                                        $data_projeto = explode('/', $microfase['data_prevista_termino']);
+                                                        $data_projeto = $data_projeto[1] . '/' . $data_projeto[0] . '/' . $data_projeto[2];
+                                                        $data_projeto = date_create($data_projeto);
+                                                        $data_diff = date_diff($data_projeto, date_create());
+                                                        $diferenca = date_interval_format($data_diff, '%a') . ' dias';
 
-                                <div class="table-responsive">
-                                    <table class="table table-light table-striped">
-                                        <thead>
-                                            <tr class="text-center">
-                                                <th colspan="5">Microfases da <?php echo $macrofase['nome_macrofase'] ?></th>
+                                                        if ($diferenca > 0) {
+                                                            echo '<p style="color:red"><b>Atrasada</b></p>';
+                                                        } else {
+                                                            echo '<p style="color:yellow"><b>No prazo</b></p>';
+                                                        }
+                                                    } else {
+                                                        echo '<p style="color:green"><b>Completa</b></p>';
+                                                    }
+                                                    ?>
+                                                </td>
+                                                <td class="align-middle text-center"><button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_<?php echo $microfase['codmicrofase'] ?>">Detalhar</button></td>
                                             </tr>
-                                            <tr class="text-center">
-                                                <th class="align-middle text-center">Microfase</th>
-                                                <th class="align-middle text-center">Início</th>
-                                                <th class="align-middle text-center">Fim</th>
-                                                <th class="align-middle text-center">Status</th>
-                                                <th class="align-middle text-center">Ações</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <?php
-                                            foreach ($microfases as $microfase) {
-                                                if ($microfase['codmacrofase'] == $macrofase['codmacrofase']) { ?>
-                                                    <tr>
-                                                        <td class="align-middle text-center"><?php echo $microfase['nome_microfase'] ?></td>
-                                                        <td class="align-middle text-center"><?php echo $microfase['data_inicio'] ?></td>
-                                                        <td class="align-middle text-center"><?php echo $microfase['data_prevista_termino'] ?></td>
-                                                        <td class="align-middle text-center">
-                                                            <?php
-                                                            if ($microfase['ativo'] == 1) {
-                                                                // $date=date('m/d/Y');
-                                                                $data_projeto = explode('/', $microfase['data_prevista_termino']);
-                                                                $data_projeto = $data_projeto[1] . '/' . $data_projeto[0] . '/' . $data_projeto[2];
-                                                                $data_projeto = date_create($data_projeto);
-                                                                $data_diff = date_diff($data_projeto, date_create());
-                                                                $diferenca = date_interval_format($data_diff, '%a') . ' dias';
-
-                                                                if ($diferenca > 0) {
-                                                                    echo '<p style="color:red"><b>Atrasada</b></p>';
-                                                                } else {
-                                                                    echo '<p style="color:yellow"><b>No prazo</b></p>';
-                                                                }
-                                                            } else {
-                                                                echo '<p style="color:green"><b>Completa</b></p>';
-                                                            }
-                                                            ?>
-                                                        </td>
-                                                        <td class="align-middle text-center"><button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_<?php echo $microfase['codmicrofase'] ?>">Detalhar</button></td>
-                                                    </tr>
-                                            <?php
-                                                }
-                                            } ?>
-                                        </tbody>
-                                    </table>
-                                </div>
-                        <?php }
-                        } ?>
+                                    <?php
+                                        }
+                                    } ?>
+                                </tbody>
+                            </table>
+                        </div>
                         <div class="form row" style="padding-top:5%;">
                             <label for="descricao" class="col-sm-3 col-form-label text-center"><strong> Descrição</strong></label>
                             <div class="form-group col-md-9">
@@ -200,7 +195,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                        <a href="#" class="btn btn-success">Criar Microfase</a>
+                        <a href="../../../projetos/main_pj/criar_microfase" class="btn btn-success">Criar Microfase</a>
                     </div>
                 </div>
             </div>
