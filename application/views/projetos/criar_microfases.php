@@ -126,9 +126,7 @@
                             <button type="submit" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-light"> Adicionar</button>
                         </div>
                     </div>
-                    <div>
-                        <input type="text" onlyread="onlyread" name="codmacrofase" id="codmacrofase" value="<?php echo $dados_projeto['codprojeto'] ?>"></input>
-                    </div>
+                    
                 </form>
             </div>
         </div>
