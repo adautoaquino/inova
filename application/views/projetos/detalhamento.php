@@ -195,7 +195,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                        <a href="../../../projetos/main_pj/criar_microfase" class="btn btn-success">Criar Microfase</a>
+                        <a href="../../../projetos/main_pj/criar_microfase/<?php echo $macrofase['codmacrofase']?>" class="btn btn-success">Criar Microfase</a>
                     </div>
                 </div>
             </div>

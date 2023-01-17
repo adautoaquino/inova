@@ -59,7 +59,7 @@
     <header>
         <nav class="navbar navbar-expand-lg bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="../../projetos/main_pj"><img src="../../../images/logo_inova.png" width="75" height="50"></a>
+                <a class="navbar-brand" href="../../projetos/main_pj"><img src="../../../../images/logo_inova.png" width="75" height="50"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -82,7 +82,7 @@
     <div class="container text-center">
         <div class="row" style="padding-top:2%">
             <div class=" offset-md-2 col-md-8 text-center" style="padding-bottom:4%">
-                <form method="post" action="criar_microfases">
+                <form method="post" action="../../main_pj/criar_microfase/<?php echo $codmacrofase?>">
                     <div class="form row" style="padding-top:5%;">
                         <label for="nome" class="col-sm-3 col-form-label text-light text-center"><strong> Nome da microfase</strong></label>
                         <div class="form-group col-md-9">
