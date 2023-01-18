@@ -107,12 +107,12 @@ class main_pj extends CI_Controller
 			$retorno = $this->projetos_model->criar_microfase($input);
 			if ($retorno == 1) {
 				echo "<script>alert('Sua microfase foi adicionada!!');
-					window.location.assign('../main_pj/gerencia_projetos');</script>
+					window.location.assign('../../main_pj/gerencia_projetos');</script>
 					
 					";
 			} else {
 				echo "<script>alert('Não foi possível criar sua microfase...');
-					window.location.assign('../main_pj/gerencia_projetos');</script>
+					window.location.assign('../../main_pj/gerencia_projetos');</script>
 					
 					";
 			}
