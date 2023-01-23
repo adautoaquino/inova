@@ -146,6 +146,37 @@ class main_pj extends CI_Controller
 			}
 		}
 	}
+
+	public function editar_macrofase($codmacrofase)
+	{
+		$data['codmacrofase'] = $codmacrofase;
+		$nome_macrofase = $this->input->post('nome');
+		if ($nome_macrofase == "") {
+			$this->load->view('Projetos/editar_macrofase', $data);
+		} else {
+			$input = array(
+				"nome_macrofase" => $nome_macrofase,
+				"descricao"    => $this->input->post('descricao'),
+				"responsavel"  => $this->input->post('responsavel'),
+				"data_inicio"  => $this->input->post('data_inicio'),
+				"data_prevista_termino" => $this->input->post('data_prevista_termino'),
+				"codmacrofase" => $codmacrofase
+			);
+			$retorno = $this->projetos_model->editar_macrofase($input);
+			if ($retorno == 1) {
+				echo "<script>alert('Sua macrofase foi alterada!!');
+					window.location.assign('../../main_pj/gerencia_projetos');</script>
+					
+					";
+			} else {
+				echo "<script>alert('Não foi possível alterar sua macrofase...');
+					window.location.assign('../../main_pj/gerencia_projetos');</script>
+					
+					";
+			}
+		}
+	}
+
 	public function finalizar_projeto($codprojeto)
 	{
 		$return = $this->projetos_model->finalizar_projeto($codprojeto);

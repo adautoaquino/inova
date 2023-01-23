@@ -82,31 +82,31 @@
     <div class="container text-center">
         <div class="row" style="padding-top:2%">
             <div class=" offset-md-2 col-md-8 text-center" style="padding-bottom:4%">
-                <form method="post" action="../../main_pj/criar_microfase/<?php echo $codmacrofase ?>">
+                <form method="post" action="../../main_pj/editar_macrofase/<?php echo $codmacrofase ?>">
                     <div class="form row" style="padding-top:5%;">
-                        <label for="nome" class="col-sm-3 col-form-label text-light text-center"><strong> Nome da microfase</strong></label>
+                        <label for="nome" class="col-sm-3 col-form-label text-light text-center"><strong> Novo Nome</strong></label>
                         <div class="form-group col-md-9">
-                            <input type="text" required placeholder="Microfase" required name="nome" class="form-control" id="nome">
+                            <input type="text" required placeholder="Macrofase" required name="nome" class="form-control" id="nome">
                         </div>
                     </div>
                     <br>
                     <div class="form row">
-                        <label for="descricao" class="col-sm-3 col-form-label text-light text-center"><strong> Descrição da Microfase</strong></label>
+                        <label for="descricao" class="col-sm-3 col-form-label text-light text-center"><strong> Nova Descrição da Macrofase</strong></label>
                         <div class="form-group col-md-9">
-                            <textarea rows="5" type="text" required placeholder="Escreva um pouco sobre a microfase..." name="descricao" class="form-control" id="descricao"></textarea>
+                            <textarea rows="5" type="text" required placeholder="Escreva novamente um pouco sobre a macrofase..." name="descricao" class="form-control" id="descricao"></textarea>
                         </div>
                     </div>
                     <br>
                     <div class="form row">
-                        <label for="responsavel" class="col-sm-3 col-form-label text-light"><strong> Responsável pela Microfase</strong></label>
+                        <label for="responsavel" class="col-sm-3 col-form-label text-light"><strong> Novo Responsável pela Macrofase</strong></label>
                         <div class="form-group col-md-9">
-                            <input type="text" required placeholder="Responsável" required name="responsavel" class="form-control" id="responsavel">
+                            <input type="text" required placeholder=" Novo responsável" required name="responsavel" class="form-control" id="responsavel">
                         </div>
                         <br>
                     </div>
                     <br>
                     <div class="form row">
-                        <label for="data_inicio" class="col-sm-3 col-form-label text-light"><strong> Data de Início</strong></label>
+                        <label for="data_inicio" class="col-sm-3 col-form-label text-light"><strong> Nova Data de Início</strong></label>
                         <div class="form-group col-md-4">
                             <input type="text" required placeholder="dd/mm/aaaa" required name="data_inicio" class="form-control" id="data_inicio">
                         </div>
@@ -114,7 +114,7 @@
                     </div>
                     <br>
                     <div class="form row">
-                        <label for="data_prevista_termino" class="col-sm-3 col-form-label text-light text-center"><strong> Data Prevista Término</strong></label>
+                        <label for="data_prevista_termino" class="col-sm-3 col-form-label text-light text-center"><strong> Nova Data Prevista Término</strong></label>
                         <div class="form-group col-md-4">
                             <input type="text" required placeholder="dd/mm/aaaa" required name="data_prevista_termino" data-mask="99/99/9999" class="form-control" id="data_prevista_termino">
                         </div>
@@ -123,7 +123,7 @@
                     <br>
                     <div class="form row" style="padding-top:5%">
                         <div class="col-md-2 offset-md-10 text-right">
-                            <button type="submit" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-light"> Adicionar Microfase</button>
+                            <button type="submit" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-light"> Finalizar Edição</button>
                         </div>
                     </div>
 

@@ -96,6 +96,18 @@ class Projetos_model extends CI_Model
         $result = $query->result_array();
         return $result;
     }
+
+    public function editar_macrofase($input)
+    {
+        $this->db->set('nome_macrofase', $input['nome_macrofase']);
+        $this->db->set('descricao', $input['descricao']);
+        $this->db->set('responsavel', $input['responsavel']);
+        $this->db->set('data_inicio', $input['data_inicio']);
+        $this->db->set('data_prevista_termino', $input['data_prevista_termino']);
+        $this->db->where('codmacrofase', $input['codmacrofase']);
+        $this->db->update('macrofases');
+    }
+
     public function finalizar_projeto($codprojeto)
     {
         $this->db->where('codprojeto', $codprojeto);

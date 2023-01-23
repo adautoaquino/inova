@@ -195,7 +195,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                        <a href="../../../projetos/main_pj/criar_microfase/<?php echo $macrofase['codmacrofase']?>" class="btn btn-success">Criar Microfase</a>
+                        <a href="../../../projetos/main_pj/criar_microfase/<?php echo $macrofase['codmacrofase'] ?>" class="btn btn-success">Criar Microfase</a>
                     </div>
                 </div>
             </div>
@@ -285,7 +285,11 @@
                                         <td><?php echo $macrofase['nome_macrofase'] ?></td>
                                         <td><?php echo $macrofase['data_inicio'] ?></td>
                                         <td><?php echo $macrofase['data_prevista_termino'] ?></td>
-                                        <td><button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_<?php echo $macrofase['codmacrofase'] ?>">Detalhar</button></td>
+                                        <td>
+                                            <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_<?php echo $macrofase['codmacrofase'] ?>">Detalhar</button>
+                                            <a href="../../../projetos/main_pj/editar_macrofase/<?php echo $macrofase['codmacrofase'] ?>" class="btn btn-light btn-sm" data-bs-toggle="modal">Editar</a>
+                                            <a class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_<?php echo $macrofase['codmacrofase'] ?>">Deletar</a>
+                                        </td>
                                     </tr>
                                 <?php } ?>
                             </tbody>
