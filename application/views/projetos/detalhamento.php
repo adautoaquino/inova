@@ -288,7 +288,7 @@
                                         <td>
                                             <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_<?php echo $macrofase['codmacrofase'] ?>">Detalhar</button>
                                             <a href="../../../projetos/main_pj/editar_macrofase/<?php echo $macrofase['codmacrofase'] ?>" class="btn btn-light btn-sm" data-bs-toggle="modal">Editar</a>
-                                            <a class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_<?php echo $macrofase['codmacrofase'] ?>">Deletar</a>
+                                            <a href="../../../projetos/main_pj/deletar_macrofase/<?php echo $macrofase['codmacrofase'] ?>" class="btn btn-warning btn-sm" data-bs-toggle="modal">Deletar</a>
                                         </td>
                                     </tr>
                                 <?php } ?>

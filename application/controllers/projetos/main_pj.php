@@ -77,12 +77,12 @@ class main_pj extends CI_Controller
 			$retorno = $this->projetos_model->criar_macrofase($input);
 			if ($retorno == 1) {
 				echo "<script>alert('Sua macrofase foi adicionada!!');
-					window.location.assign('../../main_pj/gerencia_projetos');</script>
+					window.location.assign('../main_pj/gerencia_projetos');</script>
 					
 					";
 			} else {
 				echo "<script>alert('Não foi possível criar sua macrofase...');
-					window.location.assign('../../main_pj/gerencia_projetos');</script>
+					window.location.assign('../main_pj/gerencia_projetos');</script>
 					
 					";
 			}
@@ -175,6 +175,16 @@ class main_pj extends CI_Controller
 					";
 			}
 		}
+	}
+
+	public function deletar_macrofase($codmacrofase)
+	{
+		$this->load->model('Projetos_model');
+		$this->Projetos_model->deletar_macrofase($codmacrofase);
+		echo "<script>alert('Sua macrofase foi deletada!');
+					window.location.assign('../../main_pj/gerencia_projetos');</script>
+			
+			";
 	}
 
 	public function finalizar_projeto($codprojeto)
