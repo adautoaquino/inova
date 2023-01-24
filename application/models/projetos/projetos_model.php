@@ -106,6 +106,7 @@ class Projetos_model extends CI_Model
         $this->db->set('data_prevista_termino', $input['data_prevista_termino']);
         $this->db->where('codmacrofase', $input['codmacrofase']);
         $this->db->update('macrofases');
+        return 1;
     }
 
     public function finalizar_projeto($codprojeto)

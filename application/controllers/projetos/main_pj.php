@@ -77,12 +77,12 @@ class main_pj extends CI_Controller
 			$retorno = $this->projetos_model->criar_macrofase($input);
 			if ($retorno == 1) {
 				echo "<script>alert('Sua macrofase foi adicionada!!');
-					window.location.assign('../../main_pj/gerencia_projetos');</script>
+					window.location.assign('../main_pj/gerencia_projetos');</script>
 					
 					";
 			} else {
 				echo "<script>alert('Não foi possível criar sua macrofase...');
-					window.location.assign('../../main_pj/gerencia_projetos');</script>
+					window.location.assign('../main_pj/gerencia_projetos');</script>
 					
 					";
 			}
