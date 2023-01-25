@@ -191,13 +191,19 @@ class main_pj extends CI_Controller
 	{
 		$return = $this->projetos_model->finalizar_projeto($codprojeto);
 		if ($return == 1) {
-			echo "<script>alert('Seu projeto foi criado com suceso!!');
+			echo "<script>alert('Seu projeto foi finalizado com suceso!!');
 			window.location.assign('../../main_pj/gerencia_projetos');</script>";
 		} else {
-			echo "<script>alert('Não foi possível criar seu projeto');
+			echo "<script>alert('Não foi possível finalizar seu projeto');
 			window.location.assign('../../main_pj/gerencia_projetos');</script>
 			
 			";
 		}
+	}
+
+	public function projetos_finalizados()
+	{
+		$data['projetos'] = $this->projetos_model->get_projetos_finalizados();
+		$this->load->view('Projetos/projetos_finalizados', $data);
 	}
 }

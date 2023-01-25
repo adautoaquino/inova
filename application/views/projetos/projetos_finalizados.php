@@ -10,10 +10,6 @@
     <script src="js/scripts.js"></script>
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <script src="../../libraries/jquery_mask/dist/jquery.mask.js"></script>
-    <script src="../../libraries/jquery_mask/dist/jquery.mask.min.js"></script>
-
-
 
 
 </head>
@@ -80,53 +76,63 @@
         </nav>
     </header>
     <div class="container text-center">
-        <div class="row" style="padding-top:2%">
+        <div class="row" style="padding-top:5%">
+            <div class="col-md-10 offset-md-1">
+                <div class="card bg-dark text-white">
+                    <div class="card-body">
+                        <h3><i>Seção de Visualização de Projetos Finalizados</i></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="padding-top:4%">
             <div class=" offset-md-2 col-md-8 text-center" style="padding-bottom:4%">
-                <form method="post" action="criar_projetos">
-                    <div class="form row" style="padding-top:5%;">
-                        <label for="nome" class="col-sm-3 col-form-label text-light text-center"><strong> Nome do Projeto</strong></label>
-                        <div class="form-group col-md-9">
-                            <input type="text" required name="nome" required placeholder="Nome do Projeto" class="form-control" id="nome">
-                        </div>
+                <div class="card bg-dark" style="width: 100%;">
+                    <div class="table-responsive" style=" padding-left:2%; padding-right:2%;">
+                        <table class="table table-dark table-striped">
+                            <thead>
+                                <tr>
+                                    <th colspan="7">Projetos Finalizados</th>
+                                </tr>
+                                <tr class="align-middle">
+                                    <th>Projeto</th>
+                                    <th>Responsável</th>
+                                    <th>Data de Início</th>
+                                    <th>Data de Término</th>
+                                    <th>Status</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php foreach ($projetos as $projeto) { ?>
+                                    <tr>
+                                        <td><?php echo $projeto['nome_projeto'] ?></td>
+                                        <td><?php echo $projeto['responsavel'] ?></td>
+                                        <td><?php echo $projeto['data_inicio'] ?></td>
+                                        <td><?php echo $projeto['data_prevista_termino'] ?></td>
+                                        <td>
+                                            <?php
+                                            // $date=date('m/d/Y');
+                                            $data_projeto = explode('/', $projeto['data_prevista_termino']);
+                                            $data_projeto = $data_projeto[1] . '/' . $data_projeto[0] . '/' . $data_projeto[2];
+                                            $data_projeto = date_create($data_projeto);
+                                            $data_diff = date_diff($data_projeto, date_create());
+                                            $diferenca = date_interval_format($data_diff, '%a') . ' dias';
+
+                                            if ($diferenca > 0) {
+                                                echo '<b>Entregue atrasado</b>';
+                                            } else {
+                                                echo '<b>Entregue no prazo</b>';
+                                            }
+                                            ?>
+                                        </td>
+                                        <td><a href="detalhar_projeto/<?php echo $projeto['codprojeto'] ?>" class="btn btn-sm btn-danger">Detalhes</a></td>
+                                    </tr>
+                                <?php } ?>
+                            </tbody>
+                        </table>
                     </div>
-                    <br>
-                    <div class="form row">
-                        <label for="descricao" class="col-sm-3 col-form-label text-light text-center"><strong> Descrição do Projeto</strong></label>
-                        <div class="form-group col-md-9">
-                            <textarea rows="5" type="text" required placeholder="Escreva um pouco sobre o projeto..." name="descricao" class="form-control" id="descricao"></textarea>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="form row">
-                        <label for="responsavel" class="col-sm-3 col-form-label text-light"><strong> Responsável pelo Projeto</strong></label>
-                        <div class="form-group col-md-9">
-                            <input type="text" required placeholder="Responsável" required name="responsavel" class="form-control" id="responsavel">
-                        </div>
-                        <br>
-                    </div>
-                    <br>
-                    <div class="form row">
-                        <label for="data_inicio" class="col-sm-3 col-form-label text-light"><strong> Data de Início</strong></label>
-                        <div class="form-group col-md-4">
-                            <input type="text" required name="data_inicio" required placeholder="dd/mm/aaaa" class="form-control" id="data_inicio">
-                        </div>
-                        <br>
-                    </div>
-                    <br>
-                    <div class="form row">
-                        <label for="data_prevista_termino" class="col-sm-3 col-form-label text-light text-center"><strong> Data Prevista Término</strong></label>
-                        <div class="form-group col-md-4">
-                            <input type="text" required name="data_prevista_termino" required placeholder="dd/mm/aaaa" data-mask="99/99/9999" class="form-control" id="data_prevista_termino">
-                        </div>
-                        <br>
-                    </div>
-                    <br>
-                    <div class="form row" style="padding-top:5%">
-                        <div class="col-md-2 offset-md-10 text-right">
-                            <button type="submit" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-light"> Adicionar</button>
-                        </div>
-                    </div>
-                </form>
+                </div>
             </div>
         </div>
     </div>

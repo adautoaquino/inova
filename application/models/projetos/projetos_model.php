@@ -110,9 +110,9 @@ class Projetos_model extends CI_Model
     }
 
     public function deletar_macrofase($codmacrofase)
-	{
+    {
         $this->db->delete('macrofases', ['codmacrofase' => $codmacrofase]);
-	}
+    }
 
     public function finalizar_projeto($codprojeto)
     {
@@ -129,5 +129,13 @@ class Projetos_model extends CI_Model
         } else {
             return 0;
         }
+    }
+
+    public function get_projetos_finalizados()
+    {
+        $this->db->where('ativo', 0);
+        $query = $this->db->get('projetos');
+        $result = $query->result_array();
+        return $result;
     }
 }
