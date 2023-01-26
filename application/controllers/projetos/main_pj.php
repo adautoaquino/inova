@@ -180,13 +180,52 @@ class main_pj extends CI_Controller
 	public function deletar_macrofase($codmacrofase)
 	{
 		$this->load->model('Projetos_model');
-		$this->Projetos_model->deletar_macrofase($codmacrofase);
+		$this->projetos_model->deletar_macrofase($codmacrofase);
 		echo "<script>alert('Sua macrofase foi deletada!');
 					window.location.assign('../../main_pj/gerencia_projetos');</script>
 			
 			";
 	}
 
+	public function editar_microfase($codmicrofase)
+	{
+		$data['codmicrofase'] = $codmicrofase;
+		$nome_microfase = $this->input->post('nome');
+		if ($nome_microfase == "") {
+			$this->load->view('Projetos/editar_microfase', $data);
+		} else {
+			$input = array(
+				"nome_microfase" => $nome_microfase,
+				"descricao"    => $this->input->post('descricao'),
+				"responsavel"  => $this->input->post('responsavel'),
+				"data_inicio"  => $this->input->post('data_inicio'),
+				"data_prevista_termino" => $this->input->post('data_prevista_termino'),
+				"codmicrofase" => $codmicrofase
+			);
+			$retorno = $this->projetos_model->editar_microfase($input);
+			if ($retorno == 1) {
+				echo "<script>alert('Sua macrofase foi alterada!!');
+					window.location.assign('../../main_pj/gerencia_projetos');</script>
+					
+					";
+			} else {
+				echo "<script>alert('Não foi possível alterar sua macrofase...');
+					window.location.assign('../../main_pj/gerencia_projetos');</script>
+					
+					";
+			}
+		}
+	}
+
+	public function deletar_microfase($codmicrofase)
+	{
+		$this->load->model('Projetos_model');
+		$this->projetos_model->deletar_microfase($codmicrofase);
+		echo "<script>alert('Sua microfase foi deletada!');
+					window.location.assign('../../main_pj/gerencia_projetos');</script>
+			
+			";
+	}
 	public function finalizar_projeto($codprojeto)
 	{
 		$return = $this->projetos_model->finalizar_projeto($codprojeto);
