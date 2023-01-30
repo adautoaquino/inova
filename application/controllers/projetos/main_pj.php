@@ -89,12 +89,13 @@ class main_pj extends CI_Controller
 		}
 	}
 
-	public function criar_microfase($codmacrofase)
+	public function criar_microfase($codprojeto)
 	{
-		$data['codmacrofase'] = $codmacrofase;
+		$data['macrofases'] = $this->projetos_model->get_macrofases_projeto($codprojeto);
+		$data['codprojeto'] = $codprojeto;
 		$nome_microfase = $this->input->post('nome');
 		if ($nome_microfase == "") {
-			$this->load->view('Projetos/criar_microfases', $data);
+			$this->load->view('projetos/criar_microfases', $data);
 		} else {
 			$input = array(
 				"nome_microfase" => $nome_microfase,
@@ -102,7 +103,8 @@ class main_pj extends CI_Controller
 				"responsavel"  => $this->input->post('responsavel'),
 				"data_inicio"  => $this->input->post('data_inicio'),
 				"data_prevista_termino" => $this->input->post('data_prevista_termino'),
-				"codmacrofase" => $codmacrofase
+				"codmacrofase" => $this->input->post('codmacrofase'),
+				"codprojeto" => $codprojeto
 			);
 			$retorno = $this->projetos_model->criar_microfase($input);
 			if ($retorno == 1) {
