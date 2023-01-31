@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Modulo</title>
+    <title>Projetos-InovaPM</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="js/scripts.js"></script>
@@ -49,19 +49,34 @@
     </div>
 
     <header>
+    <nav class="navbar navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="../../images/logo_inova.png" width="75" height="50"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                <li class="nav-item">
+                    <a class="nav-link active" style="color: white" aria-current="page" href="../projetos/main_pj"><b>Menu</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " style="color: white" href="../projetos/main_pj/gerencia_projetos"><b>Gerenciar Projetos</b></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " style="color: white" href="#"><b>Dashboard de Indicadores</b></a>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </nav>
     </header>
     <div class="container text-center">
-        <div class="row" style="padding-top:5%">
+        <div class="row" style="padding-top:10%">
             <div class="col-md-10 offset-md-1">
-                <img width="15%" src="../../images/logo_inova.png">
                 <div class="card bg-danger text-white">
                     <div class="card-body">
-                        <h5><i>Bem-vindo</i></h5>
-                        <p>
-                            Seja Bem-Vindo, <i><b><?php echo $this->session->userdata('user')?></b></i>. Esse é o Inova
-                            Project Manager, um sistema de gerenciamento de dados da Inova consultoria, nele você
-                            consegue controlar os <b>projetos</b> da empresa e também o <b>planejamento estratégico</b> dela.
-                        </p>
+                        <h3><i>Área de Projetos</i></h3>
                     </div>
                 </div>
             </div>
@@ -70,14 +85,13 @@
             <div class=" offset-md-1 col-md-5 text-center "style="padding-bottom:4%">
                 <div class="card bg-danger text-white">
                     <div class="card-body">
-                        <h5><i>Área de Projetos</i></h5>
+                        <h5><i>Planejamento Estratégico</i></h5>
                         <p>
-                            Todas as informações relacionadas a projetos estão vinculadas 
-                            à essa seção. Nela é possível gerenciar todos os projetos e acessar todos os dados
-                            relacionados a eles.
+                            Inserir texto
+
                         </p>
                         <div class="text-center">
-                            <a class="btn btn-light" href="../projetos/main_pj">Acessar</a>
+                                <a class="btn btn-light" href="../main_pe.php/gerencia_projetos">Acessar</a>
                         </div>
                     </div>
                 </div>
@@ -85,14 +99,12 @@
             <div class="col-md-5 text-center">
                 <div class="card bg-danger text-white">
                     <div class="card-body">
-                        <h5><i>Área de Planejamento Estratégico</i></h5>
+                        <h5><i>Planejamento Estratégico</i></h5>
                         <p>
-                            Todas as informações relacionadas a planejamento estratégico estão vinculadas 
-                            à essa seção. Nela é possível gerenciar todas as metas e acessar todos os dados
-                            relacionados a elas.
+                            Inserir texto
                         </p>
                         <div class="text-center">
-                            <a class="btn btn-light" href="../pe/main_pe">Acessar</a>
+                            <a class="btn btn-light" href="../main_pe.php">Acessar</a>
                         </div>
                     </div>
                 </div>

@@ -114,6 +114,23 @@ class Projetos_model extends CI_Model
         $this->db->delete('macrofases', ['codmacrofase' => $codmacrofase]);
     }
 
+    public function editar_microfase($input)
+    {
+        $this->db->set('nome_microfase', $input['nome_microfase']);
+        $this->db->set('descricao', $input['descricao']);
+        $this->db->set('responsavel', $input['responsavel']);
+        $this->db->set('data_inicio', $input['data_inicio']);
+        $this->db->set('data_prevista_termino', $input['data_prevista_termino']);
+        $this->db->where('codmicrofase', $input['codmicrofase']);
+        $this->db->update('microfases');
+        return 1;
+    }
+
+    public function deletar_microfase($codmicrofase)
+    {
+        $this->db->delete('microfases', ['codmicrofase' => $codmicrofase]);
+    }
+
     public function finalizar_projeto($codprojeto)
     {
         $this->db->where('codprojeto', $codprojeto);
