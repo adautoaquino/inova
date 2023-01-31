@@ -59,7 +59,7 @@
     <header>
         <nav class="navbar navbar-expand-lg bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="../../projetos/main_pj"><img src="../../../../images/logo_inova.png" width="75" height="50"></a>
+                <a class="navbar-brand" href="../../projetos/main_pj"><img src="../../../../../images/logo_inova.png" width="75" height="50"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -79,10 +79,11 @@
             </div>
         </nav>
     </header>
+
     <div class="container text-center">
         <div class="row" style="padding-top:2%">
             <div class=" offset-md-2 col-md-8 text-center" style="padding-bottom:4%">
-                <form method="post" action="../../main_pj/criar_microfase/<?php echo $codmacrofase ?>">
+                <form method="post" action="../../../main_pj/criar_microfase/<?php echo $codprojeto ?>">
                     <div class="form row" style="padding-top:5%;">
                         <label for="nome" class="col-sm-3 col-form-label text-light text-center"><strong> Nome da microfase</strong></label>
                         <div class="form-group col-md-9">
@@ -126,56 +127,13 @@
                             <button type="submit" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-light"> Adicionar Microfase</button>
                         </div>
                     </div>
-
+                    <div>
+                        <input type="hidden" onlyread="onlyread" name="codmacrofase" id="codmacrofase" value="<?php echo $this->uri->segment(5); ?>"></input>
+                    </div>
                 </form>
             </div>
         </div>
     </div>
-
-    <div class="row" style="padding-top:1%; padding-bottom:2%;">
-            <div class="card bg-dark" style="width: 100%;">
-
-
-                <div class="table-responsive">
-                    <table class="table table-dark table-striped">
-                        <thead>
-                            <tr>
-                                <th colspan="4">Microfases do Projeto</th>
-                            </tr>
-                            <?php if (count($microfases) > 0) { ?>
-                                <tr>
-                                    <th>Microfases</th>
-                                    <th>Início</th>
-                                    <th>Previsão de Fim</th>
-                                    <th>Ações</th>
-                                </tr>
-                            <?php } else {
-                                echo "<tr><th style='color:red; font-size:80%'>Nenhum Resultado Encontrado</th></td>";
-                            } ?>
-                        </thead>
-
-                        <?php if (count($microfases) > 0) { ?>
-
-                            <tbody>
-                                <?php foreach ($microfases as $microfase) { ?>
-                                    <tr>
-                                        <td><?php echo $microfase['nome_microfase'] ?></td>
-                                        <td><?php echo $microfase['data_inicio'] ?></td>
-                                        <td><?php echo $microfase['data_prevista_termino'] ?></td>
-                                        <td>
-                                            <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_<?php echo $microfase['codmicrofase'] ?>">Detalhar</button>
-                                            <a href="../../../projetos/main_pj/editar_microfase/<?php echo $microfase['codmicrofase'] ?>" class="btn btn-light btn-sm" data-bs-toggle="modal">Editar</a>
-                                            <a href="../../../projetos/main_pj/deletar_microfase/<?php echo $microfase['codmicrofase'] ?>" class="btn btn-warning btn-sm" data-bs-toggle="modal">Deletar</a>
-                                        </td>
-                                    </tr>
-                                <?php } ?>
-                            </tbody>
-
-                        <?php } ?>
-                    </table>
-                </div>
-            </div>
-        </div>
     <footer>
 
     </footer>
