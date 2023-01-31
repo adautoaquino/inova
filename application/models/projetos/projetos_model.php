@@ -138,4 +138,21 @@ class Projetos_model extends CI_Model
         $result = $query->result_array();
         return $result;
     }
+
+    public function finalizar_macrofase($codmacrofase)
+    {
+        $this->db->where('codmacrofase', $codmacrofase);
+        $query = $this->db->get('macrofases');
+        $result = $query->row_array();
+
+        $this->db->where('codmacrofase', $codmacrofase);
+        $result["ativo"] = 0;
+        $query2 = $this->db->update("macrofases", $result);
+
+        if ($query2) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
 }

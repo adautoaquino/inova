@@ -276,24 +276,24 @@
                                 echo "<tr><th style='color:red; font-size:80%'>Nenhum Resultado Encontrado</th></td>";
                             } ?>
                         </thead>
-
                         <?php if (count($macrofases) > 0) { ?>
-
                             <tbody>
                                 <?php foreach ($macrofases as $macrofase) { ?>
-                                    <tr>
-                                        <td><?php echo $macrofase['nome_macrofase'] ?></td>
-                                        <td><?php echo $macrofase['data_inicio'] ?></td>
-                                        <td><?php echo $macrofase['data_prevista_termino'] ?></td>
-                                        <td>
-                                            <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_<?php echo $macrofase['codmacrofase'] ?>">Detalhar</button>
-                                            <a href="../../../projetos/main_pj/editar_macrofase/<?php echo $macrofase['codmacrofase'] ?>" class="btn btn-light btn-sm" data-bs-toggle="modal">Editar</a>
-                                            <a href="../../../projetos/main_pj/deletar_macrofase/<?php echo $macrofase['codmacrofase'] ?>" class="btn btn-warning btn-sm" data-bs-toggle="modal">Deletar</a>
-                                        </td>
-                                    </tr>
+                                    <?php if ($macrofase['ativo'] == 1) { ?>
+                                        <tr>
+                                            <td><?php echo $macrofase['nome_macrofase'] ?></td>
+                                            <td><?php echo $macrofase['data_inicio'] ?></td>
+                                            <td><?php echo $macrofase['data_prevista_termino'] ?></td>
+                                            <td>
+                                                <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_<?php echo $macrofase['codmacrofase'] ?>">Detalhar</button>
+                                                <a href="../../../projetos/main_pj/editar_macrofase/<?php echo $macrofase['codmacrofase'] ?>" class="btn btn-light btn-sm" data-bs-toggle="modal">Editar</a>
+                                                <a href="../../../projetos/main_pj/deletar_macrofase/<?php echo $macrofase['codmacrofase'] ?>" class="btn btn-warning btn-sm" data-bs-toggle="modal">Deletar</a>
+                                                <a href="../../../projetos/main_pj/finalizar_macrofase/<?php echo $macrofase['codmacrofase'] ?>" class="btn btn-success btn-sm" data-bs-toggle="modal">Finalizar</a>
+                                            </td>
+                                        </tr>
+                                    <?php } ?>
                                 <?php } ?>
                             </tbody>
-
                         <?php } ?>
                     </table>
                 </div>

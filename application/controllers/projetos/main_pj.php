@@ -228,6 +228,21 @@ class main_pj extends CI_Controller
 			
 			";
 	}
+
+	public function finalizar_macrofase($codmacrofase)
+	{
+		$return = $this->projetos_model->finalizar_macrofase($codmacrofase);
+		if ($return == 1) {
+			echo "<script>alert('Sua macrofase foi finalizado com suceso!!');
+			window.location.assign('../../main_pj/gerencia_projetos');</script>";
+		} else {
+			echo "<script>alert('Não foi possível finalizar sua macrofase...');
+			window.location.assign('../../main_pj/gerencia_projetos');</script>
+			
+			";
+		}
+	}
+
 	public function finalizar_projeto($codprojeto)
 	{
 		$return = $this->projetos_model->finalizar_projeto($codprojeto);
@@ -235,7 +250,7 @@ class main_pj extends CI_Controller
 			echo "<script>alert('Seu projeto foi finalizado com suceso!!');
 			window.location.assign('../../main_pj/gerencia_projetos');</script>";
 		} else {
-			echo "<script>alert('Não foi possível finalizar seu projeto');
+			echo "<script>alert('Não foi possível finalizar seu projeto...');
 			window.location.assign('../../main_pj/gerencia_projetos');</script>
 			
 			";
