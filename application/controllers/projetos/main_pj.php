@@ -206,12 +206,12 @@ class main_pj extends CI_Controller
 			);
 			$retorno = $this->projetos_model->editar_microfase($input);
 			if ($retorno == 1) {
-				echo "<script>alert('Sua macrofase foi alterada!!');
+				echo "<script>alert('Sua microfase foi alterada!!');
 					window.location.assign('../../main_pj/gerencia_projetos');</script>
 					
 					";
 			} else {
-				echo "<script>alert('Não foi possível alterar sua macrofase...');
+				echo "<script>alert('Não foi possível alterar sua microfase...');
 					window.location.assign('../../main_pj/gerencia_projetos');</script>
 					
 					";
