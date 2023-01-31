@@ -87,9 +87,9 @@
             <div class=" offset-md-1 col-md-5 text-center "style="padding-bottom:4%">
                 <div class="card bg-danger text-white">
                     <div class="card-body">
-                        <h5><i>Planejamento Estratégico</i></h5>
+                        <h5><i>Gerenciar Metas</i></h5>
                         <p>
-                            Inserir texto
+                            Na secção de gerenciamento de metas você consegue criar, editar e deletar suas metas
 
                         </p>
                         <div class="text-center">
@@ -101,7 +101,7 @@
             <div class="col-md-5 text-center">
                 <div class="card bg-danger text-white">
                     <div class="card-body">
-                        <h5><i>Planejamento Estratégico</i></h5>
+                        <h5><i>Indicadores</i></h5>
                         <p>
                             Inserir texto
                         </p>
