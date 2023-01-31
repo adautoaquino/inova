@@ -54,6 +54,8 @@
             <a class="navbar-brand" href="#"><img src="../../images/logo_inova.png" width="75" height="50"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
+
+            
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
@@ -76,7 +78,7 @@
             <div class="col-md-10 offset-md-1">
                 <div class="card bg-danger text-white">
                     <div class="card-body">
-                        <h3><i>Área de Projetos</i></h3>
+                        <h3><i>Área de Planejamento Estratégico</i></h3>
                     </div>
                 </div>
             </div>
@@ -91,7 +93,7 @@
 
                         </p>
                         <div class="text-center">
-                                <a class="btn btn-light" href="../main_pe.php/gerencia_projetos">Acessar</a>
+                                <a class="btn btn-light" href="../gpe">Acessar</a>
                         </div>
                     </div>
                 </div>
@@ -104,7 +106,7 @@
                             Inserir texto
                         </p>
                         <div class="text-center">
-                            <a class="btn btn-light" href="../main_pe.php">Acessar</a>
+                            <a class="btn btn-light" href="#">Acessar</a>
                         </div>
                     </div>
                 </div>
