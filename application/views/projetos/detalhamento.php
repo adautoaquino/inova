@@ -304,48 +304,48 @@
 
     <div class="container text-center">
         <div class="row" style="padding-top:1%; padding-bottom:2%;">
-                <div class="card bg-dark" style="width: 100%;">
-                    <div class="table-responsive">
-                        <table class="table table-dark table-striped">
-                            <thead>
-                                <tr>
-                                    <th colspan="4">Microfases do Projeto</th>
-                                </tr>
-                                <?php if (count($microfases) > 0) { ?>
-                                    <tr>
-                                        <th>Microfase</th>
-                                        <th>Início</th>
-                                        <th>Previsão de Fim</th>
-                                        <th>Ações</th>
-                                    </tr>
-                                <?php } else {
-                                    echo "<tr><th style='color:red; font-size:80%'>Nenhum Resultado Encontrado</th></td>";
-                                } ?>
-                            </thead>
-
+            <div class="card bg-dark" style="width: 100%;">
+                <div class="table-responsive">
+                    <table class="table table-dark table-striped">
+                        <thead>
+                            <tr>
+                                <th colspan="4">Microfases do Projeto</th>
+                            </tr>
                             <?php if (count($microfases) > 0) { ?>
+                                <tr>
+                                    <th>Microfase</th>
+                                    <th>Início</th>
+                                    <th>Previsão de Fim</th>
+                                    <th>Ações</th>
+                                </tr>
+                            <?php } else {
+                                echo "<tr><th style='color:red; font-size:80%'>Nenhum Resultado Encontrado</th></td>";
+                            } ?>
+                        </thead>
 
-                                <tbody>
-                                    <?php foreach ($microfases as $microfase) { ?>
-                                        <tr>
-                                            <td><?php echo $microfase['nome_microfase'] ?></td>
-                                            <td><?php echo $microfase['data_inicio'] ?></td>
-                                            <td><?php echo $microfase['data_prevista_termino'] ?></td>
-                                            <td>
-                                                <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_<?php echo $microfase['codmicrofase'] ?>">Detalhar</button>
-                                                <a href="../../../projetos/main_pj/editar_microfase/<?php echo $microfase['codmicrofase'] ?>" class="btn btn-light btn-sm" data-bs-toggle="modal">Editar</a>
-                                                <a href="../../../projetos/main_pj/deletar_microfase/<?php echo $microfase['codmicrofase'] ?>" class="btn btn-warning btn-sm" data-bs-toggle="modal">Deletar</a>
-                                            </td>
-                                        </tr>
-                                    <?php } ?>
-                                </tbody>
+                        <?php if (count($microfases) > 0) { ?>
 
-                            <?php } ?>
-                        </table>
-                    </div>
+                            <tbody>
+                                <?php foreach ($microfases as $microfase) { ?>
+                                    <tr>
+                                        <td><?php echo $microfase['nome_microfase'] ?></td>
+                                        <td><?php echo $microfase['data_inicio'] ?></td>
+                                        <td><?php echo $microfase['data_prevista_termino'] ?></td>
+                                        <td>
+                                            <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_<?php echo $microfase['codmicrofase'] ?>">Detalhar</button>
+                                            <a href="../../../projetos/main_pj/editar_microfase/<?php echo $microfase['codmicrofase'] ?>" class="btn btn-light btn-sm" data-bs-toggle="modal">Editar</a>
+                                            <a href="../../../projetos/main_pj/deletar_microfase/<?php echo $microfase['codmicrofase'] ?>" class="btn btn-warning btn-sm" data-bs-toggle="modal">Deletar</a>
+                                        </td>
+                                    </tr>
+                                <?php } ?>
+                            </tbody>
+
+                        <?php } ?>
+                    </table>
                 </div>
             </div>
         </div>
+    </div>
     </div>
     <footer>
 
