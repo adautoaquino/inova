@@ -59,7 +59,7 @@
     <header>
         <nav class="navbar navbar-expand-lg bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="../../projetos/main_pj"><img src="../../../../../images/logo_inova.png" width="75" height="50"></a>
+                <a class="navbar-brand" href="../../projetos/main_pj"><img src="../../../../images/logo_inova.png" width="75" height="50"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -82,25 +82,25 @@
     <div class="container text-center">
         <div class="row" style="padding-top:2%">
             <div class=" offset-md-2 col-md-8 text-center" style="padding-bottom:4%">
-                <form method="post" action="../../main_pj/editar_macrofase/<?php echo $codmacrofase ?>">
+                <form method="post" action="../../main_pj/editar_macrofase/<?php echo $dados['codmacrofase'] ?>">
                     <div class="form row" style="padding-top:5%;">
                         <label for="nome" class="col-sm-3 col-form-label text-light text-center"><strong> Novo Nome</strong></label>
                         <div class="form-group col-md-9">
-                            <input type="text" required placeholder="Macrofase" required name="nome" class="form-control" id="nome">
+                            <input type="text" required placeholder="Macrofase" required name="nome" value="<?= isset($dados) ? $dados['nome_macrofase'] : "" ?>" class="form-control" id="nome">
                         </div>
                     </div>
                     <br>
                     <div class="form row">
                         <label for="descricao" class="col-sm-3 col-form-label text-light text-center"><strong> Nova Descrição da Macrofase</strong></label>
                         <div class="form-group col-md-9">
-                            <textarea rows="5" type="text" required placeholder="Escreva novamente um pouco sobre a macrofase..." name="descricao" class="form-control" id="descricao"></textarea>
+                            <textarea rows="5" type="text" required placeholder="Escreva novamente um pouco sobre a macrofase..." name="descricao" value="<?= isset($dados) ? $dados['descricao'] : "" ?>" class="form-control" id="descricao"></textarea>
                         </div>
                     </div>
                     <br>
                     <div class="form row">
                         <label for="responsavel" class="col-sm-3 col-form-label text-light"><strong> Novo Responsável pela Macrofase</strong></label>
                         <div class="form-group col-md-9">
-                            <input type="text" required placeholder=" Novo responsável" required name="responsavel" class="form-control" id="responsavel">
+                            <input type="text" required placeholder=" Novo responsável" required name="responsavel" value="<?= isset($dados) ? $dados['responsavel'] : "" ?>" class="form-control" id="responsavel">
                         </div>
                         <br>
                     </div>
@@ -108,7 +108,7 @@
                     <div class="form row">
                         <label for="data_inicio" class="col-sm-3 col-form-label text-light"><strong> Nova Data de Início</strong></label>
                         <div class="form-group col-md-4">
-                            <input type="text" required placeholder="dd/mm/aaaa" required name="data_inicio" class="form-control" id="data_inicio">
+                            <input type="text" required placeholder="dd/mm/aaaa" required name="data_inicio" value="<?= isset($dados) ? $dados['data_inicio'] : "" ?>" class="form-control" id="data_inicio">
                         </div>
                         <br>
                     </div>
@@ -116,7 +116,7 @@
                     <div class="form row">
                         <label for="data_prevista_termino" class="col-sm-3 col-form-label text-light text-center"><strong> Nova Data Prevista Término</strong></label>
                         <div class="form-group col-md-4">
-                            <input type="text" required placeholder="dd/mm/aaaa" required name="data_prevista_termino" data-mask="99/99/9999" class="form-control" id="data_prevista_termino">
+                            <input type="text" required placeholder="dd/mm/aaaa" required name="data_prevista_termino" value="<?= isset($dados) ? $dados['data_prevista_termino'] : "" ?>" data-mask="99/99/9999" class="form-control" id="data_prevista_termino">
                         </div>
                         <br>
                     </div>

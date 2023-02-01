@@ -52,6 +52,12 @@ class main_pj extends CI_Controller
 		$this->load->view('Projetos/detalhamento', $data);
 	}
 
+	public function detalhar_macrofase($codmacrofase)
+	{
+		$data['dados'] = $this->projetos_model->get_macrofase($codmacrofase);
+		$this->load->view('projetos/editar_macrofase', $data);
+	}
+
 	public function criar_macrofase()
 	{
 		$nome_macrofase = $this->input->post('nome');

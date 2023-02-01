@@ -287,7 +287,7 @@
                                             <td><?php echo $macrofase['data_prevista_termino'] ?></td>
                                             <td>
                                                 <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_<?php echo $macrofase['codmacrofase'] ?>">Detalhar</button>
-                                                <a href="../../../projetos/main_pj/editar_macrofase/<?php echo $macrofase['codmacrofase'] ?>" class="btn btn-light btn-sm" data-bs-toggle="modal">Editar</a>
+                                                <a href="../../../projetos/main_pj/detalhar_macrofase/<?php echo $macrofase['codmacrofase'] ?>" class="btn btn-light btn-sm" data-bs-toggle="modal">Editar</a>
                                                 <a href="../../../projetos/main_pj/deletar_macrofase/<?php echo $macrofase['codmacrofase'] ?>" class="btn btn-warning btn-sm" data-bs-toggle="modal">Deletar</a>
                                                 <a href="../../../projetos/main_pj/finalizar_macrofase/<?php echo $macrofase['codmacrofase'] ?>" class="btn btn-success btn-sm" data-bs-toggle="modal">Finalizar</a>
                                             </td>
