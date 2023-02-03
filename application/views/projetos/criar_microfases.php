@@ -66,13 +66,13 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                         <li class="nav-item">
-                            <a class="nav-link active" style="color: white" aria-current="page" href="../../projetos/main_pj"><b>Menu</b></a>
+                            <a class="nav-link active" style="color: white" aria-current="page" href="../../../../main/session"><b>Menu</b></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " style="color: white" href="#"><b>Gerenciar Projetos</b></a>
+                            <a class="nav-link " style="color: white" href="../../../../projetos/main_pj/gerencia_projetos"><b>Gerenciar Projetos</b></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " style="color: white" href="#"><b>Dashboard de Indicadores</b></a>
+                            <a class="nav-link " style="color: white" href="../../../../pe/main_pe"><b>Dashboard de Indicadores</b></a>
                         </li>
                     </ul>
                 </div>

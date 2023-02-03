@@ -50,8 +50,6 @@
             animation-duration: 6s;
 
         }
-        
-
     </style>
 
     <div id="loader" class="loader" style=" background-color: #c10000;">
@@ -68,13 +66,13 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                         <li class="nav-item">
-                            <a class="nav-link active" style="color: white" aria-current="page" href="../../projetos/main_pj"><b>Menu</b></a>
+                            <a class="nav-link active" style="color: white" aria-current="page" href="../../../main/session"><b>Menu</b></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " style="color: white" href="#"><b>Gerenciar Projetos</b></a>
+                            <a class="nav-link " style="color: white" href="../../../projetos/main_pj/gerencia_projetos"><b>Gerenciar Projetos</b></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " style="color: white" href="#"><b>Dashboard de Indicadores</b></a>
+                            <a class="nav-link " style="color: white" href="../../../pe/main_pe"><b>Dashboard de Indicadores</b></a>
                         </li>
                     </ul>
                 </div>
@@ -84,25 +82,25 @@
     <div class="container text-center">
         <div class="row" style="padding-top:2%">
             <div class=" offset-md-2 col-md-8 text-center" style="padding-bottom:4%">
-                <form method="post" action="../../main_pj/editar_microfase/<?php echo $codmicrofase ?>">
+                <form method="post" action="../../main_pj/editar_microfase/<?php echo $dados_microfase['codmicrofase'] ?>">
                     <div class="form row" style="padding-top:5%;">
                         <label for="nome" class="col-sm-3 col-form-label text-light text-center"><strong> Novo Nome</strong></label>
                         <div class="form-group col-md-9">
-                            <input type="text" required placeholder="Microfase" required name="nome" class="form-control" id="nome">
+                            <input type="text" value="<?= $dados_microfase['nome_microfase'] ?>" required name="nome" class="form-control" id="nome">
                         </div>
                     </div>
                     <br>
                     <div class="form row">
                         <label for="descricao" class="col-sm-3 col-form-label text-light text-center"><strong> Nova Descrição da Microfase</strong></label>
                         <div class="form-group col-md-9">
-                            <textarea rows="5" type="text" required placeholder="Escreva sobre a nova microfase..." name="descricao" class="form-control" id="descricao"></textarea>
+                            <textarea rows="5" type="text" name="descricao" class="form-control" id="descricao"><?= $dados_microfase['descricao'] ?></textarea>
                         </div>
                     </div>
                     <br>
                     <div class="form row">
                         <label for="responsavel" class="col-sm-3 col-form-label text-light"><strong> Novo Responsável pela Microfase</strong></label>
                         <div class="form-group col-md-9">
-                            <input type="text" required placeholder=" Novo responsável" required name="responsavel" class="form-control" id="responsavel">
+                            <input type="text" value="<?= $dados_microfase['responsavel'] ?>" required name="responsavel" class="form-control" id="responsavel">
                         </div>
                         <br>
                     </div>
@@ -110,7 +108,7 @@
                     <div class="form row">
                         <label for="data_inicio" class="col-sm-3 col-form-label text-light"><strong> Nova Data de Início</strong></label>
                         <div class="form-group col-md-4">
-                            <input type="text" required placeholder="dd/mm/aaaa" required name="data_inicio" class="form-control" id="data_inicio">
+                            <input type="text" value="<?= $dados_microfase['data_inicio'] ?>" required name="data_inicio" class="form-control" id="data_inicio">
                         </div>
                         <br>
                     </div>
@@ -118,7 +116,7 @@
                     <div class="form row">
                         <label for="data_prevista_termino" class="col-sm-3 col-form-label text-light text-center"><strong> Nova Data Prevista Término</strong></label>
                         <div class="form-group col-md-4">
-                            <input type="text" required placeholder="dd/mm/aaaa" required name="data_prevista_termino" data-mask="99/99/9999" class="form-control" id="data_prevista_termino">
+                            <input type="text" value="<?= $dados_microfase['data_prevista_termino'] ?>" required name="data_prevista_termino" data-mask="99/99/9999" class="form-control" id="data_prevista_termino">
                         </div>
                         <br>
                     </div>

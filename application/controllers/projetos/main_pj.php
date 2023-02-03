@@ -58,7 +58,13 @@ class main_pj extends CI_Controller
 		$this->load->view('projetos/editar_macrofase', $data);
 	}
 
-	public function criar_macrofase()
+	public function detalhar_microfase($codmicrofase)
+	{
+		$data['dados_microfase'] = $this->projetos_model->get_microfase($codmicrofase);
+		$this->load->view('projetos/editar_microfase', $data);
+	}
+
+	public function criar_macrofase($codprojeto)
 	{
 		$nome_macrofase = $this->input->post('nome');
 		if ($nome_macrofase == "") {
@@ -70,17 +76,17 @@ class main_pj extends CI_Controller
 				"responsavel"  => $this->input->post('responsavel'),
 				"data_inicio"  => $this->input->post('data_inicio'),
 				"data_prevista_termino" => $this->input->post('data_prevista_termino'),
-				"codprojeto" => $this->input->post('codprojeto')
+				"codprojeto" => $codprojeto
 			);
 			$retorno = $this->projetos_model->criar_macrofase($input);
 			if ($retorno == 1) {
 				echo "<script>alert('Sua macrofase foi adicionada!!');
-					window.location.assign('../main_pj/gerencia_projetos');</script>
+					window.location.assign('../../main_pj/gerencia_projetos');</script>
 					
 					";
 			} else {
 				echo "<script>alert('Não foi possível criar sua macrofase...');
-					window.location.assign('../main_pj/gerencia_projetos');</script>
+					window.location.assign('../../main_pj/gerencia_projetos');</script>
 					
 					";
 			}
@@ -235,6 +241,20 @@ class main_pj extends CI_Controller
 			window.location.assign('../../main_pj/gerencia_projetos');</script>";
 		} else {
 			echo "<script>alert('Não foi possível finalizar sua macrofase...');
+			window.location.assign('../../main_pj/gerencia_projetos');</script>
+			
+			";
+		}
+	}
+
+	public function finalizar_microfase($codmicrofase)
+	{
+		$return = $this->projetos_model->finalizar_microfase($codmicrofase);
+		if ($return == 1) {
+			echo "<script>alert('Sua microfase foi finalizado com suceso!!');
+			window.location.assign('../../main_pj/gerencia_projetos');</script>";
+		} else {
+			echo "<script>alert('Não foi possível finalizar sua microfase...');
 			window.location.assign('../../main_pj/gerencia_projetos');</script>
 			
 			";

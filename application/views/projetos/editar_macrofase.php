@@ -66,13 +66,13 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                         <li class="nav-item">
-                            <a class="nav-link active" style="color: white" aria-current="page" href="../../projetos/main_pj"><b>Menu</b></a>
+                            <a class="nav-link active" style="color: white" aria-current="page" href="../../../main/session"><b>Menu</b></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " style="color: white" href="#"><b>Gerenciar Projetos</b></a>
+                            <a class="nav-link " style="color: white" href="../../../projetos/main_pj/gerencia_projetos"><b>Gerenciar Projetos</b></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " style="color: white" href="#"><b>Dashboard de Indicadores</b></a>
+                            <a class="nav-link " style="color: white" href="../../../pe/main_pe"><b>Dashboard de Indicadores</b></a>
                         </li>
                     </ul>
                 </div>
@@ -84,7 +84,7 @@
             <div class=" offset-md-2 col-md-8 text-center" style="padding-bottom:4%">
                 <form method="post" action="../../main_pj/editar_macrofase/<?php echo $dados['codmacrofase'] ?>">
                     <div class="form row" style="padding-top:5%;">
-                        <label for="nome" class="col-sm-3 col-form-label text-light text-center"><strong> Novo Nome</strong></label>
+                        <label for="nome" class="col-sm-3 col-form-label text-light text-center"><strong> Novo Nome da Macrofase</strong></label>
                         <div class="form-group col-md-9">
                             <input type="text" required placeholder="Macrofase" required name="nome" value="<?= isset($dados) ? $dados['nome_macrofase'] : "" ?>" class="form-control" id="nome">
                         </div>
@@ -93,7 +93,7 @@
                     <div class="form row">
                         <label for="descricao" class="col-sm-3 col-form-label text-light text-center"><strong> Nova Descrição da Macrofase</strong></label>
                         <div class="form-group col-md-9">
-                            <textarea rows="5" type="text" required placeholder="Escreva novamente um pouco sobre a macrofase..." name="descricao" value="<?= isset($dados) ? $dados['descricao'] : "" ?>" class="form-control" id="descricao"></textarea>
+                            <textarea rows="5" type="text" required placeholder="Escreva novamente um pouco sobre a macrofase..." name="descricao" class="form-control" id="descricao"><?= isset($dados) ? $dados['descricao'] : "" ?></textarea>
                         </div>
                     </div>
                     <br>

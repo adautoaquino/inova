@@ -104,6 +104,13 @@ class Projetos_model extends CI_Model
         ))->row_array();
     }
 
+    public function get_microfase($codmicrofase)
+    {
+        return $this->db->get_where('microfases', array(
+            "codmicrofase" => $codmicrofase
+        ))->row_array();
+    }
+
     public function editar_macrofase($input)
     {
         $this->db->set('nome_macrofase', $input['nome_macrofase']);
@@ -172,6 +179,23 @@ class Projetos_model extends CI_Model
         $this->db->where('codmacrofase', $codmacrofase);
         $result["ativo"] = 0;
         $query2 = $this->db->update("macrofases", $result);
+
+        if ($query2) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+
+    public function finalizar_microfase($codmicrofase)
+    {
+        $this->db->where('codmicrofase', $codmicrofase);
+        $query = $this->db->get('microfases');
+        $result = $query->row_array();
+
+        $this->db->where('codmicrofase', $codmicrofase);
+        $result["ativo"] = 0;
+        $query2 = $this->db->update("microfases", $result);
 
         if ($query2) {
             return 1;

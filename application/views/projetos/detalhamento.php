@@ -66,13 +66,13 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                         <li class="nav-item">
-                            <a class="nav-link active" style="color: white" aria-current="page" href="../../../projetos/main_pj"><b>Menu</b></a>
+                            <a class="nav-link active" style="color: white" aria-current="page" href="../../../main/session"><b>Menu</b></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " style="color: white" href="#"><b>Gerenciar Projetos</b></a>
+                            <a class="nav-link " style="color: white" href="../../../projetos/main_pj/gerencia_projetos"><b>Gerenciar Projetos</b></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " style="color: white" href="#"><b>Dashboard de Indicadores</b></a>
+                            <a class="nav-link " style="color: white" href="../../../pe/main_pe"><b>Dashboard de Indicadores</b></a>
                         </li>
                     </ul>
                 </div>
@@ -130,32 +130,38 @@
                                     <?php
                                     foreach ($microfases as $microfase) {
                                         if ($microfase['codmacrofase'] == $macrofase['codmacrofase']) { ?>
-                                            <tr>
-                                                <td class="align-middle text-center"><?php echo $microfase['nome_microfase'] ?></td>
-                                                <td class="align-middle text-center"><?php echo $microfase['data_inicio'] ?></td>
-                                                <td class="align-middle text-center"><?php echo $microfase['data_prevista_termino'] ?></td>
-                                                <td class="align-middle text-center">
-                                                    <?php
-                                                    if ($microfase['ativo'] == 1) {
-                                                        // $date=date('m/d/Y');
-                                                        $data_projeto = explode('/', $microfase['data_prevista_termino']);
-                                                        $data_projeto = $data_projeto[1] . '/' . $data_projeto[0] . '/' . $data_projeto[2];
-                                                        $data_projeto = date_create($data_projeto);
-                                                        $data_diff = date_diff($data_projeto, date_create());
-                                                        $diferenca = date_interval_format($data_diff, '%a') . ' dias';
+                                            <?php if ($microfase['ativo'] == 1) { ?>
+                                                <tr>
+                                                    <td class="align-middle text-center"><?php echo $microfase['nome_microfase'] ?></td>
+                                                    <td class="align-middle text-center"><?php echo $microfase['data_inicio'] ?></td>
+                                                    <td class="align-middle text-center"><?php echo $microfase['data_prevista_termino'] ?></td>
+                                                    <td class="align-middle text-center">
+                                                        <?php
+                                                        if ($microfase['ativo'] == 1) {
+                                                            // $date=date('m/d/Y');
+                                                            $data_projeto = explode('/', $microfase['data_prevista_termino']);
+                                                            $data_projeto = $data_projeto[1] . '/' . $data_projeto[0] . '/' . $data_projeto[2];
+                                                            $data_projeto = date_create($data_projeto);
+                                                            $data_diff = date_diff($data_projeto, date_create());
+                                                            $diferenca = date_interval_format($data_diff, '%a') . ' dias';
 
-                                                        if ($diferenca > 0) {
-                                                            echo '<p style="color:red"><b>Atrasada</b></p>';
+                                                            if ($diferenca > 0) {
+                                                                echo '<p style="color:red"><b>Atrasada</b></p>';
+                                                            } else {
+                                                                echo '<p style="color:yellow"><b>No prazo</b></p>';
+                                                            }
                                                         } else {
-                                                            echo '<p style="color:yellow"><b>No prazo</b></p>';
+                                                            echo '<p style="color:green"><b>Completa</b></p>';
                                                         }
-                                                    } else {
-                                                        echo '<p style="color:green"><b>Completa</b></p>';
-                                                    }
-                                                    ?>
-                                                </td>
-                                                <td class="align-middle text-center"><button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_<?php echo $microfase['codmicrofase'] ?>">Detalhar</button></td>
-                                            </tr>
+                                                        ?>
+                                                    </td>
+                                                    <td class="align-middle text-center"><button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_<?php echo $microfase['codmicrofase'] ?>">Detalhar</button>
+                                                        <a href="../../../projetos/main_pj/detalhar_microfase/<?php echo $microfase['codmicrofase'] ?>" class="btn btn-dark btn-sm" data-bs-toggle="modal">Editar</a>
+                                                        <a href="../../../projetos/main_pj/deletar_microfase/<?php echo $microfase['codmicrofase'] ?>" class="btn btn-danger btn-sm" data-bs-toggle="modal">Deletar</a>
+                                                        <a href="../../../projetos/main_pj/finalizar_microfase/<?php echo $microfase['codmicrofase'] ?>" class="btn btn-success btn-sm" data-bs-toggle="modal">Finalizar</a>
+                                                    </td>
+                                                </tr>
+                                            <?php } ?>
                                     <?php
                                         }
                                     } ?>
@@ -206,65 +212,108 @@
     <div class="container text-center">
         <div class="row" style="padding-top:2%">
             <div class=" offset-md-2 col-md-8 text-center" style="padding-bottom:4%">
-                <form method="post" action="../criar_macrofase">
-                    <div class="form row" style="padding-top:5%;">
-                        <label for="nome" class="col-sm-3 col-form-label text-light text-center"><strong> Nome da Macrofase</strong></label>
-                        <div class="form-group col-md-9">
-                            <input type="text" required placeholder="Macrofase" required name="nome" value="" class="form-control" id="nome">
-                        </div>
+                <div class="form row" style="padding-top:5%;">
+                    <label for="nome" class="col-sm-3 col-form-label text-light text-center"><strong> Nome do Projeto</strong></label>
+                    <div class="form-group col-md-9">
+                        <input type="text" required name="nome" readonly value="<?= $dados_projeto['nome_projeto'] ?>" class="form-control" id="nome">
+                    </div>
+                </div>
+                <br>
+                <div class="form row">
+                    <label for="descricao" class="col-sm-3 col-form-label text-light text-center"><strong> Descrição do Projeto</strong></label>
+                    <div class="form-group col-md-9">
+                        <textarea rows="5" type="text" readonly name="descricao" class="form-control" id="descricao"><?= $dados_projeto['descricao'] ?></textarea>
+                    </div>
+                </div>
+                <br>
+                <div class="form row">
+                    <label for="responsavel" class="col-sm-3 col-form-label text-light"><strong> Responsável pelo Projeto</strong></label>
+                    <div class="form-group col-md-9">
+                        <input type="text" readonly value="<?= $dados_projeto['responsavel'] ?>" name="responsavel" class="form-control" id="responsavel">
                     </div>
                     <br>
-                    <div class="form row">
-                        <label for="descricao" class="col-sm-3 col-form-label text-light text-center"><strong> Descrição da Macrofase</strong></label>
-                        <div class="form-group col-md-9">
-                            <textarea rows="5" type="text" value="" required placeholder="Escreva um pouco sobre a macrofase..." name="descricao" class="form-control" id="descricao"></textarea>
-                        </div>
+                </div>
+                <br>
+                <div class="form row">
+                    <label for="data_inicio" class="col-sm-3 col-form-label text-light"><strong> Data de Início</strong></label>
+                    <div class="form-group col-md-4">
+                        <input type="text" readonly value="<?= $dados_projeto['data_inicio'] ?>" name="data_inicio" class="form-control" id="data_inicio">
                     </div>
                     <br>
-                    <div class="form row">
-                        <label for="responsavel" class="col-sm-3 col-form-label text-light"><strong> Responsável pela Macrofase</strong></label>
-                        <div class="form-group col-md-9">
-                            <input type="text" required placeholder="Responsável" value="" name="responsavel" class="form-control" id="responsavel">
-                        </div>
-                        <br>
+                </div>
+                <br>
+                <div class="form row">
+                    <label for="data_prevista_termino" class="col-sm-3 col-form-label text-light text-center"><strong> Data Prevista de Término</strong></label>
+                    <div class="form-group col-md-4">
+                        <input type="text" readonly value="<?= $dados_projeto['data_prevista_termino'] ?>" name="data_prevista_termino" data-mask="99/99/9999" class="form-control" id="data_prevista_termino">
                     </div>
                     <br>
-                    <div class="form row">
-                        <label for="data_inicio" class="col-sm-3 col-form-label text-light"><strong> Data de Início</strong></label>
-                        <div class="form-group col-md-4">
-                            <input type="text" required placeholder="dd/mm/aaaa" value="" name="data_inicio" class="form-control" id="data_inicio">
-                        </div>
-                        <br>
-                    </div>
-                    <br>
-                    <div class="form row">
-                        <label for="data_prevista_termino" class="col-sm-3 col-form-label text-light text-center"><strong> Data Prevista Término</strong></label>
-                        <div class="form-group col-md-4">
-                            <input type="text" required placeholder="dd/mm/aaaa" value="" name="data_prevista_termino" data-mask="99/99/9999" class="form-control" id="data_prevista_termino">
-                        </div>
-                        <br>
-                    </div>
-                    <div class="form row" style="padding-top:5%">
-                        <div class="col-md-2 offset-md-10 text-right">
-                            <button type="submit" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-light">Adicionar Macrofase</button>
-                        </div>
-                    </div>
-                    <div>
-                        <input type="hidden" onlyread="onlyread" name="codprojeto" id="codprojeto" value="<?php echo $dados_projeto['codprojeto'] ?>"></input>
-                    </div>
-                </form>
+                </div>
             </div>
         </div>
-
-
-
+        <div class="modal modal-xl fade" id="Modal_criar_macrofase" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel"> Criar Macrofase do Projeto: <?php echo $dados_projeto['nome_projeto'] ?></h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form method="post" action="../criar_macrofase/<?php echo $dados_projeto['codprojeto'] ?>">
+                            <div class="form row" style="padding-top:5%;">
+                                <label for="nome" class="col-sm-3 col-form-label text-center"><strong> Nome da Macrofase</strong></label>
+                                <div class="form-group col-md-9">
+                                    <input type="text" placeholder="Nome da Macrofase" required name="nome" value="" class="form-control" id="nome">
+                                </div>
+                            </div>
+                            <div class="form row" style="padding-top:5%;">
+                                <label for="descricao" class="col-sm-3 col-form-label text-center"><strong> Descrição</strong></label>
+                                <div class="form-group col-md-9">
+                                    <textarea rows="5" type="text" value="" required placeholder="Escreva um pouco sobre a macrofase..." name="descricao" class="form-control" id="descricao"></textarea>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="form row">
+                                <label for="responsavel" class="col-sm-3 col-form-label text-center"><strong> Responsável</strong></label>
+                                <div class="form-group col-md-9">
+                                    <input type="text" placeholder="Responsável pela Macrofase" value="" name="responsavel" class="form-control" id="responsavel">
+                                </div>
+                                <br>
+                            </div>
+                            <br>
+                            <div class="form row">
+                                <label for="data_inicio" class="col-sm-3 col-form-label  text-center"><strong> Início</strong></label>
+                                <div class="form-group col-md-4">
+                                    <input type="text" placeholder="dd/mm/aaaa" value="" name="data_inicio" class="form-control" id="data_inicio">
+                                </div>
+                                <br>
+                            </div>
+                            <br>
+                            <div class="form row">
+                                <label for="data_prevista_termino" class="col-sm-3 col-form-label text-center"><strong> Fim Previsto</strong></label>
+                                <div class="form-group col-md-4">
+                                    <input type="text" placeholder="dd/mm/aaaa" value="" name="data_prevista_termino" data-mask="99/99/9999" class="form-control" id="data_prevista_termino">
+                                </div>
+                                <br>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                                <button type="submit" class="btn btn-success">Criar Macrofase</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="row" style="padding-top:1%; padding-bottom:2%;">
             <div class="card bg-dark" style="width: 100%;">
                 <div class="table-responsive">
                     <table class="table table-dark table-striped">
                         <thead>
                             <tr>
-                                <th colspan="4">Macrofases do Projeto</th>
+                                <th colspan="4">Macrofases do Projeto
+                                    <button type="button" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_criar_macrofase">Adicionar Macrofase ao Projeto</button>
+                                </th>
                             </tr>
                             <?php if (count($macrofases) > 0) { ?>
                                 <tr>
@@ -286,9 +335,9 @@
                                             <td><?php echo $macrofase['data_inicio'] ?></td>
                                             <td><?php echo $macrofase['data_prevista_termino'] ?></td>
                                             <td>
-                                                <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_<?php echo $macrofase['codmacrofase'] ?>">Detalhar</button>
+                                                <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_<?php echo $macrofase['codmacrofase'] ?>">Detalhar</button>
                                                 <a href="../../../projetos/main_pj/detalhar_macrofase/<?php echo $macrofase['codmacrofase'] ?>" class="btn btn-light btn-sm" data-bs-toggle="modal">Editar</a>
-                                                <a href="../../../projetos/main_pj/deletar_macrofase/<?php echo $macrofase['codmacrofase'] ?>" class="btn btn-warning btn-sm" data-bs-toggle="modal">Deletar</a>
+                                                <a href="../../../projetos/main_pj/deletar_macrofase/<?php echo $macrofase['codmacrofase'] ?>" class="btn btn-danger btn-sm" data-bs-toggle="modal">Deletar</a>
                                                 <a href="../../../projetos/main_pj/finalizar_macrofase/<?php echo $macrofase['codmacrofase'] ?>" class="btn btn-success btn-sm" data-bs-toggle="modal">Finalizar</a>
                                             </td>
                                         </tr>
@@ -302,51 +351,6 @@
         </div>
     </div>
 
-    <div class="container text-center">
-        <div class="row" style="padding-top:1%; padding-bottom:2%;">
-            <div class="card bg-dark" style="width: 100%;">
-                <div class="table-responsive">
-                    <table class="table table-dark table-striped">
-                        <thead>
-                            <tr>
-                                <th colspan="4">Microfases do Projeto</th>
-                            </tr>
-                            <?php if (count($microfases) > 0) { ?>
-                                <tr>
-                                    <th>Microfase</th>
-                                    <th>Início</th>
-                                    <th>Previsão de Fim</th>
-                                    <th>Ações</th>
-                                </tr>
-                            <?php } else {
-                                echo "<tr><th style='color:red; font-size:80%'>Nenhum Resultado Encontrado</th></td>";
-                            } ?>
-                        </thead>
-
-                        <?php if (count($microfases) > 0) { ?>
-
-                            <tbody>
-                                <?php foreach ($microfases as $microfase) { ?>
-                                    <tr>
-                                        <td><?php echo $microfase['nome_microfase'] ?></td>
-                                        <td><?php echo $microfase['data_inicio'] ?></td>
-                                        <td><?php echo $microfase['data_prevista_termino'] ?></td>
-                                        <td>
-                                            <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_<?php echo $microfase['codmicrofase'] ?>">Detalhar</button>
-                                            <a href="../../../projetos/main_pj/editar_microfase/<?php echo $microfase['codmicrofase'] ?>" class="btn btn-light btn-sm" data-bs-toggle="modal">Editar</a>
-                                            <a href="../../../projetos/main_pj/deletar_microfase/<?php echo $microfase['codmicrofase'] ?>" class="btn btn-warning btn-sm" data-bs-toggle="modal">Deletar</a>
-                                        </td>
-                                    </tr>
-                                <?php } ?>
-                            </tbody>
-
-                        <?php } ?>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
     <footer>
 
     </footer>
