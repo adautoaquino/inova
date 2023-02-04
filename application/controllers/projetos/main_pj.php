@@ -11,6 +11,7 @@ class main_pj extends CI_Controller
 		$this->load->model('projetos/projetos_model');
 		$this->load->library('session');
 		$this->load->library('email');
+		$this->load->helper('url');
 	}
 
 	/**

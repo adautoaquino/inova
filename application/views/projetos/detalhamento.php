@@ -80,6 +80,7 @@
         </nav>
     </header>
 
+
     <!-- Button trigger modal -->
 
     <?php foreach ($macrofases as $macrofase) { ?>
@@ -210,6 +211,9 @@
 
 
     <div class="container text-center">
+
+    <a href="<?php echo base_url()?>"> teste</a>
+
         <div class="row" style="padding-top:2%">
             <div class=" offset-md-2 col-md-8 text-center" style="padding-bottom:4%">
                 <div class="form row" style="padding-top:5%;">

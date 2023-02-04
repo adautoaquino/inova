@@ -14,7 +14,7 @@
 
 </head>
 
-<body>
+<body background="<?php echo base_url()?>images/fundo_login.jpeg">
     <style>
         .titulo {
             color: aqua;
