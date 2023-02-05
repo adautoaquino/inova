@@ -34,7 +34,7 @@
             width: 100%;
             height: 100%;
             z-index: 9999;
-            background: url('../../images/logosemfundo.png') 50% 50% no-repeat;
+            background: url('<?php echo base_url()?>images/logosemfundo.png') 50% 50% no-repeat;
             background-size: 30%;
         }
 
@@ -57,7 +57,7 @@
     <div class="container text-center">
         <div class="row" style="padding-top:5%">
             <div class="col-md-10 offset-md-1">
-                <img width="15%" src="../../images/logo_inova.png">
+                <img width="15%" src="<?php echo base_url()?>images/logo_inova.png">
                 <div class="card bg-danger text-white">
                     <div class="card-body">
                         <h5><i>Bem-vindo</i></h5>
@@ -81,7 +81,7 @@
                             relacionados a eles.
                         </p>
                         <div class="text-center">
-                            <a class="btn btn-light" href="../projetos/main_pj">Acessar</a>
+                            <a class="btn btn-light" href="<?php echo base_url()?>index.php/projetos/main_pj">Acessar</a>
                         </div>
                     </div>
                 </div>
@@ -96,7 +96,7 @@
                             relacionados a elas.
                         </p>
                         <div class="text-center">
-                            <a class="btn btn-light" href="../pe/main_pe">Acessar</a>
+                            <a class="btn btn-light" href="<?php echo base_url()?>index.php/pe/main_pe">Acessar</a>
                         </div>
                     </div>
                 </div>

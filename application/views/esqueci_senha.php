@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
 
-  <body  background="../../images/fundo_login.png">
+    <body background="<?php echo base_url()?>images/fundo_login.jpeg">
     <style>
         .titulo{
             color:aqua;
@@ -50,7 +50,7 @@
         <div class="row">
             <div class="col-md-6 offset-md-3">
                 <div class="col-md-6 offset-md-3 text-center">
-                    <img style="padding-top:30%"src="../../images/logosemfundo.png" width="50%">
+                    <img style="padding-top:30%"src="<?php echo base_url()?>images/logosemfundo.png" width="50%">
                     <h3 style="padding-top:3%">AutoContract</h3>
                 </div>
             </div>

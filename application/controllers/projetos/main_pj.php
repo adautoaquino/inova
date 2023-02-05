@@ -82,12 +82,12 @@ class main_pj extends CI_Controller
 			$retorno = $this->projetos_model->criar_macrofase($input);
 			if ($retorno == 1) {
 				echo "<script>alert('Sua macrofase foi adicionada!!');
-					window.location.assign('../../main_pj/gerencia_projetos');</script>
+					window.location.assign('".base_url()."index.php/projetos/main_pj/gerencia_projetos');</script>
 					
 					";
 			} else {
 				echo "<script>alert('Não foi possível criar sua macrofase...');
-					window.location.assign('../../main_pj/gerencia_projetos');</script>
+					window.location.assign('".base_url()."index.php/projetos/main_pj/gerencia_projetos');</script>
 					
 					";
 			}
@@ -132,22 +132,31 @@ class main_pj extends CI_Controller
 		if ($nome_projeto == "") {
 			$this->load->view('Projetos/criar_projetos');
 		} else {
+			
+			// $data_inicio = explode('/', $this->input->post('data_inicio'));
+			// $data_inicio = $data_inicio[2].'-'.$data_inicio[1].'-'.$data_inicio[0];
+			// $data_inicio = strtotime($data_inicio);
+
+			// $data_termino = explode('/', $this->input->post('data_prevista_termino'));
+			// $data_termino = $data_termino[2].'-'.$data_termino[1].'-'.$data_termino[0];
+			// $data_inicio = strtotime($data_inicio);
+
 			$input = array(
 				"nome_projeto" => $nome_projeto,
 				"descricao"    => $this->input->post('descricao'),
 				"responsavel"  => $this->input->post('responsavel'),
 				"data_inicio"  => $this->input->post('data_inicio'),
-				"data_prevista_termino" => $this->input->post('data_prevista_termino')
+				"data_prevista_termino" => $this->input->post('data_inicio')
 			);
 			$retorno = $this->projetos_model->criar_projetos($input);
 			if ($retorno == 1) {
 				echo "<script>alert('Seu projeto foi criado com suceso!!');
-					window.location.assign('../main_pj/gerencia_projetos');</script>
+					window.location.assign('".base_url()."projetos/main_pj/gerencia_projetos');</script>
 					
 					";
 			} else {
 				echo "<script>alert('Não foi possível criar seu projeto...');
-					window.location.assign('../main_pj/gerencia_projetos');</script>
+					window.location.assign('".base_url()."projetos/main_pj/gerencia_projetos');</script>
 					
 					";
 			}

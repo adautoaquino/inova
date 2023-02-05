@@ -34,7 +34,7 @@
             width: 100%;
             height: 100%;
             z-index: 9999;
-            background: url('../../images/logosemfundo.png') 50% 50% no-repeat;
+            background: url('<?php echo base_url()?>images/logosemfundo.png') 50% 50% no-repeat;
             background-size: 30%;
         }
 
@@ -55,7 +55,7 @@
     <header>
         <nav class="navbar navbar-expand-lg bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img src="../../images/logo_inova.png" width="75" height="50"></a>
+                <a class="navbar-brand" href="#"><img src="<?php echo base_url()?>images/logo_inova.png" width="75" height="50"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -65,10 +65,10 @@
                             <a class="nav-link active" style="color: white" aria-current="page" href="../main/session"><b>Menu</b></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " style="color: white" href="../projetos/main_pj/gerencia_projetos"><b>Gerenciar Projetos</b></a>
+                            <a class="nav-link " style="color: white" href="<?php echo base_url()?>index.php/projetos/main_pj/gerencia_projetos"><b>Gerenciar Projetos</b></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " style="color: white" href="../pe/main_pe"><b>Dashboard de Indicadores</b></a>
+                            <a class="nav-link " style="color: white" href="<?php echo base_url()?>index.php/pe/main_pe"><b>Dashboard de Indicadores</b></a>
                         </li>
                     </ul>
                 </div>
@@ -95,7 +95,7 @@
                             criando também microfases e macrofases para auxiliar no planejamento do projeto.
                         </p>
                         <div class="text-center">
-                            <a class="btn btn-light" href="../projetos/main_pj/gerencia_projetos">Acessar</a>
+                            <a class="btn btn-light" href="<?php echo base_url()?>index.php/projetos/main_pj/gerencia_projetos">Acessar</a>
                         </div>
                     </div>
                 </div>
@@ -110,7 +110,7 @@
                             dos projetos passam pela Inova.
                         </p>
                         <div class="text-center">
-                            <a class="btn btn-light" href="../pe/main_pe">Acessar</a>
+                            <a class="btn btn-light" href="<?php echo base_url()?>index.php/pe/main_pe">Acessar</a>
                         </div>
                     </div>
                 </div>

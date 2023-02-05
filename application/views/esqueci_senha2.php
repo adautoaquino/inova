@@ -29,7 +29,7 @@
 		width: 100%;
 		height: 100%;
 		z-index: 9999;
-        background: url('../../images/logosemfundo.png') 50% 50% no-repeat;
+        background: url('<?php echo base_url()?>images/logosemfundo.png') 50% 50% no-repeat;
         background-size: 30%;
       }
       .rocket {
@@ -50,12 +50,12 @@
         <div class="row">
             <div class="col-md-6 offset-md-3">
                 <div class="col-md-6 offset-md-3 text-center">
-                    <img style="padding-top:30%"src="../../../../images/logosemfundo.png" width="50%">
+                    <img style="padding-top:30%"src="<?php echo base_url()?>images/logosemfundo.png" width="50%">
                     <h3 style="padding-top:3%">AutoContract</h3>
                 </div>
             </div>
         </div>
-        <form method="POST" action="../../esqueci_senha2/<?php echo $token; echo "/"; echo $usuario;?>">
+        <form method="POST" action="<?php echo base_url()?>/index.php/esqueci_senha2/<?php echo $token; echo "/"; echo $usuario;?>">
         <div class="row" style="padding-top:2%; padding-bottom:1%">
             <div class="col-md-6 offset-md-3">
                 <div class="col-md-6 offset-md-3">

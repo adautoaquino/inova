@@ -10,23 +10,12 @@ class Projetos_model extends CI_Model
         $this->load->database();
     }
 
-    public function get_primary_key()
-    {
-        $this->db->select('codprojeto');
-        $this->db->order_by('codprojeto', 'DESC');
-        $query = $this->db->get('projetos');
-        $result = $query->row()->codprojeto;
-        return $result;
-        // echo"<pre>";
-        // print_r($result);
-        // echo "</pre>";
-        // exit;
-    }
-
     public function criar_projetos($input)
     {
-        $primary_key = self::get_primary_key();
-        $input['codprojeto'] = $primary_key + 1;
+        // echo "<pre>";
+        //     print_r($input);
+        // echo "</pre>";
+        // exit;
         $input['ativo'] = 1;
         $this->db->insert("projetos", $input);
         return 1;

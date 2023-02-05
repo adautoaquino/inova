@@ -59,20 +59,20 @@
     <header>
         <nav class="navbar navbar-expand-lg bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="../../../projetos/main_pj"><img src="../../../../images/logo_inova.png" width="75" height="50"></a>
+                <a class="navbar-brand" href="<?php echo base_url()?>index.php/projetos/main_pj"><img src="<?php echo base_url()?>images/logo_inova.png" width="75" height="50"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                         <li class="nav-item">
-                            <a class="nav-link active" style="color: white" aria-current="page" href="../../../main/session"><b>Menu</b></a>
+                            <a class="nav-link active" style="color: white" aria-current="page" href="<?php echo base_url()?>index.php/main/session"><b>Menu</b></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " style="color: white" href="../../../projetos/main_pj/gerencia_projetos"><b>Gerenciar Projetos</b></a>
+                            <a class="nav-link " style="color: white" href="<?php echo base_url()?>index.php/projetos/main_pj/gerencia_projetos"><b>Gerenciar Projetos</b></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " style="color: white" href="../../../pe/main_pe"><b>Dashboard de Indicadores</b></a>
+                            <a class="nav-link " style="color: white" href="<?php echo base_url()?>index.php/pe/main_pe"><b>Dashboard de Indicadores</b></a>
                         </li>
                     </ul>
                 </div>
@@ -157,9 +157,9 @@
                                                         ?>
                                                     </td>
                                                     <td class="align-middle text-center"><button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_<?php echo $microfase['codmicrofase'] ?>">Detalhar</button>
-                                                        <a href="../../../projetos/main_pj/detalhar_microfase/<?php echo $microfase['codmicrofase'] ?>" class="btn btn-dark btn-sm" data-bs-toggle="modal">Editar</a>
-                                                        <a href="../../../projetos/main_pj/deletar_microfase/<?php echo $microfase['codmicrofase'] ?>" class="btn btn-danger btn-sm" data-bs-toggle="modal">Deletar</a>
-                                                        <a href="../../../projetos/main_pj/finalizar_microfase/<?php echo $microfase['codmicrofase'] ?>" class="btn btn-success btn-sm" data-bs-toggle="modal">Finalizar</a>
+                                                        <a href="<?php echo base_url()?>index.php/projetos/main_pj/detalhar_microfase/<?php echo $microfase['codmicrofase'] ?>" class="btn btn-dark btn-sm" data-bs-toggle="modal">Editar</a>
+                                                        <a href="<?php echo base_url()?>index.php/projetos/main_pj/deletar_microfase/<?php echo $microfase['codmicrofase'] ?>" class="btn btn-danger btn-sm" data-bs-toggle="modal">Deletar</a>
+                                                        <a href="<?php echo base_url()?>index.php/projetos/main_pj/finalizar_microfase/<?php echo $microfase['codmicrofase'] ?>" class="btn btn-success btn-sm" data-bs-toggle="modal">Finalizar</a>
                                                     </td>
                                                 </tr>
                                             <?php } ?>
@@ -202,7 +202,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                        <a href="../../../projetos/main_pj/criar_microfase/<?php echo $dados_projeto['codprojeto'] ?>/<?php echo $macrofase['codmacrofase'] ?>" class="btn btn-success">Criar Microfase</a>
+                        <a href="<?php echo base_url()?>index.php/projetos/main_pj/criar_microfase/<?php echo $dados_projeto['codprojeto'] ?>/<?php echo $macrofase['codmacrofase'] ?>" class="btn btn-success">Criar Microfase</a>
                     </div>
                 </div>
             </div>
@@ -211,8 +211,6 @@
 
 
     <div class="container text-center">
-
-    <a href="<?php echo base_url()?>"> teste</a>
 
         <div class="row" style="padding-top:2%">
             <div class=" offset-md-2 col-md-8 text-center" style="padding-bottom:4%">
@@ -340,9 +338,9 @@
                                             <td><?php echo $macrofase['data_prevista_termino'] ?></td>
                                             <td>
                                                 <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_<?php echo $macrofase['codmacrofase'] ?>">Detalhar</button>
-                                                <a href="../../../projetos/main_pj/detalhar_macrofase/<?php echo $macrofase['codmacrofase'] ?>" class="btn btn-light btn-sm" data-bs-toggle="modal">Editar</a>
-                                                <a href="../../../projetos/main_pj/deletar_macrofase/<?php echo $macrofase['codmacrofase'] ?>" class="btn btn-danger btn-sm" data-bs-toggle="modal">Deletar</a>
-                                                <a href="../../../projetos/main_pj/finalizar_macrofase/<?php echo $macrofase['codmacrofase'] ?>" class="btn btn-success btn-sm" data-bs-toggle="modal">Finalizar</a>
+                                                <a href="<?php echo base_url()?>index.php/projetos/main_pj/detalhar_macrofase/<?php echo $macrofase['codmacrofase'] ?>" class="btn btn-light btn-sm" data-bs-toggle="modal">Editar</a>
+                                                <a href="<?php echo base_url()?>index.php/projetos/main_pj/deletar_macrofase/<?php echo $macrofase['codmacrofase'] ?>" class="btn btn-danger btn-sm" data-bs-toggle="modal">Deletar</a>
+                                                <a href="<?php echo base_url()?>index.php/projetos/main_pj/finalizar_macrofase/<?php echo $macrofase['codmacrofase'] ?>" class="btn btn-success btn-sm" data-bs-toggle="modal">Finalizar</a>
                                             </td>
                                         </tr>
                                     <?php } ?>
