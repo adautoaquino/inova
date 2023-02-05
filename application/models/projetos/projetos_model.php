@@ -21,19 +21,8 @@ class Projetos_model extends CI_Model
         return 1;
     }
 
-    public function get_primary_key1()
-    {
-        $this->db->select('codmacrofase');
-        $this->db->order_by('codmacrofase', 'DESC');
-        $query = $this->db->get('macrofases');
-        $result = $query->row()->codmacrofase;
-        return $result;
-    }
-
     public function criar_macrofase($input)
     {
-        $primary_key = self::get_primary_key1();
-        $input['codmacrofase'] = $primary_key + 1;
         $input['ativo'] = 1;
         $this->db->insert("macrofases", $input);
         return 1;

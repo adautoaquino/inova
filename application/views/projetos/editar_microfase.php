@@ -10,8 +10,8 @@
     <script src="js/scripts.js"></script>
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <script src="../../libraries/jquery_mask/dist/jquery.mask.js"></script>
-    <script src="../../libraries/jquery_mask/dist/jquery.mask.min.js"></script>
+    <script src="<?php echo base_url()?>libraries/jquery_mask/dist/jquery.mask.js"></script>
+    <script src="<?php echo base_url()?>index.phplibraries/jquery_mask/dist/jquery.mask.min.js"></script>
 
 
 
@@ -59,20 +59,20 @@
     <header>
         <nav class="navbar navbar-expand-lg bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="../../projetos/main_pj"><img src="../../../../images/logo_inova.png" width="75" height="50"></a>
+                <a class="navbar-brand" href="<?php echo base_url()?>index.php/projetos/main_pj"><img src="<?php echo base_url()?>images/logo_inova.png" width="75" height="50"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                         <li class="nav-item">
-                            <a class="nav-link active" style="color: white" aria-current="page" href="../../../main/session"><b>Menu</b></a>
+                            <a class="nav-link active" style="color: white" aria-current="page" href="<?php echo base_url()?>index.php/main/session"><b>Menu</b></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " style="color: white" href="../../../projetos/main_pj/gerencia_projetos"><b>Gerenciar Projetos</b></a>
+                            <a class="nav-link " style="color: white" href="<?php echo base_url()?>index.php/projetos/main_pj/gerencia_projetos"><b>Gerenciar Projetos</b></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " style="color: white" href="../../../pe/main_pe"><b>Dashboard de Indicadores</b></a>
+                            <a class="nav-link " style="color: white" href="<?php echo base_url()?>index.php/pe/main_pe"><b>Dashboard de Indicadores</b></a>
                         </li>
                     </ul>
                 </div>
@@ -108,7 +108,7 @@
                     <div class="form row">
                         <label for="data_inicio" class="col-sm-3 col-form-label text-light"><strong> Nova Data de Início</strong></label>
                         <div class="form-group col-md-4">
-                            <input type="text" value="<?= $dados_microfase['data_inicio'] ?>" required name="data_inicio" class="form-control" id="data_inicio">
+                            <input type="date" value="<?= $dados_microfase['data_inicio'] ?>" required name="data_inicio" class="form-control" id="data_inicio">
                         </div>
                         <br>
                     </div>
@@ -116,7 +116,7 @@
                     <div class="form row">
                         <label for="data_prevista_termino" class="col-sm-3 col-form-label text-light text-center"><strong> Nova Data Prevista Término</strong></label>
                         <div class="form-group col-md-4">
-                            <input type="text" value="<?= $dados_microfase['data_prevista_termino'] ?>" required name="data_prevista_termino" data-mask="99/99/9999" class="form-control" id="data_prevista_termino">
+                            <input type="date" value="<?= $dados_microfase['data_prevista_termino'] ?>" required name="data_prevista_termino" data-mask="99/99/9999" class="form-control" id="data_prevista_termino">
                         </div>
                         <br>
                     </div>

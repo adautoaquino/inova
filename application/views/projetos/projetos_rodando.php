@@ -100,7 +100,7 @@
                                     <th>Data de Início</th>
                                     <th>Data Prevista de Término</th>
                                     <th>Status</th>
-                                    <th>Ações</th>
+                                    <th colspan="2">Ações</th>
                                 </tr>
                             </thead>
                             <tbody>

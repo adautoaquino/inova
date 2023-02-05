@@ -82,7 +82,7 @@
     <div class="container text-center">
         <div class="row" style="padding-top:2%">
             <div class=" offset-md-2 col-md-8 text-center" style="padding-bottom:4%">
-                <form method="post" action="../../main_pj/editar_macrofase/<?php echo $dados['codmacrofase'] ?>">
+                <form method="post" action="<?php echo base_url()?>index.php/projetos/main_pj/editar_macrofase/<?php echo $dados['codmacrofase'] ?>">
                     <div class="form row" style="padding-top:5%;">
                         <label for="nome" class="col-sm-3 col-form-label text-light text-center"><strong> Novo Nome da Macrofase</strong></label>
                         <div class="form-group col-md-9">
@@ -100,7 +100,7 @@
                     <div class="form row">
                         <label for="responsavel" class="col-sm-3 col-form-label text-light"><strong> Novo Responsável pela Macrofase</strong></label>
                         <div class="form-group col-md-9">
-                            <input type="text" required placeholder=" Novo responsável" required name="responsavel" value="<?= isset($dados) ? $dados['responsavel'] : "" ?>" class="form-control" id="responsavel">
+                            <input type="date" required placeholder=" Novo responsável" required name="responsavel" value="<?= isset($dados) ? $dados['responsavel'] : "" ?>" class="form-control" id="responsavel">
                         </div>
                         <br>
                     </div>
@@ -108,7 +108,7 @@
                     <div class="form row">
                         <label for="data_inicio" class="col-sm-3 col-form-label text-light"><strong> Nova Data de Início</strong></label>
                         <div class="form-group col-md-4">
-                            <input type="text" required placeholder="dd/mm/aaaa" required name="data_inicio" value="<?= isset($dados) ? $dados['data_inicio'] : "" ?>" class="form-control" id="data_inicio">
+                            <input type="date" required placeholder="dd/mm/aaaa" required name="data_inicio" value="<?= isset($dados) ? $dados['data_inicio'] : "" ?>" class="form-control" id="data_inicio">
                         </div>
                         <br>
                     </div>

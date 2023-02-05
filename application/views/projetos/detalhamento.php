@@ -96,14 +96,11 @@
                         <div class="row text-center">
                             <?php
                             if ($macrofase['ativo'] == 1) {
-                                // $date=date('m/d/Y');
-                                $data_projeto = explode('/', $macrofase['data_prevista_termino']);
-                                $data_projeto = $data_projeto[1] . '/' . $data_projeto[0] . '/' . $data_projeto[2];
-                                $data_projeto = date_create($data_projeto);
-                                $data_diff = date_diff($data_projeto, date_create());
-                                $diferenca = date_interval_format($data_diff, '%a') . ' dias';
 
-                                if ($diferenca > 0) {
+                                $data_final = new DateTime($macrofase['data_prevista_termino']);
+                                $data_agr = new DateTime();
+                            
+                                if ($data_agr > $data_final) {
                                     echo '<h5 style="color:red">Atrasada</h5>';
                                 } else {
                                     echo '<h5 style="color:yellow">No prazo</h5>';
@@ -139,14 +136,11 @@
                                                     <td class="align-middle text-center">
                                                         <?php
                                                         if ($microfase['ativo'] == 1) {
-                                                            // $date=date('m/d/Y');
-                                                            $data_projeto = explode('/', $microfase['data_prevista_termino']);
-                                                            $data_projeto = $data_projeto[1] . '/' . $data_projeto[0] . '/' . $data_projeto[2];
-                                                            $data_projeto = date_create($data_projeto);
-                                                            $data_diff = date_diff($data_projeto, date_create());
-                                                            $diferenca = date_interval_format($data_diff, '%a') . ' dias';
 
-                                                            if ($diferenca > 0) {
+                                                            $data_final = new DateTime($microfase['data_prevista_termino']);
+                                                            $data_agr = new DateTime();
+                                                        
+                                                            if ($data_agr > $data_final) {
                                                                 echo '<p style="color:red"><b>Atrasada</b></p>';
                                                             } else {
                                                                 echo '<p style="color:yellow"><b>No prazo</b></p>';
@@ -158,8 +152,8 @@
                                                     </td>
                                                     <td class="align-middle text-center"><button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_<?php echo $microfase['codmicrofase'] ?>">Detalhar</button>
                                                         <a href="<?php echo base_url()?>index.php/projetos/main_pj/detalhar_microfase/<?php echo $microfase['codmicrofase'] ?>" class="btn btn-dark btn-sm" data-bs-toggle="modal">Editar</a>
-                                                        <a href="<?php echo base_url()?>index.php/projetos/main_pj/deletar_microfase/<?php echo $microfase['codmicrofase'] ?>" class="btn btn-danger btn-sm" data-bs-toggle="modal">Deletar</a>
-                                                        <a href="<?php echo base_url()?>index.php/projetos/main_pj/finalizar_microfase/<?php echo $microfase['codmicrofase'] ?>" class="btn btn-success btn-sm" data-bs-toggle="modal">Finalizar</a>
+                                                        <a href="<?php echo base_url()?>index.php/projetos/main_pj/deletar_microfase/<?php echo $microfase['codmicrofase'] ?>" class="btn btn-danger btn-sm">Deletar</a>
+                                                        <a href="<?php echo base_url()?>index.php/projetos/main_pj/finalizar_microfase/<?php echo $microfase['codmicrofase'] ?>" class="btn btn-success btn-sm">Finalizar</a>
                                                     </td>
                                                 </tr>
                                             <?php } ?>
@@ -261,7 +255,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form method="post" action="../criar_macrofase/<?php echo $dados_projeto['codprojeto'] ?>">
+                        <form method="post" action="<?php echo base_url()?>index.php/projetos/main_pj/criar_macrofase/<?php echo $dados_projeto['codprojeto'] ?>">
                             <div class="form row" style="padding-top:5%;">
                                 <label for="nome" class="col-sm-3 col-form-label text-center"><strong> Nome da Macrofase</strong></label>
                                 <div class="form-group col-md-9">
@@ -286,7 +280,7 @@
                             <div class="form row">
                                 <label for="data_inicio" class="col-sm-3 col-form-label  text-center"><strong> Início</strong></label>
                                 <div class="form-group col-md-4">
-                                    <input type="text" placeholder="dd/mm/aaaa" value="" name="data_inicio" class="form-control" id="data_inicio">
+                                    <input type="date" placeholder="dd/mm/aaaa" value="" name="data_inicio" class="form-control" id="data_inicio">
                                 </div>
                                 <br>
                             </div>
@@ -294,7 +288,7 @@
                             <div class="form row">
                                 <label for="data_prevista_termino" class="col-sm-3 col-form-label text-center"><strong> Fim Previsto</strong></label>
                                 <div class="form-group col-md-4">
-                                    <input type="text" placeholder="dd/mm/aaaa" value="" name="data_prevista_termino" data-mask="99/99/9999" class="form-control" id="data_prevista_termino">
+                                    <input type="date" placeholder="dd/mm/aaaa" value="" name="data_prevista_termino" data-mask="99/99/9999" class="form-control" id="data_prevista_termino">
                                 </div>
                                 <br>
                             </div>
@@ -339,8 +333,8 @@
                                             <td>
                                                 <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_<?php echo $macrofase['codmacrofase'] ?>">Detalhar</button>
                                                 <a href="<?php echo base_url()?>index.php/projetos/main_pj/detalhar_macrofase/<?php echo $macrofase['codmacrofase'] ?>" class="btn btn-light btn-sm" data-bs-toggle="modal">Editar</a>
-                                                <a href="<?php echo base_url()?>index.php/projetos/main_pj/deletar_macrofase/<?php echo $macrofase['codmacrofase'] ?>" class="btn btn-danger btn-sm" data-bs-toggle="modal">Deletar</a>
-                                                <a href="<?php echo base_url()?>index.php/projetos/main_pj/finalizar_macrofase/<?php echo $macrofase['codmacrofase'] ?>" class="btn btn-success btn-sm" data-bs-toggle="modal">Finalizar</a>
+                                                <a href="<?php echo base_url()?>index.php/projetos/main_pj/deletar_macrofase/<?php echo $macrofase['codmacrofase'] ?>" class="btn btn-danger btn-sm">Deletar</a>
+                                                <a href="<?php echo base_url()?>index.php/projetos/main_pj/finalizar_macrofase/<?php echo $macrofase['codmacrofase'] ?>" class="btn btn-success btn-sm">Finalizar</a>
                                             </td>
                                         </tr>
                                     <?php } ?>
