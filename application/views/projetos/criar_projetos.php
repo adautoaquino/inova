@@ -108,7 +108,7 @@
                     <div class="form row">
                         <label for="data_inicio" class="col-sm-3 col-form-label text-light"><strong> Data de Início</strong></label>
                         <div class="form-group col-md-4">
-                            <input type="text" required name="data_inicio" required placeholder="dd/mm/aaaa" class="form-control" id="data_inicio">
+                            <input type="date" required name="data_inicio" required placeholder="dd/mm/aaaa" class="form-control" id="data_inicio">
                         </div>
                         <br>
                     </div>
@@ -116,7 +116,7 @@
                     <div class="form row">
                         <label for="data_prevista_termino" class="col-sm-3 col-form-label text-light text-center"><strong> Data Prevista Término</strong></label>
                         <div class="form-group col-md-4">
-                            <input type="text" required name="data_prevista_termino" required placeholder="dd/mm/aaaa" data-mask="99/99/9999" class="form-control" id="data_prevista_termino">
+                            <input type="date" required name="data_prevista_termino" required placeholder="dd/mm/aaaa" data-mask="99/99/9999" class="form-control" id="data_prevista_termino">
                         </div>
                         <br>
                     </div>
