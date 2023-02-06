@@ -82,12 +82,12 @@ class main_pj extends CI_Controller
 			$retorno = $this->projetos_model->criar_macrofase($input);
 			if ($retorno == 1) {
 				echo "<script>alert('Sua macrofase foi adicionada!!');
-					window.location.assign('".base_url()."index.php/projetos/main_pj/detalhar_projeto/".$codprojeto."');</script>
+					window.location.assign('" . base_url() . "index.php/projetos/main_pj/detalhar_projeto/" . $codprojeto . "');</script>
 					
 					";
 			} else {
 				echo "<script>alert('Não foi possível criar sua macrofase...');
-					window.location.assign('".base_url()."index.php/projetos/main_pj/detalhar_projeto/".$codprojeto."');</script>
+					window.location.assign('" . base_url() . "index.php/projetos/main_pj/detalhar_projeto/" . $codprojeto . "');</script>
 					
 					";
 			}
@@ -114,12 +114,12 @@ class main_pj extends CI_Controller
 			$retorno = $this->projetos_model->criar_microfase($input);
 			if ($retorno == 1) {
 				echo "<script>alert('Sua microfase foi adicionada!!');
-					window.location.assign('".base_url()."index.php/projetos/main_pj/detalhar_projeto/".$codprojeto."');</script>
+					window.location.assign('" . base_url() . "index.php/projetos/main_pj/detalhar_projeto/" . $codprojeto . "');</script>
 					
 					";
 			} else {
 				echo "<script>alert('Não foi possível criar sua microfase...');
-				window.location.assign('".base_url()."index.php/projetos/main_pj/detalhar_projeto/".$codprojeto."');</script>
+				window.location.assign('" . base_url() . "index.php/projetos/main_pj/detalhar_projeto/" . $codprojeto . "');</script>
 				";
 			}
 		}
@@ -131,7 +131,7 @@ class main_pj extends CI_Controller
 		if ($nome_projeto == "") {
 			$this->load->view('Projetos/criar_projetos');
 		} else {
-			
+
 			// $data_inicio = explode('/', $this->input->post('data_inicio'));
 			// $data_inicio = $data_inicio[2].'-'.$data_inicio[1].'-'.$data_inicio[0];
 			// $data_inicio = strtotime($data_inicio);
@@ -145,17 +145,17 @@ class main_pj extends CI_Controller
 				"descricao"    => $this->input->post('descricao'),
 				"responsavel"  => $this->input->post('responsavel'),
 				"data_inicio"  => $this->input->post('data_inicio'),
-				"data_prevista_termino" => $this->input->post('data_inicio')
+				"data_prevista_termino" => $this->input->post('data_prevista_termino')
 			);
 			$retorno = $this->projetos_model->criar_projetos($input);
 			if ($retorno == 1) {
 				echo "<script>alert('Seu projeto foi criado com suceso!!');
-					window.location.assign('".base_url()."projetos/main_pj/gerencia_projetos');</script>
+					window.location.assign('" . base_url() . "index.php/projetos/main_pj/gerencia_projetos');</script>
 					
 					";
 			} else {
 				echo "<script>alert('Não foi possível criar seu projeto...');
-					window.location.assign('".base_url()."projetos/main_pj/gerencia_projetos');</script>
+					window.location.assign('" . base_url() . "index.php/projetos/main_pj/gerencia_projetos');</script>
 					
 					";
 			}
@@ -237,7 +237,7 @@ class main_pj extends CI_Controller
 		$this->load->model('Projetos_model');
 		$this->projetos_model->deletar_microfase($codmicrofase);
 		echo "<script>alert('Sua microfase foi deletada!');
-					window.location.assign('".base_url()."index.php/projetos/main_pj/gerencia_projetos');</script>
+					window.location.assign('" . base_url() . "index.php/projetos/main_pj/gerencia_projetos');</script>
 			
 			";
 	}
@@ -247,11 +247,11 @@ class main_pj extends CI_Controller
 		$return = $this->projetos_model->finalizar_macrofase($codmacrofase);
 		if ($return == 1) {
 			echo "<script>alert('Sua macrofase foi finalizado com suceso!!');
-			window.location.assign('".base_url()."index.php/projetos/main_pj/gerencia_projetos');</script>
+			window.location.assign('" . base_url() . "index.php/projetos/main_pj/gerencia_projetos');</script>
 			";
 		} else {
 			echo "<script>alert('Não foi possível finalizar sua macrofase...');
-			window.location.assign('".base_url()."index.php/projetos/main_pj/gerencia_projetos');</script>
+			window.location.assign('" . base_url() . "index.php/projetos/main_pj/gerencia_projetos');</script>
 			";
 		}
 	}
@@ -261,11 +261,11 @@ class main_pj extends CI_Controller
 		$return = $this->projetos_model->finalizar_microfase($codmicrofase);
 		if ($return == 1) {
 			echo "<script>alert('Sua microfase foi finalizado com suceso!!');
-			window.location.assign('".base_url()."index.php/projetos/main_pj/gerencia_projetos');</script>
+			window.location.assign('" . base_url() . "index.php/projetos/main_pj/gerencia_projetos');</script>
 			";
 		} else {
 			echo "<script>alert('Não foi possível finalizar sua microfase...');
-			window.location.assign('".base_url()."index.php/projetos/main_pj/gerencia_projetos');</script>
+			window.location.assign('" . base_url() . "index.php/projetos/main_pj/gerencia_projetos');</script>
 			";
 		}
 	}
@@ -275,11 +275,11 @@ class main_pj extends CI_Controller
 		$return = $this->projetos_model->finalizar_projeto($codprojeto);
 		if ($return == 1) {
 			echo "<script>alert('Seu projeto foi finalizado com suceso!!');
-			window.location.assign('".base_url()."index.php/projetos/main_pj/gerencia_projetos');</script>
+			window.location.assign('" . base_url() . "index.php/projetos/main_pj/gerencia_projetos');</script>
 			";
 		} else {
 			echo "<script>alert('Não foi possível finalizar seu projeto...');
-			window.location.assign('".base_url()."index.php/projetos/main_pj/gerencia_projetos');</script>
+			window.location.assign('" . base_url() . "index.php/projetos/main_pj/gerencia_projetos');</script>
 			";
 		}
 	}

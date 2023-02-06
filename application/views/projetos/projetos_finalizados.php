@@ -55,20 +55,20 @@
     <header>
         <nav class="navbar navbar-expand-lg bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="<?php echo base_url()?>index.php/projetos/main_pj"><img src="<?php echo base_url()?>images/logo_inova.png" width="75" height="50"></a>
+                <a class="navbar-brand" href="<?php echo base_url() ?>index.php/projetos/main_pj"><img src="<?php echo base_url() ?>images/logo_inova.png" width="75" height="50"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                         <li class="nav-item">
-                            <a class="nav-link active" style="color: white" aria-current="page" href="<?php echo base_url()?>index.php/main/session"><b>Menu</b></a>
+                            <a class="nav-link active" style="color: white" aria-current="page" href="<?php echo base_url() ?>index.php/main/session"><b>Menu</b></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " style="color: white" href="<?php echo base_url()?>index.php/projetos/main_pj/gerencia_projetos"><b>Gerenciar Projetos</b></a>
+                            <a class="nav-link " style="color: white" href="<?php echo base_url() ?>index.php/projetos/main_pj/gerencia_projetos"><b>Gerenciar Projetos</b></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " style="color: white" href="<?php echo base_url()?>index.php/pe/main_pe"><b>Dashboard de Indicadores</b></a>
+                            <a class="nav-link " style="color: white" href="<?php echo base_url() ?>index.php/pe/main_pe"><b>Dashboard de Indicadores</b></a>
                         </li>
                     </ul>
                 </div>
@@ -108,18 +108,28 @@
                                     <tr>
                                         <td><?php echo $projeto['nome_projeto'] ?></td>
                                         <td><?php echo $projeto['responsavel'] ?></td>
-                                        <td><?php echo $projeto['data_inicio'] ?></td>
-                                        <td><?php echo $projeto['data_prevista_termino'] ?></td>
+                                        <td><?php $data_format = $projeto['data_inicio'];
+                                            $result = explode('-', $data_format);
+                                            $dia = $result[2];
+                                            $mes = $result[1];
+                                            $ano = $result[0];
+                                            echo "$dia/$mes/$ano"; ?></td>
+                                        <td><?php $data_format = $projeto['data_prevista_termino'];
+                                            $result = explode('-', $data_format);
+                                            $dia = $result[2];
+                                            $mes = $result[1];
+                                            $ano = $result[0];
+                                            echo "$dia/$mes/$ano"; ?></td>
                                         <td>
-                                        <?php
+                                            <?php
                                             // $date=date('m/d/Y');
                                             $data_final = new DateTime($projeto['data_prevista_termino']);
                                             $data_agr = new DateTime();
-                                        
+
                                             if ($data_agr > $data_final) {
-                                                echo '<b>Atrasado</b>';
+                                                echo '<b>Entregue com Atraso</b>';
                                             } else {
-                                                echo '<b>No prazo</b>';
+                                                echo '<b>Entregue no prazo</b>';
                                             }
                                             ?>
                                         </td>
