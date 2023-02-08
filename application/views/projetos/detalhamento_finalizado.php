@@ -83,7 +83,7 @@
 
     <!-- Button trigger modal -->
 
-    <?php foreach ($macrofases as $macrofase) { ?>
+    <?php foreach ($macrofases_finalizado as $macrofase) { ?>
         <!-- Modal -->
         <div class="modal modal-xl fade" id="Modal_<?php echo $macrofase['codmacrofase'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -126,9 +126,9 @@
                                 </thead>
                                 <tbody>
                                     <?php
-                                    foreach ($microfases as $microfase) {
+                                    foreach ($microfases_finalizado as $microfase) {
                                         if ($microfase['codmacrofase'] == $macrofase['codmacrofase']) { ?>
-                                            <?php if ($microfase['ativo'] == 1) { ?>
+                                            <?php if ($microfase['ativo'] == 0) { ?>
                                                 <tr>
                                                     <td class="align-middle text-center"><?php echo $microfase['nome_microfase'] ?></td>
                                                     <td class="align-middle text-center"><?php $data_format = $macrofase['data_inicio'];
@@ -160,10 +160,7 @@
                                                         }
                                                         ?>
                                                     </td>
-                                                    <td class="align-middle text-center"><button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_<?php echo $microfase['codmicrofase'] ?>">Detalhar</button>
-                                                        <a href="<?php echo base_url() ?>index.php/projetos/main_pj/detalhar_microfase/<?php echo $microfase['codmicrofase'] ?>" class="btn btn-dark btn-sm">Editar</a>
-                                                        <a href="<?php echo base_url() ?>index.php/projetos/main_pj/deletar_microfase/<?php echo $microfase['codmicrofase'] ?>" class="btn btn-danger btn-sm">Deletar</a>
-                                                        <a href="<?php echo base_url() ?>index.php/projetos/main_pj/finalizar_microfase/<?php echo $microfase['codmicrofase'] ?>" class="btn btn-success btn-sm">Finalizar</a>
+                                                    <td class="align-middle text-center"><button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_<?php echo $microfase['codmicrofase'] ?>">Detalhar</button>
                                                     </td>
                                                 </tr>
                                             <?php } ?>
@@ -215,8 +212,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                        <a href="<?php echo base_url() ?>index.php/projetos/main_pj/criar_microfase/<?php echo $dados_projeto['codprojeto'] ?>/<?php echo $macrofase['codmacrofase'] ?>" class="btn btn-success">Criar Microfase</a>
+                        <button data-bs-dismiss="modal" class="btn btn-danger">Fechar</button>
                     </div>
                 </div>
             </div>
@@ -231,21 +227,21 @@
                 <div class="form row" style="padding-top:5%;">
                     <label for="nome" class="col-sm-3 col-form-label text-light text-center"><strong> Nome do Projeto</strong></label>
                     <div class="form-group col-md-9">
-                        <input type="text" required name="nome" readonly value="<?= $dados_projeto['nome_projeto'] ?>" class="form-control" id="nome">
+                        <input type="text" required name="nome" readonly value="<?= $dados_projeto_finalizado['nome_projeto'] ?>" class="form-control" id="nome">
                     </div>
                 </div>
                 <br>
                 <div class="form row">
                     <label for="descricao" class="col-sm-3 col-form-label text-light text-center"><strong> Descrição do Projeto</strong></label>
                     <div class="form-group col-md-9">
-                        <textarea rows="5" type="text" readonly name="descricao" class="form-control" id="descricao"><?= $dados_projeto['descricao'] ?></textarea>
+                        <textarea rows="5" type="text" readonly name="descricao" class="form-control" id="descricao"><?= $dados_projeto_finalizado['descricao'] ?></textarea>
                     </div>
                 </div>
                 <br>
                 <div class="form row">
                     <label for="responsavel" class="col-sm-3 col-form-label text-light"><strong> Responsável pelo Projeto</strong></label>
                     <div class="form-group col-md-9">
-                        <input type="text" readonly value="<?= $dados_projeto['responsavel'] ?>" name="responsavel" class="form-control" id="responsavel">
+                        <input type="text" readonly value="<?= $dados_projeto_finalizado['responsavel'] ?>" name="responsavel" class="form-control" id="responsavel">
                     </div>
                     <br>
                 </div>
@@ -253,7 +249,7 @@
                 <div class="form row">
                     <label for="data_inicio" class="col-sm-3 col-form-label text-light"><strong> Data de Início</strong></label>
                     <div class="form-group col-md-4">
-                        <input type="text" readonly value="<?php $data_format = $dados_projeto['data_inicio'];
+                        <input type="text" readonly value="<?php $data_format = $dados_projeto_finalizado['data_inicio'];
                                                             $result = explode('-', $data_format);
                                                             $dia = $result[2];
                                                             $mes = $result[1];
@@ -264,9 +260,9 @@
                 </div>
                 <br>
                 <div class="form row">
-                    <label for="data_prevista_termino" class="col-sm-3 col-form-label text-light text-center"><strong> Data Prevista de Término</strong></label>
+                    <label for="data_prevista_termino" class="col-sm-3 col-form-label text-light text-center"><strong> Data de Término</strong></label>
                     <div class="form-group col-md-4">
-                        <input type="text" readonly value="<?php $data_format = $dados_projeto['data_prevista_termino'];
+                        <input type="text" readonly value="<?php $data_format = $dados_projeto_finalizado['data_prevista_termino'];
                                                             $result = explode('-', $data_format);
                                                             $dia = $result[2];
                                                             $mes = $result[1];
@@ -277,71 +273,16 @@
                 </div>
             </div>
         </div>
-        <div class="modal modal-xl fade" id="Modal_criar_macrofase" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel"> Criar Macrofase do Projeto: <?php echo $dados_projeto['nome_projeto'] ?></h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form method="post" action="<?php echo base_url() ?>index.php/projetos/main_pj/criar_macrofase/<?php echo $dados_projeto['codprojeto'] ?>">
-                            <div class="form row" style="padding-top:5%;">
-                                <label for="nome" class="col-sm-3 col-form-label text-center"><strong> Nome da Macrofase</strong></label>
-                                <div class="form-group col-md-9">
-                                    <input type="text" placeholder="Nome da Macrofase" required name="nome" value="" class="form-control" id="nome">
-                                </div>
-                            </div>
-                            <div class="form row" style="padding-top:5%;">
-                                <label for="descricao" class="col-sm-3 col-form-label text-center"><strong> Descrição</strong></label>
-                                <div class="form-group col-md-9">
-                                    <textarea rows="5" type="text" value="" required placeholder="Escreva um pouco sobre a macrofase..." name="descricao" class="form-control" id="descricao"></textarea>
-                                </div>
-                            </div>
-                            <br>
-                            <div class="form row">
-                                <label for="responsavel" class="col-sm-3 col-form-label text-center"><strong> Responsável</strong></label>
-                                <div class="form-group col-md-9">
-                                    <input type="text" placeholder="Responsável pela Macrofase" value="" name="responsavel" class="form-control" id="responsavel">
-                                </div>
-                                <br>
-                            </div>
-                            <br>
-                            <div class="form row">
-                                <label for="data_inicio" class="col-sm-3 col-form-label  text-center"><strong> Início</strong></label>
-                                <div class="form-group col-md-4">
-                                    <input type="date" placeholder="dd/mm/aaaa" value="" name="data_inicio" class="form-control" id="data_inicio">
-                                </div>
-                                <br>
-                            </div>
-                            <br>
-                            <div class="form row">
-                                <label for="data_prevista_termino" class="col-sm-3 col-form-label text-center"><strong> Fim Previsto</strong></label>
-                                <div class="form-group col-md-4">
-                                    <input type="date" placeholder="dd/mm/aaaa" value="" name="data_prevista_termino" data-mask="99/99/9999" class="form-control" id="data_prevista_termino">
-                                </div>
-                                <br>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                                <button type="submit" class="btn btn-success">Criar Macrofase</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
+
         <div class="row" style="padding-top:1%; padding-bottom:2%;">
             <div class="card bg-dark" style="width: 100%;">
                 <div class="table-responsive">
                     <table class="table table-dark table-striped">
                         <thead>
                             <tr>
-                                <th colspan="4">Macrofases do Projeto
-                                    <button type="button" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_criar_macrofase">Adicionar Macrofase ao Projeto</button>
-                                </th>
+                                <th colspan="4">Macrofases do Projeto</th>
                             </tr>
-                            <?php if (count($macrofases) > 0) { ?>
+                            <?php if (count($macrofases_finalizado) > 0) { ?>
                                 <tr>
                                     <th>Macrofase</th>
                                     <th>Início</th>
@@ -352,10 +293,10 @@
                                 echo "<tr><th style='color:red; font-size:80%'>Nenhum Resultado Encontrado</th></td>";
                             } ?>
                         </thead>
-                        <?php if (count($macrofases) > 0) { ?>
+                        <?php if (count($macrofases_finalizado) > 0) { ?>
                             <tbody>
-                                <?php foreach ($macrofases as $macrofase) { ?>
-                                    <?php if ($macrofase['ativo'] == 1) { ?>
+                                <?php foreach ($macrofases_finalizado as $macrofase) { ?>
+                                    <?php if ($macrofase['ativo'] == 0) { ?>
                                         <tr>
                                             <td><?php echo $macrofase['nome_macrofase'] ?></td>
                                             <td><?php
@@ -373,10 +314,7 @@
                                                 $ano = $result[0];
                                                 echo "$dia/$mes/$ano"; ?></td>
                                             <td>
-                                                <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_<?php echo $macrofase['codmacrofase'] ?>">Detalhar</button>
-                                                <a href="<?php echo base_url() ?>index.php/projetos/main_pj/detalhar_macrofase/<?php echo $macrofase['codmacrofase'] ?>" class="btn btn-light btn-sm">Editar</a>
-                                                <a href="<?php echo base_url() ?>index.php/projetos/main_pj/deletar_macrofase/<?php echo $macrofase['codmacrofase'] ?>" class="btn btn-danger btn-sm">Deletar</a>
-                                                <a href="<?php echo base_url() ?>index.php/projetos/main_pj/finalizar_macrofase/<?php echo $macrofase['codmacrofase'] ?>" class="btn btn-success btn-sm">Finalizar</a>
+                                                <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_<?php echo $macrofase['codmacrofase'] ?>">Detalhar</button>
                                             </td>
                                         </tr>
                                     <?php } ?>
