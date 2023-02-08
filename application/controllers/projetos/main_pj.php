@@ -158,12 +158,12 @@ class main_pj extends CI_Controller
 			$retorno = $this->projetos_model->criar_projetos($input);
 			if ($retorno == 1) {
 				echo "<script>alert('Seu projeto foi criado com suceso!!');
-					window.location.assign('" . base_url() . "index.php/projetos/main_pj/detalhar_projeto');</script>
+					window.location.assign('" . base_url() . "index.php/projetos/main_pj/gerencia_projetos');</script>
 					
 					";
 			} else {
 				echo "<script>alert('Não foi possível criar seu projeto...');
-					window.location.assign('" . base_url() . "index.php/projetos/main_pj/detalhar_projeto');</script>
+					window.location.assign('" . base_url() . "index.php/projetos/main_pj/gerencia_projetos');</script>
 					
 					";
 			}
