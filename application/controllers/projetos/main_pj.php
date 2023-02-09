@@ -172,6 +172,11 @@ class main_pj extends CI_Controller
 
 	public function editar_macrofase($codmacrofase)
 	{
+		$dados = $this->projetos_model->get_macrofase($codmacrofase);
+		// echo "<pre>";
+		// 	print_r($dados);
+		// echo "</pre>";
+		// exit;
 		$data['codmacrofase'] = $codmacrofase;
 		$nome_macrofase = $this->input->post('nome');
 		if ($nome_macrofase == "") {
@@ -188,12 +193,12 @@ class main_pj extends CI_Controller
 			$retorno = $this->projetos_model->editar_macrofase($input);
 			if ($retorno == 1) {
 				echo "<script>alert('Sua macrofase foi alterada!!');
-					window.location.assign('../../main_pj/detalhar_projeto');</script>
+					window.location.assign('../../main_pj/detalhar_projeto/".$dados['codprojeto']."');</script>
 					
 					";
 			} else {
 				echo "<script>alert('Não foi possível alterar sua macrofase...');
-					window.location.assign('../../main_pj/detalhar_projeto');</script>
+					window.location.assign('../../main_pj/detalhar_projeto/".$dados['codprojeto']."');</script>
 					
 					";
 			}
