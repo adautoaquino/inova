@@ -102,6 +102,11 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-1 text-center">
+                <button class="btn btn-danger" onclick="history.back()">Voltar</button>
+            </div>
+        </div>
     </div>
     <footer>
 

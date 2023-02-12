@@ -75,7 +75,7 @@
             </div>
         </nav>
     </header>
-    <div class="container text-center">
+    <div class="container-fluid text-center">
         <div class="row" style="padding-top:5%">
             <div class="col-md-10 offset-md-1">
                 <div class="card bg-dark text-white">

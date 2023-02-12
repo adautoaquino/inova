@@ -298,6 +298,45 @@ class main_pj extends CI_Controller
 		}
 	}
 
+	public function editar_projeto($codprojeto){
+		$data['codprojeto'] = $codprojeto;
+		$data['info_projeto'] = $this->projetos_model->get_projeto($codprojeto);
+		$nome_projeto = $this->input->post('nome');
+		if ($nome_projeto == "") {
+			$this->load->view('Projetos/editar_projeto', $data);
+		} else {
+
+			// $data_inicio = explode('/', $this->input->post('data_inicio'));
+			// $data_inicio = $data_inicio[2].'-'.$data_inicio[1].'-'.$data_inicio[0];
+			// $data_inicio = strtotime($data_inicio);
+
+			// $data_termino = explode('/', $this->input->post('data_prevista_termino'));
+			// $data_termino = $data_termino[2].'-'.$data_termino[1].'-'.$data_termino[0];
+			// $data_inicio = strtotime($data_inicio);
+
+			$input = array(
+				"nome_projeto" => $nome_projeto,
+				"descricao"    => $this->input->post('descricao'),
+				"responsavel"  => $this->input->post('responsavel'),
+				"data_inicio"  => $this->input->post('data_inicio'),
+				"data_prevista_termino" => $this->input->post('data_prevista_termino')
+			);
+			$retorno = $this->projetos_model->editar_projeto($codprojeto, $input);
+			if ($retorno == 1) {
+				echo "<script>alert('Seu projeto foi editado com suceso!!');
+					window.location.assign('" . base_url() . "index.php/projetos/main_pj/gerencia_projetos');</script>
+					
+					";
+			} else {
+				echo "<script>alert('Não foi possível editar seu projeto...');
+					window.location.assign('" . base_url() . "index.php/projetos/main_pj/gerencia_projetos');</script>
+					
+					";
+			}
+		}
+
+	}
+
 	public function projetos_finalizados()
 	{
 		$data['projetos'] = $this->projetos_model->get_projetos_finalizados();

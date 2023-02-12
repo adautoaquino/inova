@@ -46,6 +46,16 @@ class Projetos_model extends CI_Model
         return 1;
     }
 
+    public function editar_projeto($codprojeto, $input){
+        $this->db->where('codprojeto', $codprojeto);
+        $query = $this->db->update('projetos', $input);
+        if($query){
+            return 1;
+        }else{
+            return 2;
+        }
+    }
+
     public function get_macrofases_projeto($codprojeto)
     {
         $this->db->where('codprojeto', $codprojeto);
@@ -180,5 +190,11 @@ class Projetos_model extends CI_Model
         } else {
             return 0;
         }
+    }
+
+    public function get_projeto($codprojeto){
+        $this->db->where('codprojeto', $codprojeto);
+        $query = $this->db->get('projetos');
+        return $query->row_array();
     }
 }
