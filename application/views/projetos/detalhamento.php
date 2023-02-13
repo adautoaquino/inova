@@ -131,13 +131,13 @@
                                             <?php if ($microfase['ativo'] == 1) { ?>
                                                 <tr>
                                                     <td class="align-middle text-center"><?php echo $microfase['nome_microfase'] ?></td>
-                                                    <td class="align-middle text-center"><?php $data_format = $macrofase['data_inicio'];
+                                                    <td class="align-middle text-center"><?php $data_format = $microfase['data_inicio'];
                                                                                             $result = explode('-', $data_format);
                                                                                             $dia = $result[2];
                                                                                             $mes = $result[1];
                                                                                             $ano = $result[0];
                                                                                             echo "$dia/$mes/$ano"; ?></td>
-                                                    <td class="align-middle text-center"><?php $data_format = $macrofase['data_prevista_termino'];
+                                                    <td class="align-middle text-center"><?php $data_format = $microfase['data_prevista_termino'];
                                                                                             $result = explode('-', $data_format);
                                                                                             $dia = $result[2];
                                                                                             $mes = $result[1];

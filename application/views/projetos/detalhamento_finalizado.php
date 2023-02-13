@@ -130,13 +130,13 @@
                                         if ($microfase['codmacrofase'] == $macrofase['codmacrofase']) { ?>
                                             <tr>
                                                 <td class="align-middle text-center"><?php echo $microfase['nome_microfase'] ?></td>
-                                                <td class="align-middle text-center"><?php $data_format = $macrofase['data_inicio'];
+                                                <td class="align-middle text-center"><?php $data_format = $microfase['data_inicio'];
                                                                                         $result = explode('-', $data_format);
                                                                                         $dia = $result[2];
                                                                                         $mes = $result[1];
                                                                                         $ano = $result[0];
                                                                                         echo "$dia/$mes/$ano"; ?></td>
-                                                <td class="align-middle text-center"><?php $data_format = $macrofase['data_prevista_termino'];
+                                                <td class="align-middle text-center"><?php $data_format = $microfase['data_prevista_termino'];
                                                                                         $result = explode('-', $data_format);
                                                                                         $dia = $result[2];
                                                                                         $mes = $result[1];
@@ -159,7 +159,7 @@
                                                     }
                                                     ?>
                                                 </td>
-                                                <td class="align-middle text-center"><button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_<?php echo $microfase['codmicrofase'] ?>">Detalhar</button>
+                                                <td> <a href="<?php echo base_url() ?>index.php/projetos/main_pj/detalhar_microfase/<?php echo $microfase['codmicrofase'] ?>" class="btn btn-danger btn-sm">Detalhar</a>
                                                 </td>
                                             </tr>
                                     <?php
