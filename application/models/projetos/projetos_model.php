@@ -197,4 +197,85 @@ class Projetos_model extends CI_Model
         $query = $this->db->get('projetos');
         return $query->row_array();
     }
+    public function get_dados_gerentes_responsaveis(){
+        $this->db->where('ativo', 0);
+        $query = $this->db->get('projetos');
+        $result = $query->result_array();
+        $dados = [];
+        foreach($result as $item => $result_item){
+            if(in_array($result_item['responsavel'], $dados)){
+                $dados[$result_item['responsavel']] = $dados[$result_item['responsavel']] + 1;
+            }else{
+                $dados[$result_item['responsavel']] =1;
+            }
+        }
+    }
+
+    public function get_dados_projetos_rodando(){
+
+        $this->db->where('ativo', 1);
+        $query = $this->db->get('projetos');
+        $result = $query->result_array();
+        $rodando_atrasado = [];
+        $rodando_no_prazo =[];
+        if(count($result) != 0){
+            foreach($result as $item => $result_item){
+                $data_final = new DateTime($result_item['data_prevista_termino']);
+                $data_agr = new DateTime();
+                if ($data_agr > $data_final) {
+                    $rodando_atrasado[$item] = $result_item;
+                } else {
+                    $rodando_no_prazo[$item] = $result_item;
+                }
+            }
+            if(count($rodando_atrasado) != 0){
+                $dados['rodando_atrasado'] = count($rodando_atrasado);
+            }else{
+                $dados['rodando_atrasado'] = 0;
+            }
+            if(count($rodando_no_prazo) != 0){
+                $dados['rodando_no_prazo'] = count($rodando_no_prazo);
+            }else{
+                $dados['rodando_no_prazo'] = 0;
+            }
+        }else{
+            $dados['rodando_atrasado'] = 0;
+            $dados['rodando_no_prazo'] = 0;
+        }
+        return $dados;
+        // echo "<pre>";
+        //     print_r($dados);
+        // echo "</pre>";
+        // exit;
+    }
+    public function get_dados_projetos_finalizados(){
+
+        $this->db->where('ativo', 0);
+        $query = $this->db->get('projetos');
+        $result = $query->result_array();
+        $finalizado_atrasado = [];
+        $finalizado_no_prazo = [];
+        foreach($result as $item => $result_item){
+            $data_final = new DateTime($result_item['data_finalizacao']);
+            $data_agr = new DateTime($result_item['data_prevista_termino']);
+            if ($data_agr < $data_final) {
+                $finalizado_atrasado[$item] = $result_item;
+            } else {
+                $finalizado_no_prazo[$item] = $result_item;
+            }
+        }
+        if(count($finalizado_atrasado) != 0){
+            $dados['finalizado_atrasado'] = count($finalizado_atrasado);
+        }
+        if(count($finalizado_no_prazo) != 0){
+            $dados['finalizado_no_prazo'] = count($finalizado_no_prazo);
+        }
+        return $dados;
+        // echo "<pre>";
+        //     print_r($dados);
+        // echo "</pre>";
+        // exit;
+    }
+        
 }
+    
