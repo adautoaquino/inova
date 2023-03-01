@@ -347,4 +347,14 @@ class main_pj extends CI_Controller
 		$data['projetos'] = $this->projetos_model->get_projetos_finalizados();
 		$this->load->view('Projetos/projetos_finalizados', $data);
 	}
+
+	public function dashboard()
+	{
+		$data['dados_reponsaveis'] = $this->projetos_model->get_dados_gerentes_responsaveis();
+		$data['dados_rodando'] = $this->projetos_model->get_dados_projetos_rodando();
+		$data['dados'] = $this->projetos_model->get_dados_projetos_finalizados();
+		$this->load->view('Projetos/dashboard', $data);
+	}
 }
+
+
