@@ -106,7 +106,7 @@
                             Inserir texto
                         </p>
                         <div class="text-center">
-                            <a class="btn btn-light" href="#">Acessar</a>
+                            <a class="btn btn-light" href="../pe/main_pe/dashboard">Acessar</a>
                         </div>
                     </div>
                 </div>
