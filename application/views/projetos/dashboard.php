@@ -13,6 +13,10 @@
     <script src="../../libraries/jquery_mask/dist/jquery.mask.js"></script>
     <script src="../../libraries/jquery_mask/dist/jquery.mask.min.js"></script>
     <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
 </head>
 
 <body background="<?php echo base_url()?>images/fundo_login.jpeg">
@@ -47,6 +51,59 @@
             animation-duration: 6s;
 
         }
+        #container {
+            display: flex;
+           justify-content: center;
+            left: 0px;
+            top: 0px;
+            width: 1400px;
+            height: 400px;
+}
+
+    .highcharts-figure,
+    .highcharts-data-table table {
+        min-width: 310px;
+        max-width: 800px;
+        margin: 1em auto;
+        
+    }
+
+    .highcharts-data-table table {
+        font-family: Verdana, sans-serif;
+        border-collapse: collapse;
+        border: 1px solid #ebebeb;
+        margin: 10px auto;
+        text-align: center;
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .highcharts-data-table caption {
+        padding: 1em 0;
+        font-size: 1.2em;
+        color: #555;
+    }
+
+    .highcharts-data-table th {
+        font-weight: 600;
+        padding: 0.5em;
+    }
+
+    .highcharts-data-table td,
+    .highcharts-data-table th,
+    .highcharts-data-table caption {
+        padding: 0.5em;
+    }
+
+    .highcharts-data-table thead tr,
+    .highcharts-data-table tr:nth-child(even) {
+        background: #f8f8f8;
+    }
+
+    .highcharts-data-table tr:hover {
+        background: #f1f7ff;
+    }
+
     </style>
 
     <div id="loader" class="loader" style=" background-color: #c10000;">
@@ -95,6 +152,13 @@
         </div>
     </div>
     <footer>
+    <div class="row">
+            <div class="col-md-12">
+                <div id="container">
+                </div>
+            </div>
+        </div>
+
 
     </footer>
 
@@ -277,6 +341,72 @@ Highcharts.chart('gerentes_responsaveis', {
     }]
 });
 
+
+</script>
+
+<script>Highcharts.chart('container', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'INOVA',
+        align: 'left'
+    },
+    xAxis: {
+        categories: ['pessoas', 'projetos', 'dinheiro', 'saida']
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Projetos rodando'
+        },
+        stackLabels: {
+            enabled: true,
+            style: {
+                fontWeight: 'bold',
+                color: ( // theme
+                    Highcharts.defaultOptions.title.style &&
+                    Highcharts.defaultOptions.title.style.color
+                ) || 'gray',
+                textOutline: 'none'
+            }
+        }
+    },
+    legend: {
+        align: 'left',
+        x: 70,
+        verticalAlign: 'top',
+        y: 70,
+        floating: true,
+        backgroundColor:
+            Highcharts.defaultOptions.legend.backgroundColor || 'white',
+        borderColor: '#CCC',
+        borderWidth: 1,
+        shadow: false
+    },
+    tooltip: {
+        headerFormat: '<b>{point.x}</b><br/>',
+        pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
+    },
+    plotOptions: {
+        column: {
+            stacking: 'normal',
+            dataLabels: {
+                enabled: true
+            }
+        }
+    },
+    series: [{
+        name: 'PR',
+        data: [3, 5, 1, 13]
+    }, {
+        name: 'PC',
+        data: [14, 8, 8, 12]
+    }, {
+        name: 'PF',
+        data: [0, 2, 6, 3]
+    }]
+});
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
