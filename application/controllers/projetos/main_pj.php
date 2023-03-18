@@ -153,7 +153,8 @@ class main_pj extends CI_Controller
 				"descricao"    => $this->input->post('descricao'),
 				"responsavel"  => $this->input->post('responsavel'),
 				"data_inicio"  => $this->input->post('data_inicio'),
-				"data_prevista_termino" => $this->input->post('data_prevista_termino')
+				"data_prevista_termino" => $this->input->post('data_prevista_termino'),
+				"prioridade_projeto" => $this->input->post('prioridade_projeto')
 			);
 			$retorno = $this->projetos_model->criar_projetos($input);
 			if ($retorno == 1) {
@@ -332,7 +333,8 @@ class main_pj extends CI_Controller
 				"descricao"    => $this->input->post('descricao'),
 				"responsavel"  => $this->input->post('responsavel'),
 				"data_inicio"  => $this->input->post('data_inicio'),
-				"data_prevista_termino" => $this->input->post('data_prevista_termino')
+				"data_prevista_termino" => $this->input->post('data_prevista_termino'),
+				"prioridade_projeto" => $this->input->post('prioridade_projeto')
 			);
 			$retorno = $this->projetos_model->editar_projeto($codprojeto, $input);
 			if ($retorno == 1) {

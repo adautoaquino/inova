@@ -122,6 +122,19 @@
                         <br>
                     </div>
                     <br>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="prioridade" value="1" id="prioridade1">
+                        <label class="col-sm-3 col-form-label text-light text-center" for="prioridade1"><b>Prioriade Mínima</b></label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="prioridade" value="2" id="prioridade2" checked>
+                            <label class="col-sm-3 col-form-label text-light text-center" for="prioridade2"><b>Prioriade Intermediária</b></label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="prioridade" value="3" id="prioridade3" checked>
+                            <label class="col-sm-3 col-form-label text-light text-center" for="prioridade2"><b>Prioriade Máxima</b></label>
+                    </div>
+                    <br>
                     <div class="form row" style="padding-top:5%">
                         <div class="col-md-2 offset-md-10 text-right">
                             <button type="submit" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-light"> Adicionar Microfase</button>

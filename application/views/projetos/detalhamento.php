@@ -309,7 +309,7 @@
                             </div>
                             <br>
                             <div class="form row">
-                                <label for="data_inicio" class="col-sm-3 col-form-label  text-center"><strong> Início</strong></label>
+                                <label for="data_inicio" class="col-sm-3 col-form-label text-center"><strong> Início</strong></label>
                                 <div class="form-group col-md-4">
                                     <input type="date" placeholder="dd/mm/aaaa" value="" name="data_inicio" class="form-control" id="data_inicio">
                                 </div>
@@ -321,8 +321,21 @@
                                 <div class="form-group col-md-4">
                                     <input type="date" placeholder="dd/mm/aaaa" value="" name="data_prevista_termino" data-mask="99/99/9999" class="form-control" id="data_prevista_termino">
                                 </div>
-                                <br>
                             </div>
+                            <br>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="prioridade" value="1" id="prioridade1">
+                                <label class="col-sm-3 col-form-label text-center" for="prioridade1"><b>Prioriade Mínima</b></label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="prioridade" value="2" id="prioridade2" checked>
+                                <label class="col-sm-3 col-form-label text-center" for="prioridade2"><b>Prioriade Intermediária</b></label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="prioridade" value="3" id="prioridade3" checked>
+                                <label class="col-sm-3 col-form-label text-center" for="prioridade2"><b>Prioriade Máxima</b></label>
+                            </div>
+                            <br>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
                                 <button type="submit" class="btn btn-success">Criar Macrofase</button>

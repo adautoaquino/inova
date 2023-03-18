@@ -92,9 +92,10 @@
                         <table class="table table-dark table-striped">
                             <thead>
                                 <tr>
-                                    <th colspan="7">Projetos Rodando</th>
+                                    <th colspan="8">Projetos Rodando</th>
                                 </tr>
                                 <tr class="align-middle">
+                                    <th>Prioridade</th>
                                     <th>Projeto</th>
                                     <th>Responsável</th>
                                     <th>Data de Início</th>
@@ -106,6 +107,18 @@
                             <tbody>
                                 <?php foreach ($projetos as $projeto) { ?>
                                     <tr>
+                                        <td>
+                                            <?php 
+                                                if ($projeto['prioridade_projeto'] == 1){
+                                                    echo "Mínima";
+                                                }
+                                                if ($projeto['prioridade_projeto'] == 2){
+                                                    echo "Intermediária";
+                                                }
+                                                if ($projeto['prioridade_projeto'] == 3){
+                                                    echo "Máxima";
+                                                }?>
+                                        </td>
                                         <td><?php echo $projeto['nome_projeto'] ?></td>
                                         <td><?php echo $projeto['responsavel'] ?></td>
                                         <td><?php $data_format = $projeto['data_inicio'];
