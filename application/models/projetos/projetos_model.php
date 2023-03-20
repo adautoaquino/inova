@@ -28,19 +28,8 @@ class Projetos_model extends CI_Model
         return 1;
     }
 
-    public function get_primary_key2()
-    {
-        $this->db->select('codmicrofase');
-        $this->db->order_by('codmicrofase', 'DESC');
-        $query = $this->db->get('microfases');
-        $result = $query->row()->codmicrofase;
-        return $result;
-    }
-
     public function criar_microfase($input)
     {
-        $primary_key = self::get_primary_key2();
-        $input['codmicrofase'] = $primary_key + 1;
         $input['ativo'] = 1;
         $this->db->insert("microfases", $input);
         return 1;
@@ -58,6 +47,7 @@ class Projetos_model extends CI_Model
 
     public function get_macrofases_projeto($codprojeto)
     {
+        $this->db->order_by('prioridade_macrofase', 'DESC');
         $this->db->where('codprojeto', $codprojeto);
         $query = $this->db->get('macrofases');
         return $query->result_array();
@@ -65,6 +55,7 @@ class Projetos_model extends CI_Model
 
     public function get_microfases_projeto($codprojeto)
     {
+        $this->db->order_by('prioridade_microfase', 'DESC');
         $this->db->where('codprojeto', $codprojeto);
         $query = $this->db->get('microfases');
         return $query->result_array();
@@ -107,6 +98,7 @@ class Projetos_model extends CI_Model
         $this->db->set('responsavel', $input['responsavel']);
         $this->db->set('data_inicio', $input['data_inicio']);
         $this->db->set('data_prevista_termino', $input['data_prevista_termino']);
+        $this->db->set('prioridade_macrofase', $input['prioridade_macrofase']);
         $this->db->where('codmacrofase', $input['codmacrofase']);
         $this->db->update('macrofases');
         return 1;
@@ -198,6 +190,7 @@ class Projetos_model extends CI_Model
         $query = $this->db->get('projetos');
         return $query->row_array();
     }
+
     public function get_dados_gerentes_responsaveis(){
         $this->db->where('ativo', 0);
         $query = $this->db->get('projetos');

@@ -121,6 +121,7 @@
                         <br>
                     </div>
                     <br>
+                    <div class="form-group col-md-1">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="prioridade_projeto" value="1" id="prioridade_projeto1">
                         <label class="col-sm-3 col-form-label text-light text-center" for="prioridade1"><b>Prioriade Mínima</b></label>
@@ -132,6 +133,7 @@
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="prioridade_projeto" value="3" id="prioridade_projeto3">
                             <label class="col-sm-3 col-form-label text-light text-center" for="prioridade2"><b>Prioriade Máxima</b></label>
+                    </div>
                     </div>
                     <br>
                     <div class="form row" style="padding-top:5%">

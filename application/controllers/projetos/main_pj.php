@@ -85,6 +85,7 @@ class main_pj extends CI_Controller
 				"responsavel"  => $this->input->post('responsavel'),
 				"data_inicio"  => $this->input->post('data_inicio'),
 				"data_prevista_termino" => $this->input->post('data_prevista_termino'),
+				"prioridade_macrofase" => $this->input->post('prioridade_macrofase'),
 				"codprojeto" => $codprojeto
 			);
 			$retorno = $this->projetos_model->criar_macrofase($input);
@@ -117,6 +118,7 @@ class main_pj extends CI_Controller
 				"data_inicio"  => $this->input->post('data_inicio'),
 				"data_prevista_termino" => $this->input->post('data_prevista_termino'),
 				"codmacrofase" => $this->input->post('codmacrofase'),
+				"prioridade_microfase" => $this->input->post('prioridade_microfase'),
 				"codprojeto" => $codprojeto
 			);
 			$retorno = $this->projetos_model->criar_microfase($input);
@@ -189,6 +191,7 @@ class main_pj extends CI_Controller
 				"responsavel"  => $this->input->post('responsavel'),
 				"data_inicio"  => $this->input->post('data_inicio'),
 				"data_prevista_termino" => $this->input->post('data_prevista_termino'),
+				"prioridade_macrofase" => $this->input->post('prioridade_macrofase'),
 				"codmacrofase" => $codmacrofase
 			);
 			$retorno = $this->projetos_model->editar_macrofase($input);
@@ -232,6 +235,7 @@ class main_pj extends CI_Controller
 				"responsavel"  => $this->input->post('responsavel'),
 				"data_inicio"  => $this->input->post('data_inicio'),
 				"data_prevista_termino" => $this->input->post('data_prevista_termino'),
+				"prioridade_microfase" => $this->input->post('prioridade_microfase'),
 				"codmicrofase" => $codmicrofase
 			);
 			$retorno = $this->projetos_model->editar_microfase($input);

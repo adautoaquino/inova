@@ -114,9 +114,10 @@
                             <table class="table table-light table-striped">
                                 <thead>
                                     <tr class="text-center">
-                                        <th colspan="5">Microfases da <?php echo $macrofase['nome_macrofase'] ?></th>
+                                        <th colspan="6">Microfases da <?php echo $macrofase['nome_macrofase'] ?></th>
                                     </tr>
                                     <tr class="text-center">
+                                        <th class="align-middle text-center">Prioridade</th>
                                         <th class="align-middle text-center">Microfase</th>
                                         <th class="align-middle text-center">Início</th>
                                         <th class="align-middle text-center">Fim</th>
@@ -130,6 +131,18 @@
                                         if ($microfase['codmacrofase'] == $macrofase['codmacrofase']) { ?>
                                             <?php if ($microfase['ativo'] == 1) { ?>
                                                 <tr>
+                                                    <td class="align-middle text-center">
+                                                    <?php 
+                                                if ($microfase['prioridade_microfase'] == 1){
+                                                    echo "Mínima";
+                                                }
+                                                if ($microfase['prioridade_microfase'] == 2){
+                                                    echo "Intermediária";
+                                                }
+                                                if ($microfase['prioridade_microfase'] == 3){
+                                                    echo "Máxima";
+                                                }?>
+                                                    </td>
                                                     <td class="align-middle text-center"><?php echo $microfase['nome_microfase'] ?></td>
                                                     <td class="align-middle text-center"><?php $data_format = $microfase['data_inicio'];
                                                                                             $result = explode('-', $data_format);
@@ -212,8 +225,23 @@
                                                                                         $ano = $result[0];
                                                                                         echo "$dia/$mes/$ano"; ?>" name="data_prevista_termino" data-mask="99/99/9999" class="form-control" id="data_prevista_termino">
                             </div>
-                            <br>
                         </div>
+                        <br>
+                        <div class="form row">
+                <label for="prioridade_macrofase" class="col-sm-3 col-form-label text-center"><b> Prioriade da Macrofase</b></label>
+                    <div class="form-group col-md-4">
+                        <input type="text" readonly value="<?php 
+                                                        if ($macrofase['prioridade_macrofase'] == 1){
+                                                            echo "Prioridade Mínima";
+                                                        }
+                                                        if ($macrofase['prioridade_macrofase'] == 2){
+                                                            echo "Prioridade Intermediária";
+                                                        }
+                                                        if ($macrofase['prioridade_macrofase'] == 3){
+                                                            echo "Prioridade Máxima";
+                                                        }?>" name="prioridade_projeto" id="prioridade_projeto" class="form-control">
+                    </div>
+                </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
@@ -274,7 +302,22 @@
                                                             $ano = $result[0];
                                                             echo "$dia/$mes/$ano"; ?>" name="data_prevista_termino" data-mask="99/99/9999" class="form-control" id="data_prevista_termino">
                     </div>
-                    <br>
+                </div>
+                <br>
+                <div class="form row">
+                <label for="prioridade_projeto" class="col-sm-3 col-form-label text-light text-center"><b> Prioriade do Projeto</b></label>
+                    <div class="form-group col-md-4">
+                        <input type="text" readonly value="<?php 
+                                                        if ($dados_projeto['prioridade_projeto'] == 1){
+                                                            echo "Prioridade Mínima";
+                                                        }
+                                                        if ($dados_projeto['prioridade_projeto'] == 2){
+                                                            echo "Prioridade Intermediária";
+                                                        }
+                                                        if ($dados_projeto['prioridade_projeto'] == 3){
+                                                            echo "Prioridade Máxima";
+                                                        }?>" name="prioridade_projeto" id="prioridade_projeto" class="form-control">
+                    </div>
                 </div>
             </div>
         </div>
@@ -323,17 +366,19 @@
                                 </div>
                             </div>
                             <br>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="prioridade" value="1" id="prioridade1">
+                            <div class="form-group col-md-4">
+                            <div class="form-check" style="padding-left:50%">
+                                <input class="form-check-input" type="radio" name="prioridade_macrofase" value="1" id="prioridade1">
                                 <label class="col-sm-3 col-form-label text-center" for="prioridade1"><b>Prioriade Mínima</b></label>
                             </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="prioridade" value="2" id="prioridade2" checked>
+                            <div class="form-check" style="padding-left:50%">
+                                <input class="form-check-input" type="radio" name="prioridade_macrofase" value="2" id="prioridade2"  checked>
                                 <label class="col-sm-3 col-form-label text-center" for="prioridade2"><b>Prioriade Intermediária</b></label>
                             </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="prioridade" value="3" id="prioridade3" checked>
+                            <div class="form-check" style="padding-left:50%">
+                                <input class="form-check-input" type="radio" name="prioridade_macrofase" value="3" id="prioridade3">
                                 <label class="col-sm-3 col-form-label text-center" for="prioridade2"><b>Prioriade Máxima</b></label>
+                            </div>
                             </div>
                             <br>
                             <div class="modal-footer">
@@ -351,12 +396,13 @@
                     <table class="table table-dark table-striped">
                         <thead>
                             <tr>
-                                <th colspan="4">Macrofases do Projeto
+                                <th colspan="5">Macrofases do Projeto
                                     <button type="button" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_criar_macrofase">Adicionar Macrofase ao Projeto</button>
                                 </th>
                             </tr>
                             <?php if (count($macrofases) > 0) { ?>
                                 <tr>
+                                    <th>Prioridade</th>
                                     <th>Macrofase</th>
                                     <th>Início</th>
                                     <th>Previsão de Fim</th>
@@ -371,6 +417,18 @@
                                 <?php foreach ($macrofases as $macrofase) { ?>
                                     <?php if ($macrofase['ativo'] == 1) { ?>
                                         <tr>
+                                            <td>
+                                            <?php 
+                                                if ($macrofase['prioridade_macrofase'] == 1){
+                                                    echo "Mínima";
+                                                }
+                                                if ($macrofase['prioridade_macrofase'] == 2){
+                                                    echo "Intermediária";
+                                                }
+                                                if ($macrofase['prioridade_macrofase'] == 3){
+                                                    echo "Máxima";
+                                                }?>
+                                            </td>
                                             <td><?php echo $macrofase['nome_macrofase'] ?></td>
                                             <td><?php
                                                 $data_format = $macrofase['data_inicio'];
