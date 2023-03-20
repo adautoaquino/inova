@@ -80,6 +80,7 @@ class Projetos_model extends CI_Model
     public function get_projetos_rodando()
     {
         $this->db->where('ativo', 1);
+        $this->db->order_by('prioridade_projeto', 'DESC');
         $query = $this->db->get('projetos');
         $result = $query->result_array();
         return $result;
