@@ -280,6 +280,14 @@
                 </div>
                 <br>
                 <div class="form row">
+                    <label for="responsavel" class="col-sm-3 col-form-label text-light"><strong> Patrocinador do Projeto</strong></label>
+                    <div class="form-group col-md-9">
+                        <input type="text" readonly value="<?= $dados_projeto['patrocinador_projeto'] ?>" name="patrocinador_projeto" class="form-control" id="patrocinador_projeto">
+                    </div>
+                    <br>
+                </div>
+                <br>
+                <div class="form row">
                     <label for="data_inicio" class="col-sm-3 col-form-label text-light"><strong> Data de Início</strong></label>
                     <div class="form-group col-md-4">
                         <input type="text" readonly value="<?php $data_format = $dados_projeto['data_inicio'];

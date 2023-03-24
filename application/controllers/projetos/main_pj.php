@@ -154,6 +154,7 @@ class main_pj extends CI_Controller
 				"nome_projeto" => $nome_projeto,
 				"descricao"    => $this->input->post('descricao'),
 				"responsavel"  => $this->input->post('responsavel'),
+				"patrocinador_projeto"  => $this->input->post('patrocinador_projeto'),
 				"data_inicio"  => $this->input->post('data_inicio'),
 				"data_prevista_termino" => $this->input->post('data_prevista_termino'),
 				"prioridade_projeto" => $this->input->post('prioridade_projeto')

@@ -106,6 +106,14 @@
                     </div>
                     <br>
                     <div class="form row">
+                        <label for="responsavel" class="col-sm-3 col-form-label text-light"><strong> Patrocinador do Projeto</strong></label>
+                        <div class="form-group col-md-9">
+                            <input type="text" required placeholder="Patrocinador do projeto" required name="patrocinador_projeto" class="form-control" id="patrocinador_projeto">
+                        </div>
+                        <br>
+                    </div>
+                    <br>
+                    <div class="form row">
                         <label for="data_inicio" class="col-sm-3 col-form-label text-light"><strong> Data de Início</strong></label>
                         <div class="form-group col-md-4">
                             <input type="date" required name="data_inicio" required placeholder="dd/mm/aaaa" class="form-control" id="data_inicio">
