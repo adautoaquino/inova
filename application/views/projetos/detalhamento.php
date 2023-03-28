@@ -203,6 +203,13 @@
                         </div>
                         <br>
                         <div class="form row">
+                            <label for="responsavel" class="col-sm-3 col-form-label text-center"><strong> Projetistas da Macrofase</strong></label>
+                            <div class="form-group col-md-9">
+                                <input type="text" required readonly='readonly' value="<?php echo $macrofase['projetistas_macro'] ?>" name="projetistas_macro" class="form-control" id="projetistas_macro">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="form row">
                             <label for="data_inicio" class="col-sm-3 col-form-label  text-center"><strong> Início</strong></label>
                             <div class="form-group col-md-4">
                                 <input type="text" required readonly='readonly' value="<?php $data_format = $macrofase['data_inicio'];
@@ -275,6 +282,14 @@
                     <label for="responsavel" class="col-sm-3 col-form-label text-light"><strong> Responsável pelo Projeto</strong></label>
                     <div class="form-group col-md-9">
                         <input type="text" readonly value="<?= $dados_projeto['responsavel'] ?>" name="responsavel" class="form-control" id="responsavel">
+                    </div>
+                    <br>
+                </div>
+                <br>
+                <div class="form row">
+                    <label for="responsavel" class="col-sm-3 col-form-label text-light"><strong> Projetistas Do Projeto</strong></label>
+                    <div class="form-group col-md-9">
+                        <input type="text" readonly value="<?= $dados_projeto['projetistas_projetos'] ?>" name="projetistas_projetos" class="form-control" id="patrocinador_projeto">
                     </div>
                     <br>
                 </div>
@@ -355,6 +370,14 @@
                                 <label for="responsavel" class="col-sm-3 col-form-label text-center"><strong> Responsável</strong></label>
                                 <div class="form-group col-md-9">
                                     <input type="text" placeholder="Responsável pela Macrofase" value="" name="responsavel" class="form-control" id="responsavel">
+                                </div>
+                                <br>
+                            </div>
+                            <br>
+                            <div class="form row">
+                                <label for="projetistas_macro" class="col-sm-3 col-form-label text-center"><strong> Projetistas Da macrofase</strong></label>
+                                <div class="form-group col-md-9">
+                                    <input type="text" placeholder="Projetistas Macro" value="" name="projetistas_macro" class="form-control" id="projetistas_macro">
                                 </div>
                                 <br>
                             </div>

@@ -106,6 +106,14 @@
                     </div>
                     <br>
                     <div class="form row">
+                        <label for="responsavel" class="col-sm-3 col-form-label text-light"><strong>Projetistas Do Projeto</strong></label>
+                        <div class="form-group col-md-9">
+                            <input type="text" required placeholder="Projetistas" required name="projetistas_projetos" class="form-control" id="projetistas_projetos">
+                        </div>
+                        <br>
+                    </div>
+                    <br>
+                    <div class="form row">
                         <label for="responsavel" class="col-sm-3 col-form-label text-light"><strong> Patrocinador do Projeto</strong></label>
                         <div class="form-group col-md-9">
                             <input type="text" required placeholder="Patrocinador do projeto" required name="patrocinador_projeto" class="form-control" id="patrocinador_projeto">

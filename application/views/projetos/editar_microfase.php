@@ -106,6 +106,14 @@
                     </div>
                     <br>
                     <div class="form row">
+                        <label for="responsavel" class="col-sm-3 col-form-label text-light"><strong> Projetistas Da Microfase</strong></label>
+                        <div class="form-group col-md-9">
+                            <input type="text" value="<?= $dados_microfase['projetistas_micro'] ?>" required name="projetistas_micro" class="form-control" id="projetistas_micro">
+                        </div>
+                        <br>
+                    </div>
+                    <br>
+                    <div class="form row">
                         <label for="data_inicio" class="col-sm-3 col-form-label text-light"><strong> Nova Data de Início</strong></label>
                         <div class="form-group col-md-4">
                             <input type="date" value="<?= $dados_microfase['data_inicio'] ?>" required name="data_inicio" class="form-control" id="data_inicio">

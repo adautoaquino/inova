@@ -100,8 +100,16 @@
                     <div class="form row">
                         <label for="responsavel" class="col-sm-3 col-form-label text-light"><strong> Novo Responsável pela Microfase</strong></label>
                         <div class="form-group col-md-9">
-                            <input type="text"  required readonly='readonly'value="<?= $dados_microfase['responsavel'] ?>" required name="responsavel" class="form-control" id="responsavel">
-                     
+                        <input type="text"  required readonly='readonly'value="<?= $dados_microfase['responsavel'] ?>" required name="responsavel" class="form-control" id="responsavel">
+                    </div>
+                    </div>
+                    <br>
+                    <div class="form row">
+                        <label for="responsavel" class="col-sm-3 col-form-label text-light"><strong> Projetistas da Microfase</strong></label>
+                        <div class="form-group col-md-9">
+                        <input type="text"  required readonly='readonly'value="<?= $dados_microfase['projetistas_micro'] ?>" required name="projetistas_micro" class="form-control" id="projetistas_micro">
+                    </div>
+                    </div>
                     <br>
                     <div class="form row">
                         <label for="data_inicio" class="col-sm-3 col-form-label text-light"><strong> Nova Data de Início</strong></label>

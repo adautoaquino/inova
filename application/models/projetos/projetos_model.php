@@ -96,6 +96,7 @@ class Projetos_model extends CI_Model
         $this->db->set('nome_macrofase', $input['nome_macrofase']);
         $this->db->set('descricao', $input['descricao']);
         $this->db->set('responsavel', $input['responsavel']);
+        $this->db->set('projetistas_macro', $input['projetistas_macro']);
         $this->db->set('data_inicio', $input['data_inicio']);
         $this->db->set('data_prevista_termino', $input['data_prevista_termino']);
         $this->db->set('prioridade_macrofase', $input['prioridade_macrofase']);

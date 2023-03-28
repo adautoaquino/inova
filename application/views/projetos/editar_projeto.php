@@ -106,6 +106,22 @@
                     </div>
                     <br>
                     <div class="form row">
+                        <label for="responsavel" class="col-sm-3 col-form-label text-light"><strong>Projetistas do projeto</strong></label>
+                        <div class="form-group col-md-9">
+                            <input type="text" required placeholder="Projetistas Do Projeto" value="<?php echo $info_projeto['projetistas_projetos']?>" required name="projetistas_projetos" class="form-control" id="projetistas_projetos">
+                        </div>
+                        <br>
+                    </div>
+                    <br>
+                    <div class="form row">
+                        <label for="responsavel" class="col-sm-3 col-form-label text-light"><strong>Patrocinador Projeto</strong></label>
+                        <div class="form-group col-md-9">
+                            <input type="text" required placeholder="Patrocinador do Projeto" value="<?php echo $info_projeto['patrocinador_projeto']?>" required name="patrocinador_projeto" class="form-control" id="patrocinador_projeto">
+                        </div>
+                        <br>
+                    </div>
+                    <br>
+                    <div class="form row">
                         <label for="data_inicio" class="col-sm-3 col-form-label text-light"><strong> Data de Início</strong></label>
                         <div class="form-group col-md-4">
                             <input type="date" required name="data_inicio" value="<?php echo $info_projeto['data_inicio']?>" required placeholder="dd/mm/aaaa" class="form-control" id="data_inicio">

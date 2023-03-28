@@ -181,7 +181,15 @@
                                 <input type="text" required readonly='readonly' value="<?php echo $macrofase['responsavel'] ?>" name="responsavel" class="form-control" id="responsavel">
                             </div>
                             <br>
-                        </div>
+                         </div>
+                        <br>
+                        <div class="form row">
+                            <label for="responsavel" class="col-sm-3 col-form-label text-center"><strong>Projetistas Da Macrofase</strong></label>
+                            <div class="form-group col-md-9">
+                                <input type="text" required readonly='readonly' value="<?php echo $macrofase['projetistas_macro'] ?>" name="projetistas_macro" class="form-control" id="projetistas_macro">
+                            </div>
+                            <br>
+                         </div>
                         <br>
                         <div class="form row">
                             <label for="data_inicio" class="col-sm-3 col-form-label  text-center"><strong> Início</strong></label>
@@ -240,6 +248,22 @@
                     <label for="responsavel" class="col-sm-3 col-form-label text-light"><strong> Responsável pelo Projeto</strong></label>
                     <div class="form-group col-md-9">
                         <input type="text" readonly value="<?= $dados_projeto_finalizado['responsavel'] ?>" name="responsavel" class="form-control" id="responsavel">
+                    </div>
+                    <br>
+                </div>
+                <br>
+                <div class="form row">
+                    <label for="responsavel" class="col-sm-3 col-form-label text-light"><strong> Projetistas do Projeto</strong></label>
+                    <div class="form-group col-md-9">
+                        <input type="text" readonly value="<?= $dados_projeto_finalizado['projetistas_projetos'] ?>" name="projetistas_projetos" class="form-control" id="projetistas_projetos">
+                    </div>
+                    <br>
+                </div>
+                <br>
+                <div class="form row">
+                    <label for="responsavel" class="col-sm-3 col-form-label text-light"><strong> Patrocinador Do Projeto</strong></label>
+                    <div class="form-group col-md-9">
+                        <input type="text" readonly value="<?= $dados_projeto_finalizado['patrocinador_projeto'] ?>" name="patrocinador_projeto" class="form-control" id="patrocinador_projeto">
                     </div>
                     <br>
                 </div>

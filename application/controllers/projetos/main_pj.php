@@ -84,6 +84,7 @@ class main_pj extends CI_Controller
 				"descricao"    => $this->input->post('descricao'),
 				"responsavel"  => $this->input->post('responsavel'),
 				"data_inicio"  => $this->input->post('data_inicio'),
+				"projetistas_macro"  => $this->input->post('projetistas_macro'),
 				"data_prevista_termino" => $this->input->post('data_prevista_termino'),
 				"prioridade_macrofase" => $this->input->post('prioridade_macrofase'),
 				"codprojeto" => $codprojeto
@@ -114,6 +115,7 @@ class main_pj extends CI_Controller
 			$input = array(
 				"nome_microfase" => $nome_microfase,
 				"descricao"    => $this->input->post('descricao'),
+				"projetistas_micro"    => $this->input->post('projetistas_micro'),
 				"responsavel"  => $this->input->post('responsavel'),
 				"data_inicio"  => $this->input->post('data_inicio'),
 				"data_prevista_termino" => $this->input->post('data_prevista_termino'),
@@ -154,6 +156,7 @@ class main_pj extends CI_Controller
 				"nome_projeto" => $nome_projeto,
 				"descricao"    => $this->input->post('descricao'),
 				"responsavel"  => $this->input->post('responsavel'),
+				"projetistas_projetos"  => $this->input->post('projetistas_projetos'),
 				"patrocinador_projeto"  => $this->input->post('patrocinador_projeto'),
 				"data_inicio"  => $this->input->post('data_inicio'),
 				"data_prevista_termino" => $this->input->post('data_prevista_termino'),
@@ -190,6 +193,7 @@ class main_pj extends CI_Controller
 				"nome_macrofase" => $nome_macrofase,
 				"descricao"    => $this->input->post('descricao'),
 				"responsavel"  => $this->input->post('responsavel'),
+				"projetistas_macro"  => $this->input->post('projetistas_macro'),
 				"data_inicio"  => $this->input->post('data_inicio'),
 				"data_prevista_termino" => $this->input->post('data_prevista_termino'),
 				"prioridade_macrofase" => $this->input->post('prioridade_macrofase'),
@@ -233,6 +237,7 @@ class main_pj extends CI_Controller
 			$input = array(
 				"nome_microfase" => $nome_microfase,
 				"descricao"    => $this->input->post('descricao'),
+				"projetistas_micro"    => $this->input->post('projetistas_micro'),
 				"responsavel"  => $this->input->post('responsavel'),
 				"data_inicio"  => $this->input->post('data_inicio'),
 				"data_prevista_termino" => $this->input->post('data_prevista_termino'),
@@ -337,6 +342,8 @@ class main_pj extends CI_Controller
 				"nome_projeto" => $nome_projeto,
 				"descricao"    => $this->input->post('descricao'),
 				"responsavel"  => $this->input->post('responsavel'),
+				"projetistas_projetos"  => $this->input->post('projetistas_projetos'),
+				"patrocinador_projeto"  => $this->input->post('patrocinador_projeto'),
 				"data_inicio"  => $this->input->post('data_inicio'),
 				"data_prevista_termino" => $this->input->post('data_prevista_termino'),
 				"prioridade_projeto" => $this->input->post('prioridade_projeto')

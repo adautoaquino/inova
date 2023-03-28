@@ -106,6 +106,14 @@
                     </div>
                     <br>
                     <div class="form row">
+                        <label for="responsavel" class="col-sm-3 col-form-label text-light"><strong> Projetistas Da Macrofase</strong></label>
+                        <div class="form-group col-md-9">
+                            <input type="text" required placeholder=" Projetistas Macro" required name="projetistas_macro" value="<?= isset($dados) ? $dados['projetistas_macro'] : "" ?>" class="form-control" id="projetistas_macro">
+                        </div>
+                        <br>
+                    </div>
+                    <br>
+                    <div class="form row">
                         <label for="data_inicio" class="col-sm-3 col-form-label text-light"><strong> Nova Data de Início</strong></label>
                         <div class="form-group col-md-4">
                             <input type="date" required placeholder="dd/mm/aaaa" required name="data_inicio" value="<?= isset($dados) ? $dados['data_inicio'] : "" ?>" class="form-control" id="data_inicio">
