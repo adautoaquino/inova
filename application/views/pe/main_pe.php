@@ -42,6 +42,137 @@
 
         }
 
+        body {
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+}
+
+.wrapper {
+  margin: auto;
+  max-width: 960px;
+  width: 100%;
+}
+
+.bmc {
+  display: grid;
+  grid: repeat(3, 200px) / repeat(10, 1fr);
+}
+
+.bmc,
+.bmc > div {
+  border: 1px solid;
+  background: #fff;
+}
+
+.bmc > div {
+  display: grid;
+  position: relative;
+  gap: 10px;
+  grid-template-rows: 30px;
+  grid-auto-rows: 65px;
+  padding: 8px;
+}
+
+.bmc > div:nth-child(8),
+.bmc > div:nth-child(9) {
+  grid: 30px / repeat(5, 1fr);
+}
+.bmc > div:nth-child(8) h3,
+.bmc > div:nth-child(9) h3 {
+  grid-column: 1 / -1;
+}
+
+
+.bmc > div:nth-child(8) .note,
+.bmc > div:nth-child(9) .note {
+  grid-column: span 2;
+}
+
+.bmc h3 {
+  margin: 0;
+  font-size: 14px;
+  color: #5b5b5b;
+}
+
+.note {
+  padding: 15px;
+  background: #F33C61;
+  color: #fff;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px 1px rgba(0,0,0,.2);
+}
+
+.note.green {
+  background: #79D12A;
+}
+
+.bmc > div:nth-child(1),
+.bmc > div:nth-child(4),
+.bmc > div:nth-child(7) {
+  grid-area: span 2 / span 2;
+}
+
+.bmc > div:nth-child(2),
+.bmc > div:nth-child(5) {
+  grid-column: span 2;
+}
+
+.bmc > div:nth-child(3) {
+  grid-column: 3 / span 2;
+  grid-row: 2;
+}
+
+.bmc > div:nth-child(6) {
+  grid-column: 7 / span 2;
+  grid-row: 2;
+}
+
+.bmc > div:nth-child(8),
+.bmc > div:nth-child(9) {
+  grid-area: -2 / span 5;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+a,
+a:visited,
+a:focus,
+a:active,
+a:link {
+  text-decoration: none;
+  outline: 0;
+}
+
+a {
+  color: currentColor;
+  transition: .2s ease-in-out;
+}
+
+h1, h2, h3, h4 {
+  margin: .3em 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  vertical-align: middle;
+  height: auto;
+  width: 100%;
+}
     </style>
 
     <div id="loader" class="loader" style=" background-color: #c10000;;">
@@ -73,46 +204,48 @@
         </div>
     </nav>
     </header>
-    <div class="container text-center">
-        <div class="row" style="padding-top:10%">
-            <div class="col-md-10 offset-md-1">
-                <div class="card bg-danger text-white">
-                    <div class="card-body">
-                        <h3><i>Área de Planejamento Estratégico</i></h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row" style="padding-top:4%">
-            <div class=" offset-md-1 col-md-5 text-center "style="padding-bottom:4%">
-                <div class="card bg-danger text-white">
-                    <div class="card-body">
-                        <h5><i>Gerenciar Metas</i></h5>
-                        <p>
-                            Na secção de gerenciamento de metas você consegue criar, editar e deletar suas metas
-
-                        </p>
-                        <div class="text-center">
-                                <a class="btn btn-light" href="../pe/main_pe/gpe">Acessar</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-5 text-center">
-                <div class="card bg-danger text-white">
-                    <div class="card-body">
-                        <h5><i>Indicadores</i></h5>
-                        <p>
-                            Inserir texto
-                        </p>
-                        <div class="text-center">
-                            <a class="btn btn-light" href="../pe/main_pe/dashboard">Acessar</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="wrapper">
+  <h1>Business Model Canvas</h1>
+  <div class="bmc">
+    <div>
+      <h3>Key Partners</h3>
+      <div class="note">Everyone</div>
+      <div class="note green">Even more</div>
+      <div class="note">Everyone</div>
+      <div class="note green">Even more</div>
     </div>
+    <div>
+      <h3>Key Activities</h3>
+      <div class="note">All</div>
+    </div>
+    <div>
+      <h3>Key Resources</h3>
+    </div>
+    <div>
+      <h3>Value Proposition</h3>
+      <div class="note">Everything</div>
+    </div>
+    <div>
+      <h3>Customer Relationship</h3>
+    </div>
+    <div>
+      <h3>Channels</h3>
+    </div>
+    <div>
+      <h3>Customers Segments</h3>
+    </div>
+    <div>
+      <h3>Cost Structure</h3>
+    </div>
+    <div>
+      <h3>Revenue Streams</h3>
+      <div class="note">Everyone</div>
+      <div class="note">Everyone</div>
+      <div class="note">Everyone</div>
+      <div class="note green">Even more</div>
+    </div>
+  </div>
+</div>
     <footer>
 
     </footer>
