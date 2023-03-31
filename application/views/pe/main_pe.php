@@ -10,43 +10,41 @@
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
+</head> 
 
-</head>
-  <body>
+<body style="background-color: #c10000;">
     <style>
-        .titulo{
-            color:aqua;
+         <style>
+        .titulo {
+            color: aqua;
             size: 14px;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
-        legend{
-            color:black;
+
+        legend {
+            color: black;
             font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
         }
+
         .loader {
-		position: fixed;
-		left: 0px;
-		top: 0px;
-		width: 100%;
-		height: 100%;
-		z-index: 9999;
-        background: url('../../images/logosemfundo.png') 50% 50% no-repeat;
-        background-size: 30%;
-      }
-      .rocket {
-        display: inline-block;
-        margin: 0 0.5rem;
-
-        animation: bounceInUp;
-        animation-duration: 6s; 
-
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background: url('../../images/logosemfundo.png') 50% 50% no-repeat;
+            background-size: 30%;
         }
 
-        body {
-  display: flex;
-  flex-direction: column;
-  font-family: sans-serif;
-}
+        .rocket {
+            display: inline-block;
+            margin: 0 0.5rem;
+
+            animation: bounceInUp;
+            animation-duration: 6s;
+
+        }
 
 .wrapper {
   margin: auto;
@@ -185,8 +183,6 @@ img {
             <a class="navbar-brand" href="#"><img src="../../images/logo_inova.png" width="75" height="50"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-
-            
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
@@ -200,45 +196,45 @@ img {
                     <a class="nav-link " style="color: white" href="#"><b>Dashboard de Indicadores</b></a>
                 </li>
             </ul>
-            </div>
         </div>
+    </div>
     </nav>
     </header>
     <div class="wrapper">
-  <h1>Business Model Canvas</h1>
+  <h1>Modelo Canvas</h1>
   <div class="bmc">
     <div>
-      <h3>Key Partners</h3>
+      <h3>Parceiros Chaves</h3>
       <div class="note">Everyone</div>
       <div class="note green">Even more</div>
       <div class="note">Everyone</div>
       <div class="note green">Even more</div>
     </div>
     <div>
-      <h3>Key Activities</h3>
+      <h3>Atividades Chaves</h3>
       <div class="note">All</div>
     </div>
     <div>
-      <h3>Key Resources</h3>
+      <h3>Recursos Chaves</h3>
     </div>
     <div>
-      <h3>Value Proposition</h3>
+      <h3>Proposta de Valor</h3>
       <div class="note">Everything</div>
     </div>
     <div>
-      <h3>Customer Relationship</h3>
+      <h3>Relacionamento com o Cliente</h3>
     </div>
     <div>
-      <h3>Channels</h3>
+      <h3>Canais de Distribuição</h3>
     </div>
     <div>
-      <h3>Customers Segments</h3>
+      <h3>Segmentos de Clientes</h3>
     </div>
     <div>
-      <h3>Cost Structure</h3>
+      <h3>Estrutura de Custos</h3>
     </div>
     <div>
-      <h3>Revenue Streams</h3>
+      <h3>Fontes de Receitas</h3>
       <div class="note">Everyone</div>
       <div class="note">Everyone</div>
       <div class="note">Everyone</div>
