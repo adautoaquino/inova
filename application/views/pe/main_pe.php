@@ -9,6 +9,8 @@
     <script src="js/scripts.js"></script>
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
 
 </head> 
 
@@ -48,7 +50,7 @@
 
 .wrapper {
   margin: auto;
-  max-width: 960px;
+  max-width: 100%;
   width: 100%;
 }
 
@@ -205,10 +207,7 @@ img {
   <div class="bmc">
     <div>
       <h3>Parceiros Chaves</h3>
-      <div class="note">Everyone</div>
-      <div class="note green">Even more</div>
-      <div class="note">Everyone</div>
-      <div class="note green">Even more</div>
+    
     </div>
     <div>
       <h3>Atividades Chaves</h3>
@@ -219,7 +218,7 @@ img {
     </div>
     <div>
       <h3>Proposta de Valor</h3>
-      <div class="note">Everything</div>
+      
     </div>
     <div>
       <h3>Relacionamento com o Cliente</h3>
