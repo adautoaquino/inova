@@ -113,6 +113,7 @@ class Projetos_model extends CI_Model
     public function editar_microfase($input)
     {
         $this->db->set('nome_microfase', $input['nome_microfase']);
+        $this->db->set('projetistas_micro', $input['projetistas_micro']);
         $this->db->set('descricao', $input['descricao']);
         $this->db->set('responsavel', $input['responsavel']);
         $this->db->set('data_inicio', $input['data_inicio']);
