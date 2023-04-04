@@ -36,6 +36,10 @@ class Projetos_model extends CI_Model
     }
 
     public function editar_projeto($codprojeto, $input){
+        // echo "<pre>";
+        //     print_r($input);
+        // echo "<pre>";
+        // exit;
         $this->db->where('codprojeto', $codprojeto);
         $query = $this->db->update('projetos', $input);
         if($query){

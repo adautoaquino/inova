@@ -82,7 +82,7 @@
     <div class="container text-center">
         <div class="row" style="padding-top:2%">
             <div class=" offset-md-2 col-md-8 text-center" style="padding-bottom:4%">
-                <form method="post" action="editar_projeto/<?php echo $codprojeto?>">
+                <form method="post" action="../editar_projeto/<?php echo $codprojeto?>">
                     <div class="form row" style="padding-top:5%;">
                         <label for="nome" class="col-sm-3 col-form-label text-light text-center"><strong> Nome do Projeto</strong></label>
                         <div class="form-group col-md-9">
