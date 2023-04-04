@@ -16,7 +16,6 @@
 
 <body style="background-color: #c10000;">
     <style>
-         <style>
         .titulo {
             color: aqua;
             size: 14px;
@@ -51,7 +50,8 @@
 .wrapper {
   margin: auto;
   max-width: 100%;
-  width: 100%;
+  width: 98%;
+  padding-bottom: 1%;
 }
 
 .bmc {
@@ -74,25 +74,15 @@
   padding: 8px;
 }
 
-.bmc > div:nth-child(8),
-.bmc > div:nth-child(9) {
-  grid: 30px / repeat(5, 1fr);
-}
 .bmc > div:nth-child(8) h3,
 .bmc > div:nth-child(9) h3 {
   grid-column: 1 / -1;
 }
 
-
-.bmc > div:nth-child(8) .note,
-.bmc > div:nth-child(9) .note {
-  grid-column: span 2;
-}
-
 .bmc h3 {
   margin: 0;
   font-size: 14px;
-  color: #5b5b5b;
+  color: #000;
 }
 
 .note {
@@ -161,6 +151,7 @@ a {
 
 h1, h2, h3, h4 {
   margin: .3em 0;
+  color: #fff;
 }
 
 ul {
@@ -180,64 +171,184 @@ img {
     </div>
 
     <header>
-    <nav class="navbar navbar-expand-lg bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="../../images/logo_inova.png" width="75" height="50"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
-                <li class="nav-item">
-                    <a class="nav-link active" style="color: white" aria-current="page" href="../projetos/main_pj"><b>Menu</b></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " style="color: white" href="../projetos/main_pj/gerencia_projetos"><b>Gerenciar Projetos</b></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " style="color: white" href="#"><b>Dashboard de Indicadores</b></a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    </nav>
+        <nav class="navbar navbar-expand-lg bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="<?php echo base_url() ?>index.php/main/session"><img src="<?php echo base_url() ?>images/logo_inova.png" width="75" height="50"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                        <li class="nav-item">
+                            <a class="nav-link active" style="color: white" aria-current="page" href="<?php echo base_url() ?>index.php/main/session"><b>Menu</b></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " style="color: white" href="<?php echo base_url() ?>index.php/projetos/main_pj/gerencia_projetos"><b>Gerenciar Projetos</b></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " style="color: white" href="<?php echo base_url() ?>index.php/pe/main_pe"><b>Dashboard de Indicadores</b></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
+
     <div class="wrapper">
   <h1>Modelo Canvas</h1>
   <div class="bmc">
-    <div>
-      <h3>Parceiros Chaves</h3>
-    
+    <div class="table-responsive">
+      <table class="table">
+  <thead>
+    <tr>
+      <th colspan="2">Parceiros Chaves
+      <button type="button" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_">Adicionar</button>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: #666666;">Adautin o grato</th>
+      <th><button type="button" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_">Detalhes</button></th>
+    </tr>
+  </tbody>
+</table>
     </div>
-    <div>
-      <h3>Atividades Chaves</h3>
-      <div class="note">All</div>
+    <div class="table-responsive">
+    <table class="table">
+  <thead>
+    <tr>
+      <th colspan="2">Atividades Chaves
+      <button type="button" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_">Adicionar</button>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: #666666;">Adautin o grato</th>
+      <th><button type="button" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_">Detalhes</button></th>
+    </tr>
+  </tbody>
+</table>
     </div>
-    <div>
-      <h3>Recursos Chaves</h3>
+    <div class="table-responsive">
+    <table class="table">
+  <thead>
+    <tr>
+      <th colspan="2">Recursos Chaves
+      <button type="button" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_">Adicionar</button>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: #666666;">Adautin o grato</th>
+      <th><button type="button" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_">Detalhes</button></th>
+    </tr>
+  </tbody>
+</table>
     </div>
-    <div>
-      <h3>Proposta de Valor</h3>
-      
+    <div class="table-responsive">
+    <table class="table">
+  <thead>
+    <tr>
+      <th colspan="2">Proposta de Valor
+      <button type="button" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_">Adicionar</button>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: #666666;">Adautin o grato</th>
+      <th><button type="button" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_">Detalhes</button></th>
+    </tr>
+  </tbody>
+</table>
     </div>
-    <div>
-      <h3>Relacionamento com o Cliente</h3>
+    <div class="table-responsive">
+    <table class="table">
+  <thead>
+    <tr>
+      <th colspan="2">Relacionamento com o Cliente
+      <button type="button" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_">Adicionar</button>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: #666666;">Adautin o grato</th>
+      <th><button type="button" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_">Detalhes</button></th>
+    </tr>
+  </tbody>
+</table>
     </div>
-    <div>
-      <h3>Canais de Distribuição</h3>
+    <div class="table-responsive">
+    <table class="table">
+  <thead>
+    <tr>
+      <th colspan="2">Canais de Distribuição
+      <button type="button" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_">Adicionar</button>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: #666666;">Adautin o grato</th>
+      <th><button type="button" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_">Detalhes</button></th>
+    </tr>
+  </tbody>
+</table>
     </div>
-    <div>
-      <h3>Segmentos de Clientes</h3>
+    <div class="table-responsive">
+    <table class="table">
+  <thead>
+    <tr>
+      <th colspan="2">Segmentos de Clientes
+      <button type="button" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_">Adicionar</button>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: #666666;">Adautin o grato</th>
+      <th><button type="button" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_">Detalhes</button></th>
+    </tr>
+  </tbody>
+</table>
     </div>
-    <div>
-      <h3>Estrutura de Custos</h3>
+    <div class="table-responsive">
+    <table class="table">
+  <thead>
+    <tr>
+      <th colspan="2">Estrutura de Custos
+      <button type="button" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_">Adicionar</button>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: #666666;">Adautin o grato</th>
+      <th><button type="button" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_">Detalhes</button></th>
+    </tr>
+  </tbody>
+</table>
     </div>
-    <div>
-      <h3>Fontes de Receitas</h3>
-      <div class="note">Everyone</div>
-      <div class="note">Everyone</div>
-      <div class="note">Everyone</div>
-      <div class="note green">Even more</div>
+    <div class="table-responsive">
+      <table class="table">
+  <thead>
+    <tr>
+      <th colspan="2">Parceiros Chaves
+      <button type="button" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_">Adicionar</button>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: #666666;">Adautin o grato</th>
+      <th><button type="button" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_">Detalhes</button></th>
+    </tr>
+  </tbody>
+</table>
     </div>
   </div>
 </div>
