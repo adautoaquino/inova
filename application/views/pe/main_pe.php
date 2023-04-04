@@ -201,15 +201,16 @@ img {
       <table class="table">
   <thead>
     <tr>
-      <th colspan="2">Parceiros Chaves
-      <button type="button" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_">Adicionar</button>
+      <th colspan="2">Parcerias Chave
+      
+      <button type="button" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_Canvas">Adicionar</button>
       </th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th scope="row" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: #666666;">Adautin o grato</th>
-      <th><button type="button" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_">Detalhes</button></th>
+      <th><button type="button" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_DE">Detalhes</button></th>
     </tr>
   </tbody>
 </table>
@@ -219,14 +220,14 @@ img {
   <thead>
     <tr>
       <th colspan="2">Atividades Chaves
-      <button type="button" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_">Adicionar</button>
+      <button type="button" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_Canvas">Adicionar</button>
       </th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th scope="row" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: #666666;">Adautin o grato</th>
-      <th><button type="button" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_">Detalhes</button></th>
+      <th><button type="button" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_DE">Detalhes</button></th>
     </tr>
   </tbody>
 </table>
@@ -236,14 +237,14 @@ img {
   <thead>
     <tr>
       <th colspan="2">Recursos Chaves
-      <button type="button" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_">Adicionar</button>
+      <button type="button" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_Canvas">Adicionar</button>
       </th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th scope="row" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: #666666;">Adautin o grato</th>
-      <th><button type="button" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_">Detalhes</button></th>
+      <th><button type="button" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_DE">Detalhes</button></th>
     </tr>
   </tbody>
 </table>
@@ -253,14 +254,14 @@ img {
   <thead>
     <tr>
       <th colspan="2">Proposta de Valor
-      <button type="button" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_">Adicionar</button>
+      <button type="button" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_Canvas">Adicionar</button>
       </th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th scope="row" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: #666666;">Adautin o grato</th>
-      <th><button type="button" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_">Detalhes</button></th>
+      <th><button type="button" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_DE">Detalhes</button></th>
     </tr>
   </tbody>
 </table>
@@ -270,14 +271,14 @@ img {
   <thead>
     <tr>
       <th colspan="2">Relacionamento com o Cliente
-      <button type="button" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_">Adicionar</button>
+      <button type="button" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_Canvas">Adicionar</button>
       </th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th scope="row" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: #666666;">Adautin o grato</th>
-      <th><button type="button" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_">Detalhes</button></th>
+      <th><button type="button" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_DE">Detalhes</button></th>
     </tr>
   </tbody>
 </table>
@@ -287,14 +288,14 @@ img {
   <thead>
     <tr>
       <th colspan="2">Canais de Distribuição
-      <button type="button" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_">Adicionar</button>
+      <button type="button" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_Canvas">Adicionar</button>
       </th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th scope="row" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: #666666;">Adautin o grato</th>
-      <th><button type="button" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_">Detalhes</button></th>
+      <th><button type="button" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_DE">Detalhes</button></th>
     </tr>
   </tbody>
 </table>
@@ -304,14 +305,14 @@ img {
   <thead>
     <tr>
       <th colspan="2">Segmentos de Clientes
-      <button type="button" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_">Adicionar</button>
+      <button type="button" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_Canvas">Adicionar</button>
       </th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th scope="row" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: #666666;">Adautin o grato</th>
-      <th><button type="button" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_">Detalhes</button></th>
+      <th><button type="button" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_DE">Detalhes</button></th>
     </tr>
   </tbody>
 </table>
@@ -321,14 +322,14 @@ img {
   <thead>
     <tr>
       <th colspan="2">Estrutura de Custos
-      <button type="button" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_">Adicionar</button>
+      <button type="button" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_Canvas">Adicionar</button>
       </th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th scope="row" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: #666666;">Adautin o grato</th>
-      <th><button type="button" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_">Detalhes</button></th>
+      <th><button type="button" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_DE">Detalhes</button></th>
     </tr>
   </tbody>
 </table>
@@ -337,15 +338,15 @@ img {
       <table class="table">
   <thead>
     <tr>
-      <th colspan="2">Parceiros Chaves
-      <button type="button" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_">Adicionar</button>
+      <th colspan="2">Fontes de receita
+      <button type="button" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_Canvas">Adicionar</button>
       </th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th scope="row" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: #666666;">Adautin o grato</th>
-      <th><button type="button" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_">Detalhes</button></th>
+      <th><button type="button" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_DE">Detalhes</button></th>
     </tr>
   </tbody>
 </table>
@@ -356,8 +357,66 @@ img {
 
     </footer>
 
+    </div>
+
+    <div class="modal modal-xl fade" id="Modal_Canvas" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel"> Detalhamento: <?php echo $dados_projeto['nome_projeto'] ?></h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form method="post" action="<?php echo base_url() ?>index.php/projetos/main_pj/criar_macrofase/<?php echo $dados_projeto['codprojeto'] ?>">
+                            <div class="form row" style="padding-top:5%;">
+                                <label for="descricao" class="col-sm-3 col-form-label text-center"><strong> Descrição</strong></label>
+                                <div class="form-group col-md-9">
+                                    <textarea rows="5" type="text" value="" required placeholder="Escreva um pouco sobre a macrofase..." name="descricao" class="form-control" id="descricao"></textarea>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                                <button type="submit" class="btn btn-success">Criar Detalhe</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="modal modal-xl fade" id="Modal_DE" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel"> Detalhamento: <?php echo $dados_projeto['nome_projeto'] ?></h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form method="post" action="<?php echo base_url() ?>index.php/projetos/main_pj/criar_macrofase/<?php echo $dados_projeto['codprojeto'] ?>">
+                            <div class="form row" style="padding-top:5%;">
+                                <label for="descricao" class="col-sm-3 col-form-label text-center"><strong> Descrição</strong></label>
+                                <div class="form-group col-md-9">
+                                    <textarea rows="5" type="text" required readonly='readonly' value="" required placeholder="Escreva um pouco sobre a macrofase..." name="descricao" class="form-control" id="descricao"></textarea>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                                <button type="submit" class="btn btn-success">Criar Macrofase</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
   </body>
+
+  
 
 
 </html>
