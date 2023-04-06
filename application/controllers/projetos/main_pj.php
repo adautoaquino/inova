@@ -323,6 +323,8 @@ class main_pj extends CI_Controller
 	}
 
 	public function editar_projeto($codprojeto){
+		// echo $codprojeto;
+		// exit;
 		$data['codprojeto'] = $codprojeto;
 		$data['info_projeto'] = $this->projetos_model->get_projeto($codprojeto);
 		$nome_projeto = $this->input->post('nome');
@@ -348,6 +350,11 @@ class main_pj extends CI_Controller
 				"data_prevista_termino" => $this->input->post('data_prevista_termino'),
 				"prioridade_projeto" => $this->input->post('prioridade_projeto')
 			);
+			// echo "<pre>";
+			// 	print_r($codprojeto);
+			// echo "<pre>";
+			// exit;
+
 			$retorno = $this->projetos_model->editar_projeto($codprojeto, $input);
 			if ($retorno == 1) {
 				echo "<script>alert('Seu projeto foi editado com suceso!!');
