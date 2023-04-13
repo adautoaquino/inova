@@ -72,7 +72,7 @@
                             <a class="nav-link " style="color: white" href="<?php echo base_url() ?>index.php/projetos/main_pj/gerencia_projetos"><b>Gerenciar Projetos</b></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " style="color: white" href="<?php echo base_url() ?>index.php/pe/main_pe"><b>Dashboard de Indicadores</b></a>
+                            <a class="nav-link " style="color: white" href="<?php echo base_url() ?>index.php/projetos/main_pj/dashboard"><b>Dashboard de Indicadores</b></a>
                         </li>
                     </ul>
                 </div>

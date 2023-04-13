@@ -96,7 +96,7 @@
                             relacionados a elas.
                         </p>
                         <div class="text-center">
-                            <a class="btn btn-light" href="<?php echo base_url()?>index.php/pe/main_pe">Acessar</a>
+                            <a class="btn btn-light" href="<?php echo base_url()?>index.php/projetos/main_pj/dashboard">Acessar</a>
                         </div>
                     </div>
                 </div>
