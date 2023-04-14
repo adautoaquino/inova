@@ -38,7 +38,7 @@ class main_pe extends CI_Controller
 		$this->load->view('pe/gpe');
 	}
     
-    .
+
 }
 
 
