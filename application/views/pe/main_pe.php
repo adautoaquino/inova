@@ -134,7 +134,7 @@
     <div class="accordion accordion-flush" id="accordionFlushExample">
         <div class="accordion-item">
           <h2 class="accordion-header" id="flush-headingOne">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse2" aria-expanded="false" aria-controls="flush-collapseOne">
               <b>Atividades Chave</b>
             </button>
           </h2>
@@ -142,29 +142,7 @@
             <img src="<?php echo base_url() ?>images/botao-adicionar.png" width="25" height="25">
           </button>
           <div style="height: 18rem; overflow-y: scroll;">
-          <div id="flush-collapseOne" class="accordion-collapse collapse text-center" style="padding-top: 3%; padding-left:8%; padding-bottom: 3%;" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-            <div class="card" style="width: 18rem;">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
-                <a href="#" class="card-link">Another link</a>
-              </div>
-            </div>
-          </div>
-          <div id="flush-collapseOne" class="accordion-collapse collapse text-center" style="padding-top: 3%; padding-left:8%; padding-bottom: 3%;" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-            <div class="card" style="width: 18rem;">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
-                <a href="#" class="card-link">Another link</a>
-              </div>
-            </div>
-          </div>
-          <div id="flush-collapseOne" class="accordion-collapse collapse text-center" style="padding-top: 3%; padding-left:8%; padding-bottom: 3%;" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+          <div id="flush-collapse2" class="accordion-collapse collapse text-center" style="padding-top: 3%; padding-left:8%; padding-bottom: 3%;" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
             <div class="card" style="width: 18rem;">
               <div class="card-body">
                 <h5 class="card-title">Card title</h5>
@@ -183,7 +161,7 @@
     <div class="accordion accordion-flush" id="accordionFlushExample">
         <div class="accordion-item">
           <h2 class="accordion-header" id="flush-headingOne">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse3" aria-expanded="false" aria-controls="flush-collapseOne">
               <b>Recursos Chave</b>
             </button>
           </h2>
@@ -191,7 +169,7 @@
             <img src="<?php echo base_url() ?>images/botao-adicionar.png" width="25" height="25">
           </button>
           <div style="height: 18rem; overflow-y: scroll;">
-          <div id="flush-collapseOne" class="accordion-collapse collapse text-center" style="padding-top: 3%; padding-left:8%; padding-bottom: 3%;" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+          <div id="flush-collapse3" class="accordion-collapse collapse text-center" style="padding-top: 3%; padding-left:8%; padding-bottom: 3%;" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
             <div class="card" style="width: 18rem;">
               <div class="card-body">
                 <h5 class="card-title">Card title</h5>
@@ -213,7 +191,7 @@
     <div class="accordion accordion-flush" id="accordionFlushExample">
         <div class="accordion-item">
           <h2 class="accordion-header" id="flush-headingOne">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse4" aria-expanded="false" aria-controls="flush-collapseOne">
               <b>Proposta de Valor</b>
             </button>
           </h2>
@@ -221,7 +199,7 @@
             <img src="<?php echo base_url() ?>images/botao-adicionar.png" width="25" height="25">
           </button>
           <div style="height: 18rem; overflow-y: scroll;">
-          <div id="flush-collapseOne" class="accordion-collapse collapse text-center" style="padding-top: 3%; padding-left:8%; padding-bottom: 3%;" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+          <div id="flush-collapse4" class="accordion-collapse collapse text-center" style="padding-top: 3%; padding-left:8%; padding-bottom: 3%;" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
             <div class="card" style="width: 18rem;">
               <div class="card-body">
                 <h5 class="card-title">Card title</h5>
@@ -240,7 +218,7 @@
     <div class="accordion accordion-flush" id="accordionFlushExample">
         <div class="accordion-item">
           <h2 class="accordion-header" id="flush-headingOne">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse5" aria-expanded="false" aria-controls="flush-collapseOne">
               <b>Relacionamento com o Cliente</b>
             </button>
           </h2>
@@ -248,7 +226,7 @@
             <img src="<?php echo base_url() ?>images/botao-adicionar.png" width="25" height="25">
           </button>
           <div style="height: 18rem; overflow-y: scroll;">
-          <div id="flush-collapseOne" class="accordion-collapse collapse text-center" style="padding-top: 3%; padding-left:8%; padding-bottom: 3%;" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+          <div id="flush-collapse5" class="accordion-collapse collapse text-center" style="padding-top: 3%; padding-left:8%; padding-bottom: 3%;" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
             <div class="card" style="width: 18rem;">
               <div class="card-body">
                 <h5 class="card-title">Card title</h5>
@@ -267,7 +245,7 @@
     <div class="accordion accordion-flush" id="accordionFlushExample">
         <div class="accordion-item">
           <h2 class="accordion-header" id="flush-headingOne">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse6" aria-expanded="false" aria-controls="flush-collapseOne">
               <b>Segmento de Cliente</b>
             </button>
           </h2>
@@ -275,7 +253,7 @@
             <img src="<?php echo base_url() ?>images/botao-adicionar.png" width="25" height="25">
           </button>
           <div style="height: 18rem; overflow-y: scroll;">
-          <div id="flush-collapseOne" class="accordion-collapse collapse text-center" style="padding-top: 3%; padding-left:8%; padding-bottom: 3%;" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+          <div id="flush-collapse6" class="accordion-collapse collapse text-center" style="padding-top: 3%; padding-left:8%; padding-bottom: 3%;" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
             <div class="card" style="width: 18rem;">
               <div class="card-body">
                 <h5 class="card-title">Card title</h5>
@@ -297,7 +275,7 @@
     <div class="accordion accordion-flush" id="accordionFlushExample">
         <div class="accordion-item">
           <h2 class="accordion-header" id="flush-headingOne">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse7" aria-expanded="false" aria-controls="flush-collapseOne">
               <b>Canais de Distribuição</b>
             </button>
           </h2>
@@ -305,7 +283,7 @@
             <img src="<?php echo base_url() ?>images/botao-adicionar.png" width="25" height="25">
           </button>
           <div style="height: 18rem; overflow-y: scroll;">
-          <div id="flush-collapseOne" class="accordion-collapse collapse text-center" style="padding-top: 3%; padding-left:8%; padding-bottom: 3%;" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+          <div id="flush-collapse7" class="accordion-collapse collapse text-center" style="padding-top: 3%; padding-left:8%; padding-bottom: 3%;" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
             <div class="card" style="width: 18rem;">
               <div class="card-body">
                 <h5 class="card-title">Card title</h5>
@@ -324,7 +302,7 @@
     <div class="accordion accordion-flush" id="accordionFlushExample">
         <div class="accordion-item">
           <h2 class="accordion-header" id="flush-headingOne">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse8" aria-expanded="false" aria-controls="flush-collapseOne">
               <b>Estrutura de Custos</b>
             </button>
           </h2>
@@ -332,7 +310,7 @@
             <img src="<?php echo base_url() ?>images/botao-adicionar.png" width="25" height="25">
           </button>
           <div style="height: 18rem; overflow-y: scroll;">
-          <div id="flush-collapseOne" class="accordion-collapse collapse text-center" style="padding-top: 3%; padding-left:8%; padding-bottom: 3%;" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+          <div id="flush-collapse8" class="accordion-collapse collapse text-center" style="padding-top: 3%; padding-left:8%; padding-bottom: 3%;" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
             <div class="card" style="width: 18rem;">
               <div class="card-body">
                 <h5 class="card-title">Card title</h5>
@@ -351,7 +329,7 @@
     <div class="accordion accordion-flush" id="accordionFlushExample">
         <div class="accordion-item">
           <h2 class="accordion-header" id="flush-headingOne">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse9" aria-expanded="false" aria-controls="flush-collapseOne">
               <b>Fontes de Receita</b>
             </button>
           </h2>
@@ -359,7 +337,7 @@
             <img src="<?php echo base_url() ?>images/botao-adicionar.png" width="25" height="25">
           </button>
           <div style="height: 18rem; overflow-y: scroll;">
-          <div id="flush-collapseOne" class="accordion-collapse collapse text-center" style="padding-top: 3%; padding-left:8%; padding-bottom: 3%;" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+          <div id="flush-collapse9" class="accordion-collapse collapse text-center" style="padding-top: 3%; padding-left:8%; padding-bottom: 3%;" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
             <div class="card" style="width: 18rem;">
               <div class="card-body">
                 <h5 class="card-title">Card title</h5>
