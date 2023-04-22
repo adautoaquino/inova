@@ -86,7 +86,7 @@
             </div>
         </div>
         <div class="row" style="padding-top:4%">
-            <div class=" offset-md-2 col-md-8 text-center" style="padding-bottom:4%">
+            <div class=" offset-md-1 col-md-10 text-center" style="padding-bottom:4%">
                 <div class="card bg-dark" style="width: 100%;">
                     <div class="table-responsive" style=" padding-left:2%; padding-right:2%;">
                         <table class="table table-dark table-striped">
@@ -146,9 +146,9 @@
                                             }
                                             ?>
                                         </td>
-                                        <td><a href="detalhar_projeto/<?php echo $projeto['codprojeto'] ?>" class="btn btn-sm btn-danger">Detalhes</a></td>
+                                        <td><a href="detalhar_projeto/<?php echo $projeto['codprojeto'] ?>" class="btn btn-sm btn-warning">Detalhes</a></td>
                                         <td><a href="editar_projeto/<?php echo $projeto['codprojeto'] ?>" class="btn btn-sm btn-light">Editar</a></td>
-                                        <td><a href="finalizar_projeto/<?php echo $projeto['codprojeto'] ?>" class="btn btn-sm btn-light">Finalizar</a></td>
+                                        <td><a href="finalizar_projeto/<?php echo $projeto['codprojeto'] ?>" class="btn btn-sm btn-success">Finalizar</a></td>
                                     </tr>
                                 <?php } ?>
                             </tbody>

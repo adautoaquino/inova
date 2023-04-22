@@ -133,7 +133,7 @@
                                             }
                                             ?>
                                         </td>
-                                        <td><a href="detalhar_projeto_finalizado/<?php echo $projeto['codprojeto'] ?>" class="btn btn-sm btn-danger">Detalhes</a></td>
+                                        <td><a href="detalhar_projeto_finalizado/<?php echo $projeto['codprojeto'] ?>" class="btn btn-sm btn-warning">Detalhes</a></td>
                                     </tr>
                                 <?php } ?>
                             </tbody>

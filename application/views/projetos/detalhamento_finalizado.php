@@ -103,10 +103,10 @@
                                 if ($data_agr > $data_final) {
                                     echo '<h5 style="color:red">Atrasada</h5>';
                                 } else {
-                                    echo '<h5 style="color:yellow">No prazo</h5>';
+                                    echo '<h5 style="color:green">No prazo</h5>';
                                 }
                             } else {
-                                echo '<h5 style="color:green">Completa</h5>';
+                                echo '<h5 style="color:blue">Completa</h5>';
                             }
                             ?>
                         </div>
@@ -152,14 +152,14 @@
                                                         if ($data_agr > $data_final) {
                                                             echo '<p style="color:red"><b>Atrasada</b></p>';
                                                         } else {
-                                                            echo '<p style="color:yellow"><b>No prazo</b></p>';
+                                                            echo '<p style="color:green"><b>No prazo</b></p>';
                                                         }
                                                     } else {
-                                                        echo '<p style="color:green"><b>Completa</b></p>';
+                                                        echo '<p style="color:blue"><b>Completa</b></p>';
                                                     }
                                                     ?>
                                                 </td>
-                                                <td> <a href="<?php echo base_url() ?>index.php/projetos/main_pj/detalhar_microfase/<?php echo $microfase['codmicrofase'] ?>" class="btn btn-danger btn-sm">Detalhar</a>
+                                                <td> <a href="<?php echo base_url() ?>index.php/projetos/main_pj/detalhar_microfase/<?php echo $microfase['codmicrofase'] ?>" class="btn btn-warning btn-sm">Detalhar</a>
                                                 </td>
                                             </tr>
                                     <?php
@@ -335,7 +335,7 @@
                                             $ano = $result[0];
                                             echo "$dia/$mes/$ano"; ?></td>
                                         <td>
-                                            <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_<?php echo $macrofase['codmacrofase'] ?>">Detalhar</button>
+                                            <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_<?php echo $macrofase['codmacrofase'] ?>">Detalhar</button>
                                         </td>
                                     </tr>
                                 <?php } ?>

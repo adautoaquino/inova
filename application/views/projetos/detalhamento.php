@@ -103,10 +103,10 @@
                                 if ($data_agr > $data_final) {
                                     echo '<h5 style="color:red">Atrasada</h5>';
                                 } else {
-                                    echo '<h5 style="color:yellow">No prazo</h5>';
+                                    echo '<h5 style="color:green">No prazo</h5>';
                                 }
                             } else {
-                                echo '<h5 style="color:green">Completa</h5>';
+                                echo '<h5 style="color:blue">Completa</h5>';
                             }
                             ?>
                         </div>
@@ -166,15 +166,15 @@
                                                             if ($data_agr > $data_final) {
                                                                 echo '<p style="color:red"><b>Atrasada</b></p>';
                                                             } else {
-                                                                echo '<p style="color:yellow"><b>No prazo</b></p>';
+                                                                echo '<p style="color:green"><b>No prazo</b></p>';
                                                             }
                                                         } else {
-                                                            echo '<p style="color:green"><b>Completa</b></p>';
+                                                            echo '<p style="color:blue"><b>Completa</b></p>';
                                                         }
                                                         ?>
                                                     </td>
                                                     <td class="align-middle text-center">
-                                                        <a href="<?php echo base_url() ?>index.php/projetos/main_pj/detalhar_microfase/<?php echo $microfase['codmicrofase'] ?>" class="btn btn-dark btn-sm">Detalhar</a>
+                                                        <a href="<?php echo base_url() ?>index.php/projetos/main_pj/detalhar_microfase/<?php echo $microfase['codmicrofase'] ?>" class="btn btn-warning btn-sm">Detalhar</a>
                                                         <a href="<?php echo base_url() ?>index.php/projetos/main_pj/editar_microfase/<?php echo $microfase['codmicrofase'] ?>" class="btn btn-dark btn-sm">Editar</a>
                                                         <a href="<?php echo base_url() ?>index.php/projetos/main_pj/deletar_microfase/<?php echo $microfase['codmicrofase'] ?>" class="btn btn-danger btn-sm">Deletar</a>
                                                         <a href="<?php echo base_url() ?>index.php/projetos/main_pj/finalizar_microfase/<?php echo $microfase['codmicrofase'] ?>" class="btn btn-success btn-sm">Finalizar</a>
