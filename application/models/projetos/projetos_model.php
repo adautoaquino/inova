@@ -122,6 +122,7 @@ class Projetos_model extends CI_Model
         $this->db->set('responsavel', $input['responsavel']);
         $this->db->set('data_inicio', $input['data_inicio']);
         $this->db->set('data_prevista_termino', $input['data_prevista_termino']);
+        $this->db->set('prioridade_microfase', $input['prioridade_microfase']);
         $this->db->where('codmicrofase', $input['codmicrofase']);
         $this->db->update('microfases');
         return 1;

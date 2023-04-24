@@ -288,14 +288,14 @@ class main_pj extends CI_Controller
 	public function finalizar_microfase($codmicrofase)
 	{
 		$return = $this->projetos_model->finalizar_microfase($codmicrofase);
-		$dados = $this->projetos_model->get_macrofase($codmicrofase);
+		$dados = $this->projetos_model->get_microfase($codmicrofase);
 		if ($return == 1) {
 			echo "<script>alert('Sua microfase foi finalizado com suceso!!');
-			window.location.assign('../../main_pj/detalhar_projeto/".$dados['codprojeto']."');</script>
+			window.location.assign('" . base_url() . "index.php/projetos/main_pj/detalhar_projeto/".$dados['codprojeto']."');</script>
 			";
 		} else {
 			echo "<script>alert('Não foi possível finalizar sua microfase...');
-			window.location.assign('../../main_pj/detalhar_projeto/".$dados['codprojeto']."');</script>
+			window.location.assign('" . base_url() . "index.php/projetos/main_pj/detalhar_projeto/".$dados['codprojeto']."');</script>
 			";
 		}
 	}
