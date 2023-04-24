@@ -95,46 +95,20 @@
           <div id="flush-collapseOne" class="accordion-collapse collapse text-center" style="padding-top: 3%; padding-left:8%; padding-bottom: 3%;" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
             <div class="card" style="width: 18rem;">
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 <a href="#" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
-                <a href="#" class="card-link">Another link</a>
-              </div>
-            </div>
-          </div>
-          <div id="flush-collapseOne" class="accordion-collapse collapse text-center" style="padding-top: 3%; padding-left:8%; padding-bottom: 3%;" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-            <div class="card" style="width: 18rem;">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
-                <a href="#" class="card-link">Another link</a>
-              </div>
-            </div>
-          </div>
-          <div id="flush-collapseOne" class="accordion-collapse collapse text-center" style="padding-top: 3%; padding-left:8%; padding-bottom: 3%;" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-            <div class="card" style="width: 18rem;">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
-                <a href="#" class="card-link">Another link</a>
               </div>
             </div>
           </div>
           </div>
         </div>
       </div>
-      
     </div>
     <div class="col">
-    <div class="accordion accordion-flush" id="accordionFlushExample">
+    <div class="accordion accordion-flush" id="accordionFlushExample2">
         <div class="accordion-item">
-          <h2 class="accordion-header" id="flush-headingOne">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse2" aria-expanded="false" aria-controls="flush-collapseOne">
+          <h2 class="accordion-header" id="flush-heading2">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse2" aria-expanded="false" aria-controls="flush-collapse2">
               <b>Atividades Chave</b>
             </button>
           </h2>
@@ -142,14 +116,11 @@
             <img src="<?php echo base_url() ?>images/botao-adicionar.png" width="25" height="25">
           </button>
           <div style="height: 18rem; overflow-y: scroll;">
-          <div id="flush-collapse2" class="accordion-collapse collapse text-center" style="padding-top: 3%; padding-left:8%; padding-bottom: 3%;" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+          <div id="flush-collapse2" class="accordion-collapse collapse text-center" style="padding-top: 3%; padding-left:8%; padding-bottom: 3%;" aria-labelledby="flush-heading2" data-bs-parent="#accordionFlushExample2">
             <div class="card" style="width: 18rem;">
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 <a href="#" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
-                <a href="#" class="card-link">Another link</a>
               </div>
             </div>
           </div>
@@ -158,10 +129,10 @@
       </div>
     </div>
     <div class="col">
-    <div class="accordion accordion-flush" id="accordionFlushExample">
+    <div class="accordion accordion-flush" id="accordionFlushExample3">
         <div class="accordion-item">
-          <h2 class="accordion-header" id="flush-headingOne">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse3" aria-expanded="false" aria-controls="flush-collapseOne">
+          <h2 class="accordion-header" id="flush-heading3">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse3" aria-expanded="false" aria-controls="flush-collapse3">
               <b>Recursos Chave</b>
             </button>
           </h2>
@@ -169,14 +140,11 @@
             <img src="<?php echo base_url() ?>images/botao-adicionar.png" width="25" height="25">
           </button>
           <div style="height: 18rem; overflow-y: scroll;">
-          <div id="flush-collapse3" class="accordion-collapse collapse text-center" style="padding-top: 3%; padding-left:8%; padding-bottom: 3%;" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+          <div id="flush-collapse3" class="accordion-collapse collapse text-center" style="padding-top: 3%; padding-left:8%; padding-bottom: 3%;" aria-labelledby="flush-heading3" data-bs-parent="#accordionFlushExample3">
             <div class="card" style="width: 18rem;">
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 <a href="#" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
-                <a href="#" class="card-link">Another link</a>
               </div>
             </div>
           </div>
@@ -188,10 +156,10 @@
   <hr>
   <div class="row justify-content-center">
     <div class="col">
-    <div class="accordion accordion-flush" id="accordionFlushExample">
+    <div class="accordion accordion-flush" id="accordionFlushExample4">
         <div class="accordion-item">
-          <h2 class="accordion-header" id="flush-headingOne">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse4" aria-expanded="false" aria-controls="flush-collapseOne">
+          <h2 class="accordion-header" id="flush-heading4">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse4" aria-expanded="false" aria-controls="flush-collapse4">
               <b>Proposta de Valor</b>
             </button>
           </h2>
@@ -199,14 +167,11 @@
             <img src="<?php echo base_url() ?>images/botao-adicionar.png" width="25" height="25">
           </button>
           <div style="height: 18rem; overflow-y: scroll;">
-          <div id="flush-collapse4" class="accordion-collapse collapse text-center" style="padding-top: 3%; padding-left:8%; padding-bottom: 3%;" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+          <div id="flush-collapse4" class="accordion-collapse collapse text-center" style="padding-top: 3%; padding-left:8%; padding-bottom: 3%;" aria-labelledby="flush-heading4" data-bs-parent="#accordionFlushExample4">
             <div class="card" style="width: 18rem;">
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 <a href="#" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
-                <a href="#" class="card-link">Another link</a>
               </div>
             </div>
           </div>
@@ -215,10 +180,10 @@
       </div>
     </div>
     <div class="col">
-    <div class="accordion accordion-flush" id="accordionFlushExample">
+    <div class="accordion accordion-flush" id="accordionFlushExample5">
         <div class="accordion-item">
-          <h2 class="accordion-header" id="flush-headingOne">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse5" aria-expanded="false" aria-controls="flush-collapseOne">
+          <h2 class="accordion-header" id="flush-heading5">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse5" aria-expanded="false" aria-controls="flush-collapse5">
               <b>Relacionamento com o Cliente</b>
             </button>
           </h2>
@@ -226,14 +191,11 @@
             <img src="<?php echo base_url() ?>images/botao-adicionar.png" width="25" height="25">
           </button>
           <div style="height: 18rem; overflow-y: scroll;">
-          <div id="flush-collapse5" class="accordion-collapse collapse text-center" style="padding-top: 3%; padding-left:8%; padding-bottom: 3%;" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+          <div id="flush-collapse5" class="accordion-collapse collapse text-center" style="padding-top: 3%; padding-left:8%; padding-bottom: 3%;" aria-labelledby="flush-heading5" data-bs-parent="#accordionFlushExample5">
             <div class="card" style="width: 18rem;">
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 <a href="#" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
-                <a href="#" class="card-link">Another link</a>
               </div>
             </div>
           </div>
@@ -242,10 +204,10 @@
       </div>
     </div>
     <div class="col">
-    <div class="accordion accordion-flush" id="accordionFlushExample">
+    <div class="accordion accordion-flush" id="accordionFlushExample6">
         <div class="accordion-item">
-          <h2 class="accordion-header" id="flush-headingOne">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse6" aria-expanded="false" aria-controls="flush-collapseOne">
+          <h2 class="accordion-header" id="flush-heading6">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse6" aria-expanded="false" aria-controls="flush-collapse6">
               <b>Segmento de Cliente</b>
             </button>
           </h2>
@@ -253,14 +215,11 @@
             <img src="<?php echo base_url() ?>images/botao-adicionar.png" width="25" height="25">
           </button>
           <div style="height: 18rem; overflow-y: scroll;">
-          <div id="flush-collapse6" class="accordion-collapse collapse text-center" style="padding-top: 3%; padding-left:8%; padding-bottom: 3%;" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+          <div id="flush-collapse6" class="accordion-collapse collapse text-center" style="padding-top: 3%; padding-left:8%; padding-bottom: 3%;" aria-labelledby="flush-heading6" data-bs-parent="#accordionFlushExample6">
             <div class="card" style="width: 18rem;">
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 <a href="#" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
-                <a href="#" class="card-link">Another link</a>
               </div>
             </div>
           </div>
@@ -272,10 +231,10 @@
   <hr>
   <div class="row justify-content-center">
     <div class="col">
-    <div class="accordion accordion-flush" id="accordionFlushExample">
+    <div class="accordion accordion-flush" id="accordionFlushExample7">
         <div class="accordion-item">
-          <h2 class="accordion-header" id="flush-headingOne">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse7" aria-expanded="false" aria-controls="flush-collapseOne">
+          <h2 class="accordion-header" id="flush-heading7">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse7" aria-expanded="false" aria-controls="flush-collapse7">
               <b>Canais de Distribuição</b>
             </button>
           </h2>
@@ -283,14 +242,11 @@
             <img src="<?php echo base_url() ?>images/botao-adicionar.png" width="25" height="25">
           </button>
           <div style="height: 18rem; overflow-y: scroll;">
-          <div id="flush-collapse7" class="accordion-collapse collapse text-center" style="padding-top: 3%; padding-left:8%; padding-bottom: 3%;" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+          <div id="flush-collapse7" class="accordion-collapse collapse text-center" style="padding-top: 3%; padding-left:8%; padding-bottom: 3%;" aria-labelledby="flush-heading7" data-bs-parent="#accordionFlushExample7">
             <div class="card" style="width: 18rem;">
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 <a href="#" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
-                <a href="#" class="card-link">Another link</a>
               </div>
             </div>
           </div>
@@ -299,10 +255,10 @@
       </div>
     </div>
     <div class="col">
-    <div class="accordion accordion-flush" id="accordionFlushExample">
+    <div class="accordion accordion-flush" id="accordionFlushExample8">
         <div class="accordion-item">
-          <h2 class="accordion-header" id="flush-headingOne">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse8" aria-expanded="false" aria-controls="flush-collapseOne">
+          <h2 class="accordion-header" id="flush-heading8">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse8" aria-expanded="false" aria-controls="flush-collapse8">
               <b>Estrutura de Custos</b>
             </button>
           </h2>
@@ -310,14 +266,11 @@
             <img src="<?php echo base_url() ?>images/botao-adicionar.png" width="25" height="25">
           </button>
           <div style="height: 18rem; overflow-y: scroll;">
-          <div id="flush-collapse8" class="accordion-collapse collapse text-center" style="padding-top: 3%; padding-left:8%; padding-bottom: 3%;" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+          <div id="flush-collapse8" class="accordion-collapse collapse text-center" style="padding-top: 3%; padding-left:8%; padding-bottom: 3%;" aria-labelledby="flush-heading8" data-bs-parent="#accordionFlushExample8">
             <div class="card" style="width: 18rem;">
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 <a href="#" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
-                <a href="#" class="card-link">Another link</a>
               </div>
             </div>
           </div>
@@ -326,10 +279,10 @@
       </div>
     </div>
     <div class="col">
-    <div class="accordion accordion-flush" id="accordionFlushExample">
+    <div class="accordion accordion-flush" id="accordionFlushExample9">
         <div class="accordion-item">
-          <h2 class="accordion-header" id="flush-headingOne">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse9" aria-expanded="false" aria-controls="flush-collapseOne">
+          <h2 class="accordion-header" id="flush-heading9">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse9" aria-expanded="false" aria-controls="flush-collapse9">
               <b>Fontes de Receita</b>
             </button>
           </h2>
@@ -337,14 +290,11 @@
             <img src="<?php echo base_url() ?>images/botao-adicionar.png" width="25" height="25">
           </button>
           <div style="height: 18rem; overflow-y: scroll;">
-          <div id="flush-collapse9" class="accordion-collapse collapse text-center" style="padding-top: 3%; padding-left:8%; padding-bottom: 3%;" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+          <div id="flush-collapse9" class="accordion-collapse collapse text-center" style="padding-top: 3%; padding-left:8%; padding-bottom: 3%;" aria-labelledby="flush-heading9" data-bs-parent="#accordionFlushExample9">
             <div class="card" style="width: 18rem;">
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 <a href="#" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
-                <a href="#" class="card-link">Another link</a>
               </div>
             </div>
           </div>
@@ -353,6 +303,20 @@
       </div>
     </div>
   </div>
+    <script>
+      const accordionButtons = document.querySelectorAll('.accordion-button');
+      accordionButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
+          const targetCollapse = document.querySelector(button.getAttribute('data-bs-target'));
+          const showCollapses = document.querySelectorAll('.collapse.show');
+          showCollapses.forEach(function (collapse) {
+            if (collapse !== targetCollapse) {
+              bootstrap.Collapse.getInstance(collapse).hide();
+            }
+          });
+        });
+      });
+    </script>
 <!-- ////////////////////////////////////////////////////////////////// MODAIS//////////////////////////////////////////////////// -->
   <div class="modal modal-md fade" id="Modal_criar_parceria" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -364,16 +328,13 @@
                     <div class="modal-body">
                         <form method="post" action="#">
                             <div class="form row" style="padding-top:5%;">
-                                <label for="nome" class="col-sm-3 col-form-label text-center"><strong> Nome:</strong></label>
+                                <label for="descricao" class="col-sm-3 col-form-label text-center"><strong> Conteúdo do card:</strong></label>
                                 <div class="form-group col-md-9">
-                                    <input type="text" placeholder="Parcerias Chave" required name="nome" value="" class="form-control" id="nome">
+                                    <textarea rows="5" type="text" value="" required placeholder="Escreva um pouco sobre..." name="parceria" class="form-control" id="parceria"></textarea>
                                 </div>
                             </div>
-                            <div class="form row" style="padding-top:5%;">
-                                <label for="descricao" class="col-sm-3 col-form-label text-center"><strong> Descrição:</strong></label>
-                                <div class="form-group col-md-9">
-                                    <textarea rows="5" type="text" value="" required placeholder="Escreva um pouco sobre..." name="descricao" class="form-control" id="descricao"></textarea>
-                                </div>
+                            <div>
+                              <input name="flag" id="flag" type="hidden" value="1">
                             </div>
                             <br>
                             <div class="modal-footer">
@@ -395,16 +356,13 @@
                     <div class="modal-body">
                         <form method="post" action="#">
                             <div class="form row" style="padding-top:5%;">
-                                <label for="nome" class="col-sm-3 col-form-label text-center"><strong> Nome:</strong></label>
+                                <label for="descricao" class="col-sm-3 col-form-label text-center"><strong> Conteúdo do card:</strong></label>
                                 <div class="form-group col-md-9">
-                                    <input type="text" placeholder="Atividades Chave" required name="nome" value="" class="form-control" id="nome">
+                                    <textarea rows="5" type="text" value="" required placeholder="Escreva um pouco sobre..." name="atividades" class="form-control" id="atividades"></textarea>
                                 </div>
                             </div>
-                            <div class="form row" style="padding-top:5%;">
-                                <label for="descricao" class="col-sm-3 col-form-label text-center"><strong> Descrição:</strong></label>
-                                <div class="form-group col-md-9">
-                                    <textarea rows="5" type="text" value="" required placeholder="Escreva um pouco sobre..." name="descricao" class="form-control" id="descricao"></textarea>
-                                </div>
+                            <div>
+                              <input name="flag" id="flag" type="hidden" value="2">
                             </div>
                             <br>
                             <div class="modal-footer">
@@ -426,16 +384,13 @@
                     <div class="modal-body">
                         <form method="post" action="#">
                             <div class="form row" style="padding-top:5%;">
-                                <label for="nome" class="col-sm-3 col-form-label text-center"><strong> Nome:</strong></label>
+                                <label for="descricao" class="col-sm-3 col-form-label text-center"><strong> Conteúdo do card:</strong></label>
                                 <div class="form-group col-md-9">
-                                    <input type="text" placeholder="Recursos Chave" required name="nome" value="" class="form-control" id="nome">
+                                    <textarea rows="5" type="text" value="" required placeholder="Escreva um pouco sobre..." name="recursos" class="form-control" id="recursos"></textarea>
                                 </div>
                             </div>
-                            <div class="form row" style="padding-top:5%;">
-                                <label for="descricao" class="col-sm-3 col-form-label text-center"><strong> Descrição:</strong></label>
-                                <div class="form-group col-md-9">
-                                    <textarea rows="5" type="text" value="" required placeholder="Escreva um pouco sobre..." name="descricao" class="form-control" id="descricao"></textarea>
-                                </div>
+                            <div>
+                              <input name="flag" id="flag" type="hidden" value="3">
                             </div>
                             <br>
                             <div class="modal-footer">
@@ -457,16 +412,13 @@
                     <div class="modal-body">
                         <form method="post" action="#">
                             <div class="form row" style="padding-top:5%;">
-                                <label for="nome" class="col-sm-3 col-form-label text-center"><strong> Nome:</strong></label>
+                                <label for="descricao" class="col-sm-3 col-form-label text-center"><strong> Conteúdo do card:</strong></label>
                                 <div class="form-group col-md-9">
-                                    <input type="text" placeholder="Proposta de Valor" required name="nome" value="" class="form-control" id="nome">
+                                    <textarea rows="5" type="text" value="" required placeholder="Escreva um pouco sobre..." name="proposta" class="form-control" id="proposta"></textarea>
                                 </div>
                             </div>
-                            <div class="form row" style="padding-top:5%;">
-                                <label for="descricao" class="col-sm-3 col-form-label text-center"><strong> Descrição:</strong></label>
-                                <div class="form-group col-md-9">
-                                    <textarea rows="5" type="text" value="" required placeholder="Escreva um pouco sobre..." name="descricao" class="form-control" id="descricao"></textarea>
-                                </div>
+                            <div>
+                              <input name="flag" id="flag" type="hidden" value="4">
                             </div>
                             <br>
                             <div class="modal-footer">
@@ -488,16 +440,13 @@
                     <div class="modal-body">
                         <form method="post" action="#">
                             <div class="form row" style="padding-top:5%;">
-                                <label for="nome" class="col-sm-3 col-form-label text-center"><strong> Nome:</strong></label>
+                                <label for="descricao" class="col-sm-3 col-form-label text-center"><strong> Conteúdo do card:</strong></label>
                                 <div class="form-group col-md-9">
-                                    <input type="text" placeholder="Relacionamento com o Cliente" required name="nome" value="" class="form-control" id="nome">
+                                    <textarea rows="5" type="text" value="" required placeholder="Escreva um pouco sobre..." name="relacionamento" class="form-control" id="relacionamento"></textarea>
                                 </div>
                             </div>
-                            <div class="form row" style="padding-top:5%;">
-                                <label for="descricao" class="col-sm-3 col-form-label text-center"><strong> Descrição:</strong></label>
-                                <div class="form-group col-md-9">
-                                    <textarea rows="5" type="text" value="" required placeholder="Escreva um pouco sobre..." name="descricao" class="form-control" id="descricao"></textarea>
-                                </div>
+                            <div>
+                              <input name="flag" id="flag" type="hidden" value="5">
                             </div>
                             <br>
                             <div class="modal-footer">
@@ -519,16 +468,13 @@
                     <div class="modal-body">
                         <form method="post" action="#">
                             <div class="form row" style="padding-top:5%;">
-                                <label for="nome" class="col-sm-3 col-form-label text-center"><strong> Nome:</strong></label>
+                                <label for="descricao" class="col-sm-3 col-form-label text-center"><strong> Conteúdo do card:</strong></label>
                                 <div class="form-group col-md-9">
-                                    <input type="text" placeholder="Segmento de Cliente" required name="nome" value="" class="form-control" id="nome">
+                                    <textarea rows="5" type="text" value="" required placeholder="Escreva um pouco sobre..." name="segmento" class="form-control" id="segmento"></textarea>
                                 </div>
                             </div>
-                            <div class="form row" style="padding-top:5%;">
-                                <label for="descricao" class="col-sm-3 col-form-label text-center"><strong> Descrição:</strong></label>
-                                <div class="form-group col-md-9">
-                                    <textarea rows="5" type="text" value="" required placeholder="Escreva um pouco sobre..." name="descricao" class="form-control" id="descricao"></textarea>
-                                </div>
+                            <div>
+                              <input name="flag" id="flag" type="hidden" value="6">
                             </div>
                             <br>
                             <div class="modal-footer">
@@ -550,16 +496,13 @@
                     <div class="modal-body">
                         <form method="post" action="#">
                             <div class="form row" style="padding-top:5%;">
-                                <label for="nome" class="col-sm-3 col-form-label text-center"><strong> Nome:</strong></label>
+                                <label for="descricao" class="col-sm-3 col-form-label text-center"><strong> Conteúdo do card:</strong></label>
                                 <div class="form-group col-md-9">
-                                    <input type="text" placeholder="Canais de Distribuição" required name="nome" value="" class="form-control" id="nome">
+                                    <textarea rows="5" type="text" value="" required placeholder="Escreva um pouco sobre..." name="canais" class="form-control" id="canais"></textarea>
                                 </div>
                             </div>
-                            <div class="form row" style="padding-top:5%;">
-                                <label for="descricao" class="col-sm-3 col-form-label text-center"><strong> Descrição:</strong></label>
-                                <div class="form-group col-md-9">
-                                    <textarea rows="5" type="text" value="" required placeholder="Escreva um pouco sobre..." name="descricao" class="form-control" id="descricao"></textarea>
-                                </div>
+                            <div>
+                              <input name="flag" id="flag" type="hidden" value="7">
                             </div>
                             <br>
                             <div class="modal-footer">
@@ -581,16 +524,13 @@
                     <div class="modal-body">
                         <form method="post" action="#">
                             <div class="form row" style="padding-top:5%;">
-                                <label for="nome" class="col-sm-3 col-form-label text-center"><strong> Nome:</strong></label>
+                                <label for="descricao" class="col-sm-3 col-form-label text-center"><strong> Conteúdo do card:</strong></label>
                                 <div class="form-group col-md-9">
-                                    <input type="text" placeholder="Estrutura de Custos" required name="nome" value="" class="form-control" id="nome">
+                                    <textarea rows="5" type="text" value="" required placeholder="Escreva um pouco sobre..." name="estrutura" class="form-control" id="estrutura"></textarea>
                                 </div>
                             </div>
-                            <div class="form row" style="padding-top:5%;">
-                                <label for="descricao" class="col-sm-3 col-form-label text-center"><strong> Descrição:</strong></label>
-                                <div class="form-group col-md-9">
-                                    <textarea rows="5" type="text" value="" required placeholder="Escreva um pouco sobre..." name="descricao" class="form-control" id="descricao"></textarea>
-                                </div>
+                            <div>
+                              <input name="flag" id="flag" type="hidden" value="8">
                             </div>
                             <br>
                             <div class="modal-footer">
@@ -612,16 +552,13 @@
                     <div class="modal-body">
                         <form method="post" action="#">
                             <div class="form row" style="padding-top:5%;">
-                                <label for="nome" class="col-sm-3 col-form-label text-center"><strong> Nome:</strong></label>
+                                <label for="descricao" class="col-sm-3 col-form-label text-center"><strong> Conteúdo do card:</strong></label>
                                 <div class="form-group col-md-9">
-                                    <input type="text" placeholder="Fontes de Receita" required name="nome" value="" class="form-control" id="nome">
+                                    <textarea rows="5" type="text" value="" required placeholder="Escreva um pouco sobre..." name="fontes" class="form-control" id="fontes"></textarea>
                                 </div>
                             </div>
-                            <div class="form row" style="padding-top:5%;">
-                                <label for="descricao" class="col-sm-3 col-form-label text-center"><strong> Descrição:</strong></label>
-                                <div class="form-group col-md-9">
-                                    <textarea rows="5" type="text" value="" required placeholder="Escreva um pouco sobre..." name="descricao" class="form-control" id="descricao"></textarea>
-                                </div>
+                            <div>
+                              <input name="flag" id="flag" type="hidden" value="9">
                             </div>
                             <br>
                             <div class="modal-footer">
