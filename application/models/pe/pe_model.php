@@ -56,11 +56,14 @@ class Projetos_model extends CI_Model
     }
 
 /////////////////////////////////REQUISIÇÃO//////////////////////////////////////////////////
+
     public function get_canvas(){
         $query = $this->db->get("canvas");
         $result = $query->row_array();
         return $result;
     }
+
 /////////////////////////////////DELETAR//////////////////////////////////////////////////
+
 }
     
