@@ -82,25 +82,25 @@
     <div class="container text-center">
         <div class="row" style="padding-top:2%">
             <div class=" offset-md-2 col-md-8 text-center" style="padding-bottom:4%">
-                <form method="post" action="../editar_projeto/<?php echo $codprojeto?>">
+                <form method="post" action="../editar_projeto/<?php echo $codprojeto ?>">
                     <div class="form row" style="padding-top:5%;">
                         <label for="nome" class="col-sm-3 col-form-label text-light text-center"><strong> Nome do Projeto</strong></label>
                         <div class="form-group col-md-9">
-                            <input type="text" required name="nome" required placeholder="Nome do Projeto" value="<?php echo $info_projeto['nome_projeto']?>" class="form-control" id="nome">
+                            <input type="text" required name="nome" required placeholder="Nome do Projeto" value="<?php echo $info_projeto['nome_projeto'] ?>" class="form-control" id="nome">
                         </div>
                     </div>
                     <br>
                     <div class="form row">
                         <label for="descricao" class="col-sm-3 col-form-label text-light text-center"><strong> Descrição do Projeto</strong></label>
                         <div class="form-group col-md-9">
-                            <textarea rows="5" type="text" required placeholder="Escreva um pouco sobre o projeto..." name="descricao" class="form-control" id="descricao"><?php echo $info_projeto['descricao']?></textarea>
+                            <textarea rows="5" type="text" required placeholder="Escreva um pouco sobre o projeto..." name="descricao" class="form-control" id="descricao"><?php echo $info_projeto['descricao'] ?></textarea>
                         </div>
                     </div>
                     <br>
                     <div class="form row">
                         <label for="responsavel" class="col-sm-3 col-form-label text-light"><strong> Responsável pelo Projeto</strong></label>
                         <div class="form-group col-md-9">
-                            <input type="text" required placeholder="Responsável" value="<?php echo $info_projeto['responsavel']?>" required name="responsavel" class="form-control" id="responsavel">
+                            <input type="text" required placeholder="Responsável" value="<?php echo $info_projeto['responsavel'] ?>" required name="responsavel" class="form-control" id="responsavel">
                         </div>
                         <br>
                     </div>
@@ -108,7 +108,7 @@
                     <div class="form row">
                         <label for="responsavel" class="col-sm-3 col-form-label text-light"><strong>Projetistas do projeto</strong></label>
                         <div class="form-group col-md-9">
-                            <input type="text" required placeholder="Projetistas Do Projeto" value="<?php echo $info_projeto['projetistas_projetos']?>" required name="projetistas_projetos" class="form-control" id="projetistas_projetos">
+                            <input type="text" required placeholder="Projetistas Do Projeto" value="<?php echo $info_projeto['projetistas_projetos'] ?>" required name="projetistas_projetos" class="form-control" id="projetistas_projetos">
                         </div>
                         <br>
                     </div>
@@ -116,7 +116,7 @@
                     <div class="form row">
                         <label for="responsavel" class="col-sm-3 col-form-label text-light"><strong>Patrocinador Projeto</strong></label>
                         <div class="form-group col-md-9">
-                            <input type="text" required placeholder="Patrocinador do Projeto" value="<?php echo $info_projeto['patrocinador_projeto']?>" required name="patrocinador_projeto" class="form-control" id="patrocinador_projeto">
+                            <input type="text" required placeholder="Patrocinador do Projeto" value="<?php echo $info_projeto['patrocinador_projeto'] ?>" required name="patrocinador_projeto" class="form-control" id="patrocinador_projeto">
                         </div>
                         <br>
                     </div>
@@ -124,15 +124,37 @@
                     <div class="form row">
                         <label for="data_inicio" class="col-sm-3 col-form-label text-light"><strong> Data de Início</strong></label>
                         <div class="form-group col-md-4">
-                            <input type="date" required name="data_inicio" value="<?php echo $info_projeto['data_inicio']?>" required placeholder="dd/mm/aaaa" class="form-control" id="data_inicio">
+                            <input type="date" required name="data_inicio" value="<?php echo $info_projeto['data_inicio'] ?>" required placeholder="dd/mm/aaaa" class="form-control" id="data_inicio">
                         </div>
                         <br>
                     </div>
                     <br>
                     <div class="form row">
+                        <script>
+                            function data() {
+                                var today = new Date();
+                                today.setHours(0, 0, 0, 0); // define a hora para meia-noite para garantir que estamos comparando apenas as datas
+                                var timeZoneOffset = -3 * 60; // define o fuso horário como -3 horas em relação ao UTC para fortaleza
+                                var goal = parseInt(document.getElementById('goal').value); // o valor de dias também pode ser somado à 1, caso voces não contem que hoje é dia util
+                                var uu = Math.ceil(goal / 4) - 1;
+                                var fds = goal + (uu * 2);
+                                var usDate = new Date(today.getTime() + (fds * 24 * 60 * 60 * 1000) + (timeZoneOffset * 60 * 1000)); // hoje + dias corridos passados, formato usado "DD/MM/YYYY"
+                                var options = {
+                                    year: 'numeric',
+                                    month: 'medium',
+                                    day: 'numeric',
+                                };
+                                var us = usDate.toISOString('pt-BR', options); // transforma a data em iso se n o bixo n aceita
+                                const partesData = us.split('T'); // tira as horas da data iso
+                                const dataSemHora = partesData[0];
+                                //console.log(us, goal); essa parte é para depurar se o valor de us e goal ta saindo conforme esperado
+                                document.getElementById('data_prevista_termino').value = dataSemHora // atualiza o valor de data_prevista_termino com base no ID
+                            };
+                        </script>
+                        <input type="number" id="goal" name="goal"> <button type="button" onclick="data()">Processa</button>  <!-- eu tlgd que esse botão ta feio p kct mas depois eu resolvo  -->
                         <label for="data_prevista_termino" class="col-sm-3 col-form-label text-light text-center"><strong> Data Prevista Término</strong></label>
                         <div class="form-group col-md-4">
-                            <input type="date" required name="data_prevista_termino" value="<?php echo $info_projeto['data_prevista_termino']?>" required placeholder="dd/mm/aaaa" data-mask="99/99/9999" class="form-control" id="data_prevista_termino">
+                            <input type="date" required name="data_prevista_termino" value="<?php echo $info_projeto['data_prevista_termino'] ?>" required placeholder="dd/mm/aaaa" data-mask="99/99/9999" class="form-control" id="data_prevista_termino">
                         </div>
                         <br>
                     </div>
@@ -143,11 +165,11 @@
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="prioridade_projeto" value="2" id="prioridade_projeto2">
-                            <label class="col-sm-3 col-form-label text-light text-center" for="prioridade2"><b>Prioriade Intermediária</b></label>
+                        <label class="col-sm-3 col-form-label text-light text-center" for="prioridade2"><b>Prioriade Intermediária</b></label>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="prioridade_projeto" value="3" id="prioridade_projeto3">
-                            <label class="col-sm-3 col-form-label text-light text-center" for="prioridade2"><b>Prioriade Máxima</b></label>
+                        <label class="col-sm-3 col-form-label text-light text-center" for="prioridade2"><b>Prioriade Máxima</b></label>
                     </div>
                     <br>
                     <div class="form row" style="padding-top:5%">
