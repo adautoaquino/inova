@@ -326,7 +326,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form method="post" action="#">
+                        <form method="post" action="<?php echo base_url() ?>index.php/pe/main_pe/criar_parceria">
                             <div class="form row" style="padding-top:5%;">
                                 <label for="descricao" class="col-sm-3 col-form-label text-center"><strong> Conteúdo do card:</strong></label>
                                 <div class="form-group col-md-9">
@@ -354,7 +354,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form method="post" action="#">
+                        <form method="post" action="<?php echo base_url() ?>index.php/pe/main_pe/criar_atividades">
                             <div class="form row" style="padding-top:5%;">
                                 <label for="descricao" class="col-sm-3 col-form-label text-center"><strong> Conteúdo do card:</strong></label>
                                 <div class="form-group col-md-9">
@@ -382,7 +382,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form method="post" action="#">
+                        <form method="post" action="<?php echo base_url() ?>index.php/pe/main_pe/criar_recursos">
                             <div class="form row" style="padding-top:5%;">
                                 <label for="descricao" class="col-sm-3 col-form-label text-center"><strong> Conteúdo do card:</strong></label>
                                 <div class="form-group col-md-9">
@@ -410,7 +410,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form method="post" action="#">
+                        <form method="post" action="<?php echo base_url() ?>index.php/pe/main_pe/criar_proposta">
                             <div class="form row" style="padding-top:5%;">
                                 <label for="descricao" class="col-sm-3 col-form-label text-center"><strong> Conteúdo do card:</strong></label>
                                 <div class="form-group col-md-9">
@@ -438,7 +438,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form method="post" action="#">
+                        <form method="post" action="<?php echo base_url() ?>index.php/pe/main_pe/criar_relacionamento">
                             <div class="form row" style="padding-top:5%;">
                                 <label for="descricao" class="col-sm-3 col-form-label text-center"><strong> Conteúdo do card:</strong></label>
                                 <div class="form-group col-md-9">
@@ -466,7 +466,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form method="post" action="#">
+                        <form method="post" action="<?php echo base_url() ?>index.php/pe/main_pe/criar_segmento">
                             <div class="form row" style="padding-top:5%;">
                                 <label for="descricao" class="col-sm-3 col-form-label text-center"><strong> Conteúdo do card:</strong></label>
                                 <div class="form-group col-md-9">
@@ -494,7 +494,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form method="post" action="#">
+                        <form method="post" action="<?php echo base_url() ?>index.php/pe/main_pe/criar_canais">
                             <div class="form row" style="padding-top:5%;">
                                 <label for="descricao" class="col-sm-3 col-form-label text-center"><strong> Conteúdo do card:</strong></label>
                                 <div class="form-group col-md-9">
@@ -522,7 +522,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form method="post" action="#">
+                        <form method="post" action="<?php echo base_url() ?>index.php/pe/main_pe/criar_estrutura">
                             <div class="form row" style="padding-top:5%;">
                                 <label for="descricao" class="col-sm-3 col-form-label text-center"><strong> Conteúdo do card:</strong></label>
                                 <div class="form-group col-md-9">
@@ -550,7 +550,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form method="post" action="#">
+                        <form method="post" action="<?php echo base_url() ?>index.php/pe/main_pe/criar_fontes">
                             <div class="form row" style="padding-top:5%;">
                                 <label for="descricao" class="col-sm-3 col-form-label text-center"><strong> Conteúdo do card:</strong></label>
                                 <div class="form-group col-md-9">
