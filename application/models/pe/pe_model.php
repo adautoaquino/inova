@@ -1,6 +1,6 @@
 <?php
 
-class Projetos_model extends CI_Model
+class Pe_model extends CI_Model
 {
 
     public function __construct()
@@ -10,7 +10,7 @@ class Projetos_model extends CI_Model
         $this->load->database();
     }
 /////////////////////////////////CRIAR//////////////////////////////////////////////////
-    public function criar_parceiro($input){
+    public function criar_parceria($input){
         $this->db->insert("canvas", $input);
         return 1;
     }
@@ -51,7 +51,7 @@ class Projetos_model extends CI_Model
     }
 
     public function criar_fontes($input){
-        $this->db->insert($input);
+        $this->db->insert("canvas", $input);
         return 1;
     }
 
@@ -59,7 +59,7 @@ class Projetos_model extends CI_Model
 
     public function get_canvas(){
         $query = $this->db->get("canvas");
-        $result = $query->row_array();
+        $result = $query->result_array();
         return $result;
     }
 

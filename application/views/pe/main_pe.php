@@ -93,12 +93,15 @@
           </button>
           <div style="height: 18rem; overflow-y: scroll;">
           <div id="flush-collapseOne" class="accordion-collapse collapse text-center" style="padding-top: 3%; padding-left:8%; padding-bottom: 3%;" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+            <?php foreach ($dados_canvas as $canva) {
+              if ($canva['flag'] == 1) {?>
             <div class="card" style="width: 18rem;">
               <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="card-text"><?= $canva['conteudo']?></p>
                 <a href="#" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
               </div>
             </div>
+            <?php } }?>
           </div>
           </div>
         </div>
@@ -117,12 +120,15 @@
           </button>
           <div style="height: 18rem; overflow-y: scroll;">
           <div id="flush-collapse2" class="accordion-collapse collapse text-center" style="padding-top: 3%; padding-left:8%; padding-bottom: 3%;" aria-labelledby="flush-heading2" data-bs-parent="#accordionFlushExample2">
+            <?php foreach ($dados_canvas as $canva) {
+              if ($canva['flag'] == 2) {?>
             <div class="card" style="width: 18rem;">
               <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="card-text"><?= $canva['conteudo']?></p>
                 <a href="#" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
               </div>
             </div>
+            <?php } }?>
           </div>
           </div>
         </div>
@@ -141,12 +147,15 @@
           </button>
           <div style="height: 18rem; overflow-y: scroll;">
           <div id="flush-collapse3" class="accordion-collapse collapse text-center" style="padding-top: 3%; padding-left:8%; padding-bottom: 3%;" aria-labelledby="flush-heading3" data-bs-parent="#accordionFlushExample3">
+            <?php foreach ($dados_canvas as $canva) {
+              if ($canva['flag'] == 3) {?>
             <div class="card" style="width: 18rem;">
               <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="card-text"><?= $canva['conteudo']?></p>
                 <a href="#" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
               </div>
             </div>
+            <?php } }?>
           </div>
           </div>
         </div>
@@ -168,12 +177,15 @@
           </button>
           <div style="height: 18rem; overflow-y: scroll;">
           <div id="flush-collapse4" class="accordion-collapse collapse text-center" style="padding-top: 3%; padding-left:8%; padding-bottom: 3%;" aria-labelledby="flush-heading4" data-bs-parent="#accordionFlushExample4">
+            <?php foreach ($dados_canvas as $canva) {
+              if ($canva['flag'] == 4) {?>
             <div class="card" style="width: 18rem;">
               <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="card-text"><?= $canva['conteudo']?></p>
                 <a href="#" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
               </div>
             </div>
+            <?php } }?>
           </div>
           </div>
         </div>
@@ -192,12 +204,15 @@
           </button>
           <div style="height: 18rem; overflow-y: scroll;">
           <div id="flush-collapse5" class="accordion-collapse collapse text-center" style="padding-top: 3%; padding-left:8%; padding-bottom: 3%;" aria-labelledby="flush-heading5" data-bs-parent="#accordionFlushExample5">
+            <?php foreach ($dados_canvas as $canva) {
+              if ($canva['flag'] == 5) {?>
             <div class="card" style="width: 18rem;">
               <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="card-text"><?= $canva['conteudo']?></p>
                 <a href="#" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
               </div>
             </div>
+            <?php } }?>
           </div>
           </div>
         </div>
@@ -216,12 +231,15 @@
           </button>
           <div style="height: 18rem; overflow-y: scroll;">
           <div id="flush-collapse6" class="accordion-collapse collapse text-center" style="padding-top: 3%; padding-left:8%; padding-bottom: 3%;" aria-labelledby="flush-heading6" data-bs-parent="#accordionFlushExample6">
+            <?php foreach ($dados_canvas as $canva) {
+              if ($canva['flag'] == 6) {?>
             <div class="card" style="width: 18rem;">
               <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="card-text"><?= $canva['conteudo']?></p>
                 <a href="#" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
               </div>
             </div>
+            <?php } }?>
           </div>
           </div>
         </div>
@@ -243,12 +261,15 @@
           </button>
           <div style="height: 18rem; overflow-y: scroll;">
           <div id="flush-collapse7" class="accordion-collapse collapse text-center" style="padding-top: 3%; padding-left:8%; padding-bottom: 3%;" aria-labelledby="flush-heading7" data-bs-parent="#accordionFlushExample7">
-            <div class="card" style="width: 18rem;">
-              <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
-              </div>
-            </div>
+            <?php foreach ($dados_canvas as $canva) {
+              if ($canva['flag'] == 7) {?>
+                <div class="card" style="width: 18rem;">
+                  <div class="card-body">
+                    <p class="card-text"><?= $canva['conteudo']?></p>
+                    <a href="#" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
+                  </div>
+                </div>
+            <?php } }?>
           </div>
           </div>
         </div>
@@ -267,12 +288,16 @@
           </button>
           <div style="height: 18rem; overflow-y: scroll;">
           <div id="flush-collapse8" class="accordion-collapse collapse text-center" style="padding-top: 3%; padding-left:8%; padding-bottom: 3%;" aria-labelledby="flush-heading8" data-bs-parent="#accordionFlushExample8">
-            <div class="card" style="width: 18rem;">
-              <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
-              </div>
-            </div>
+            <?php foreach ($dados_canvas as $canva) {?>
+              <?php if ($canva['flag'] == 8) {?>
+                <div class="card" style="width: 18rem;">
+                  <div class="card-body">
+                    <p class="card-text"><?= $canva['conteudo']?></p>
+                    <a href="#" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
+                  </div>
+                </div>
+              <?php }?>
+            <?php }?>
           </div>
           </div>
         </div>
@@ -291,12 +316,16 @@
           </button>
           <div style="height: 18rem; overflow-y: scroll;">
           <div id="flush-collapse9" class="accordion-collapse collapse text-center" style="padding-top: 3%; padding-left:8%; padding-bottom: 3%;" aria-labelledby="flush-heading9" data-bs-parent="#accordionFlushExample9">
-            <div class="card" style="width: 18rem;">
-              <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
-              </div>
-            </div>
+              <?php foreach ($dados_canvas as $canva) {?>
+                <?php if ($canva['flag'] == 9) { ?>
+                <div class="card" style="width: 18rem;">
+                  <div class="card-body">
+                    <p class="card-text"><?= $canva['conteudo'] ?></p>
+                    <a href="#" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
+                  </div>
+                </div>
+              <?php }?>
+            <?php }?>
           </div>
           </div>
         </div>
