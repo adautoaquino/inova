@@ -40,6 +40,18 @@ class main_pe extends CI_Controller
 		$this->load->view('pe/gpe');
 	}
 
+/////////////////////////////////DELETAR//////////////////////////////////////////////////
+
+    public function deletar_canva($codcanva){
+        $retorno = $this->pe_model->deletar_canva($codcanva);
+        if ($retorno == 1){
+            echo "<script> alert('Deletado com sucesso!!');
+            window.location.assign('" . base_url() . "index.php/pe/main_pe');</script>";
+        } else{
+            echo "<script> alert('Não foi possível deletar...');
+            window.location.assign('".base_url()."index.php/pe/main_pe');</script>";
+        }
+    }
 
 /////////////////////////////////CRIAR//////////////////////////////////////////////////
 

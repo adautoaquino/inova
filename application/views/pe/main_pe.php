@@ -98,7 +98,7 @@
             <div class="card" style="width: 18rem;">
               <div class="card-body">
                 <p class="card-text"><?= $canva['conteudo']?></p>
-                <a href="#" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
+                <a href="<?php base_url() ?>main_pe/deletar_canva/<?php echo $canva['codcanva']?>" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
               </div>
             </div>
             <?php } }?>
@@ -125,7 +125,7 @@
             <div class="card" style="width: 18rem;">
               <div class="card-body">
                 <p class="card-text"><?= $canva['conteudo']?></p>
-                <a href="#" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
+                <a href="<?php base_url()?>main_pe/deletar_canva/<?php echo $canva['codcanva']?>" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
               </div>
             </div>
             <?php } }?>
@@ -152,7 +152,7 @@
             <div class="card" style="width: 18rem;">
               <div class="card-body">
                 <p class="card-text"><?= $canva['conteudo']?></p>
-                <a href="#" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
+                <a href="<?php base_url() ?>main_pe/deletar_canva/<?php echo $canva['codcanva']?>" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
               </div>
             </div>
             <?php } }?>
@@ -182,7 +182,7 @@
             <div class="card" style="width: 18rem;">
               <div class="card-body">
                 <p class="card-text"><?= $canva['conteudo']?></p>
-                <a href="#" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
+                <a href="<?php base_url() ?>main_pe/deletar_canva/<?php echo $canva['codcanva']?>" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
               </div>
             </div>
             <?php } }?>
@@ -209,7 +209,7 @@
             <div class="card" style="width: 18rem;">
               <div class="card-body">
                 <p class="card-text"><?= $canva['conteudo']?></p>
-                <a href="#" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
+                <a href="<?php base_url() ?>main_pe/deletar_canva/<?= $canva['codcanva']?>" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
               </div>
             </div>
             <?php } }?>
@@ -236,7 +236,7 @@
             <div class="card" style="width: 18rem;">
               <div class="card-body">
                 <p class="card-text"><?= $canva['conteudo']?></p>
-                <a href="#" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
+                <a href="<?php base_url() ?>main_pe/deletar_canva/<?= $canva['codcanva']?>" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
               </div>
             </div>
             <?php } }?>
@@ -266,7 +266,7 @@
                 <div class="card" style="width: 18rem;">
                   <div class="card-body">
                     <p class="card-text"><?= $canva['conteudo']?></p>
-                    <a href="#" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
+                    <a href="<?php base_url() ?>main_pe/deletar_canva/<?= $canva['codcanva']?>" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
                   </div>
                 </div>
             <?php } }?>
@@ -293,7 +293,7 @@
                 <div class="card" style="width: 18rem;">
                   <div class="card-body">
                     <p class="card-text"><?= $canva['conteudo']?></p>
-                    <a href="#" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
+                    <a href="<?php base_url() ?>main_pe/deletar_canva/<?= $canva['codcanva']?>" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
                   </div>
                 </div>
               <?php }?>
@@ -321,7 +321,7 @@
                 <div class="card" style="width: 18rem;">
                   <div class="card-body">
                     <p class="card-text"><?= $canva['conteudo'] ?></p>
-                    <a href="#" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
+                    <a href="<?php base_url() ?>main_pe/deletar_canva/<?= $canva['codcanva']?>" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
                   </div>
                 </div>
               <?php }?>

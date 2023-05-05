@@ -65,5 +65,9 @@ class Pe_model extends CI_Model
 
 /////////////////////////////////DELETAR//////////////////////////////////////////////////
 
+    public function deletar_canva($codcanva){
+        $this->db->delete('canvas', ["codcanva" => $codcanva]);
+        return 1;
+    }
 }
     
