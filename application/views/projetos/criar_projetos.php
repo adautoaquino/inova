@@ -130,6 +130,13 @@
                     </div>
                     <br>
                     <div class="form row">
+                        <label for="goal" class="col-sm-3 col-form-label text-light text-center"><strong> Dias de duração do Projeto</strong></label>
+                        <div class="form-group col-md-4">
+                            <input type="number" class="form-control" name="goal" id="goal" onchange="data();" placeholder="0 dias"> <!-- eu tlgd que esse botão ta feio p kct mas depois eu resolvo  -->
+                        </div>
+                        <br>
+                    </div>
+                    <div class="form row">
                         <script>
                             function data() {
                                 var today = new Date();
@@ -151,9 +158,9 @@
                                 document.getElementById('data_prevista_termino').value = dataSemHora // atualiza o valor de data_prevista_termino com base no ID
                             };
                         </script>
+
                         <label for="data_prevista_termino" class="col-sm-3 col-form-label text-light text-center"><strong> Data Prevista Término</strong></label>
                         <div class="form-group col-md-4">
-                            <input type="number" name="goal" id="goal" placeholder="0 dias"> <button type="button" onclick="data()">Processa</button> <!-- eu tlgd que esse botão ta feio p kct mas depois eu resolvo  -->
                             <input type="date" required name="data_prevista_termino" required placeholder="dd/mm/aaaa" data-mask="00/00/0000" class="form-control" id="data_prevista_termino">
                         </div>
                         <br>
