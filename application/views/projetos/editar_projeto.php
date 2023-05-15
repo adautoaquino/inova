@@ -161,7 +161,7 @@
 
                         <label for="data_prevista_termino" class="col-sm-3 col-form-label text-light text-center"><strong> Data Prevista Término</strong></label>
                         <div class="form-group col-md-4">
-                            <input type="date" required name="data_prevista_termino" required placeholder="dd/mm/aaaa" data-mask="00/00/0000" class="form-control" id="data_prevista_termino">
+                            <input type="date" required name="data_prevista_termino" value="<?php echo $info_projeto['data_prevista_termino'] ?>" required placeholder="dd/mm/aaaa" data-mask="00/00/0000" class="form-control" id="data_prevista_termino">
                         </div>
                         <br>
                     </div>
