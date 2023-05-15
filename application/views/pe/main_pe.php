@@ -332,20 +332,6 @@
       </div>
     </div>
   </div>
-    <script>
-      const accordionButtons = document.querySelectorAll('.accordion-button');
-      accordionButtons.forEach(function (button) {
-        button.addEventListener('click', function () {
-          const targetCollapse = document.querySelector(button.getAttribute('data-bs-target'));
-          const showCollapses = document.querySelectorAll('.collapse.show');
-          showCollapses.forEach(function (collapse) {
-            if (collapse !== targetCollapse) {
-              bootstrap.Collapse.getInstance(collapse).hide();
-            }
-          });
-        });
-      });
-    </script>
 <!-- ////////////////////////////////////////////////////////////////// MODAIS//////////////////////////////////////////////////// -->
   <div class="modal modal-md fade" id="Modal_criar_parceria" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
