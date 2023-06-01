@@ -93,12 +93,15 @@
           </button>
           <div style="height: 18rem; overflow-y: scroll;">
           <div id="flush-collapseOne" class="accordion-collapse collapse text-center" style="padding-top: 3%; padding-left:8%; padding-bottom: 3%;" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+            <?php foreach ($dados_canvas as $canva) {
+              if ($canva['flag'] == 1) {?>
             <div class="card" style="width: 18rem;">
               <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
+                <p class="card-text"><?= $canva['conteudo']?></p>
+                <a href="<?php base_url() ?>main_pe/deletar_canva/<?php echo $canva['codcanva']?>" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
               </div>
             </div>
+            <?php } }?>
           </div>
           </div>
         </div>
@@ -117,12 +120,15 @@
           </button>
           <div style="height: 18rem; overflow-y: scroll;">
           <div id="flush-collapse2" class="accordion-collapse collapse text-center" style="padding-top: 3%; padding-left:8%; padding-bottom: 3%;" aria-labelledby="flush-heading2" data-bs-parent="#accordionFlushExample2">
+            <?php foreach ($dados_canvas as $canva) {
+              if ($canva['flag'] == 2) {?>
             <div class="card" style="width: 18rem;">
               <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
+                <p class="card-text"><?= $canva['conteudo']?></p>
+                <a href="<?php base_url()?>main_pe/deletar_canva/<?php echo $canva['codcanva']?>" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
               </div>
             </div>
+            <?php } }?>
           </div>
           </div>
         </div>
@@ -141,12 +147,15 @@
           </button>
           <div style="height: 18rem; overflow-y: scroll;">
           <div id="flush-collapse3" class="accordion-collapse collapse text-center" style="padding-top: 3%; padding-left:8%; padding-bottom: 3%;" aria-labelledby="flush-heading3" data-bs-parent="#accordionFlushExample3">
+            <?php foreach ($dados_canvas as $canva) {
+              if ($canva['flag'] == 3) {?>
             <div class="card" style="width: 18rem;">
               <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
+                <p class="card-text"><?= $canva['conteudo']?></p>
+                <a href="<?php base_url() ?>main_pe/deletar_canva/<?php echo $canva['codcanva']?>" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
               </div>
             </div>
+            <?php } }?>
           </div>
           </div>
         </div>
@@ -168,12 +177,15 @@
           </button>
           <div style="height: 18rem; overflow-y: scroll;">
           <div id="flush-collapse4" class="accordion-collapse collapse text-center" style="padding-top: 3%; padding-left:8%; padding-bottom: 3%;" aria-labelledby="flush-heading4" data-bs-parent="#accordionFlushExample4">
+            <?php foreach ($dados_canvas as $canva) {
+              if ($canva['flag'] == 4) {?>
             <div class="card" style="width: 18rem;">
               <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
+                <p class="card-text"><?= $canva['conteudo']?></p>
+                <a href="<?php base_url() ?>main_pe/deletar_canva/<?php echo $canva['codcanva']?>" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
               </div>
             </div>
+            <?php } }?>
           </div>
           </div>
         </div>
@@ -192,12 +204,15 @@
           </button>
           <div style="height: 18rem; overflow-y: scroll;">
           <div id="flush-collapse5" class="accordion-collapse collapse text-center" style="padding-top: 3%; padding-left:8%; padding-bottom: 3%;" aria-labelledby="flush-heading5" data-bs-parent="#accordionFlushExample5">
+            <?php foreach ($dados_canvas as $canva) {
+              if ($canva['flag'] == 5) {?>
             <div class="card" style="width: 18rem;">
               <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
+                <p class="card-text"><?= $canva['conteudo']?></p>
+                <a href="<?php base_url() ?>main_pe/deletar_canva/<?= $canva['codcanva']?>" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
               </div>
             </div>
+            <?php } }?>
           </div>
           </div>
         </div>
@@ -216,12 +231,15 @@
           </button>
           <div style="height: 18rem; overflow-y: scroll;">
           <div id="flush-collapse6" class="accordion-collapse collapse text-center" style="padding-top: 3%; padding-left:8%; padding-bottom: 3%;" aria-labelledby="flush-heading6" data-bs-parent="#accordionFlushExample6">
+            <?php foreach ($dados_canvas as $canva) {
+              if ($canva['flag'] == 6) {?>
             <div class="card" style="width: 18rem;">
               <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
+                <p class="card-text"><?= $canva['conteudo']?></p>
+                <a href="<?php base_url() ?>main_pe/deletar_canva/<?= $canva['codcanva']?>" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
               </div>
             </div>
+            <?php } }?>
           </div>
           </div>
         </div>
@@ -243,12 +261,15 @@
           </button>
           <div style="height: 18rem; overflow-y: scroll;">
           <div id="flush-collapse7" class="accordion-collapse collapse text-center" style="padding-top: 3%; padding-left:8%; padding-bottom: 3%;" aria-labelledby="flush-heading7" data-bs-parent="#accordionFlushExample7">
-            <div class="card" style="width: 18rem;">
-              <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
-              </div>
-            </div>
+            <?php foreach ($dados_canvas as $canva) {
+              if ($canva['flag'] == 7) {?>
+                <div class="card" style="width: 18rem;">
+                  <div class="card-body">
+                    <p class="card-text"><?= $canva['conteudo']?></p>
+                    <a href="<?php base_url() ?>main_pe/deletar_canva/<?= $canva['codcanva']?>" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
+                  </div>
+                </div>
+            <?php } }?>
           </div>
           </div>
         </div>
@@ -267,12 +288,16 @@
           </button>
           <div style="height: 18rem; overflow-y: scroll;">
           <div id="flush-collapse8" class="accordion-collapse collapse text-center" style="padding-top: 3%; padding-left:8%; padding-bottom: 3%;" aria-labelledby="flush-heading8" data-bs-parent="#accordionFlushExample8">
-            <div class="card" style="width: 18rem;">
-              <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
-              </div>
-            </div>
+            <?php foreach ($dados_canvas as $canva) {?>
+              <?php if ($canva['flag'] == 8) {?>
+                <div class="card" style="width: 18rem;">
+                  <div class="card-body">
+                    <p class="card-text"><?= $canva['conteudo']?></p>
+                    <a href="<?php base_url() ?>main_pe/deletar_canva/<?= $canva['codcanva']?>" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
+                  </div>
+                </div>
+              <?php }?>
+            <?php }?>
           </div>
           </div>
         </div>
@@ -291,32 +316,22 @@
           </button>
           <div style="height: 18rem; overflow-y: scroll;">
           <div id="flush-collapse9" class="accordion-collapse collapse text-center" style="padding-top: 3%; padding-left:8%; padding-bottom: 3%;" aria-labelledby="flush-heading9" data-bs-parent="#accordionFlushExample9">
-            <div class="card" style="width: 18rem;">
-              <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
-              </div>
-            </div>
+              <?php foreach ($dados_canvas as $canva) {?>
+                <?php if ($canva['flag'] == 9) { ?>
+                <div class="card" style="width: 18rem;">
+                  <div class="card-body">
+                    <p class="card-text"><?= $canva['conteudo'] ?></p>
+                    <a href="<?php base_url() ?>main_pe/deletar_canva/<?= $canva['codcanva']?>" class="card-link"><img src="<?php echo base_url() ?>images/excluir.png" width="25" height="25"></a>
+                  </div>
+                </div>
+              <?php }?>
+            <?php }?>
           </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-    <script>
-      const accordionButtons = document.querySelectorAll('.accordion-button');
-      accordionButtons.forEach(function (button) {
-        button.addEventListener('click', function () {
-          const targetCollapse = document.querySelector(button.getAttribute('data-bs-target'));
-          const showCollapses = document.querySelectorAll('.collapse.show');
-          showCollapses.forEach(function (collapse) {
-            if (collapse !== targetCollapse) {
-              bootstrap.Collapse.getInstance(collapse).hide();
-            }
-          });
-        });
-      });
-    </script>
 <!-- ////////////////////////////////////////////////////////////////// MODAIS//////////////////////////////////////////////////// -->
   <div class="modal modal-md fade" id="Modal_criar_parceria" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -326,7 +341,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form method="post" action="#">
+                        <form method="post" action="<?php echo base_url() ?>index.php/pe/main_pe/criar_parceria">
                             <div class="form row" style="padding-top:5%;">
                                 <label for="descricao" class="col-sm-3 col-form-label text-center"><strong> Conteúdo do card:</strong></label>
                                 <div class="form-group col-md-9">
@@ -354,7 +369,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form method="post" action="#">
+                        <form method="post" action="<?php echo base_url() ?>index.php/pe/main_pe/criar_atividades">
                             <div class="form row" style="padding-top:5%;">
                                 <label for="descricao" class="col-sm-3 col-form-label text-center"><strong> Conteúdo do card:</strong></label>
                                 <div class="form-group col-md-9">
@@ -382,7 +397,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form method="post" action="#">
+                        <form method="post" action="<?php echo base_url() ?>index.php/pe/main_pe/criar_recursos">
                             <div class="form row" style="padding-top:5%;">
                                 <label for="descricao" class="col-sm-3 col-form-label text-center"><strong> Conteúdo do card:</strong></label>
                                 <div class="form-group col-md-9">
@@ -410,7 +425,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form method="post" action="#">
+                        <form method="post" action="<?php echo base_url() ?>index.php/pe/main_pe/criar_proposta">
                             <div class="form row" style="padding-top:5%;">
                                 <label for="descricao" class="col-sm-3 col-form-label text-center"><strong> Conteúdo do card:</strong></label>
                                 <div class="form-group col-md-9">
@@ -438,7 +453,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form method="post" action="#">
+                        <form method="post" action="<?php echo base_url() ?>index.php/pe/main_pe/criar_relacionamento">
                             <div class="form row" style="padding-top:5%;">
                                 <label for="descricao" class="col-sm-3 col-form-label text-center"><strong> Conteúdo do card:</strong></label>
                                 <div class="form-group col-md-9">
@@ -466,7 +481,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form method="post" action="#">
+                        <form method="post" action="<?php echo base_url() ?>index.php/pe/main_pe/criar_segmento">
                             <div class="form row" style="padding-top:5%;">
                                 <label for="descricao" class="col-sm-3 col-form-label text-center"><strong> Conteúdo do card:</strong></label>
                                 <div class="form-group col-md-9">
@@ -494,7 +509,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form method="post" action="#">
+                        <form method="post" action="<?php echo base_url() ?>index.php/pe/main_pe/criar_canais">
                             <div class="form row" style="padding-top:5%;">
                                 <label for="descricao" class="col-sm-3 col-form-label text-center"><strong> Conteúdo do card:</strong></label>
                                 <div class="form-group col-md-9">
@@ -522,7 +537,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form method="post" action="#">
+                        <form method="post" action="<?php echo base_url() ?>index.php/pe/main_pe/criar_estrutura">
                             <div class="form row" style="padding-top:5%;">
                                 <label for="descricao" class="col-sm-3 col-form-label text-center"><strong> Conteúdo do card:</strong></label>
                                 <div class="form-group col-md-9">
@@ -550,7 +565,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form method="post" action="#">
+                        <form method="post" action="<?php echo base_url() ?>index.php/pe/main_pe/criar_fontes">
                             <div class="form row" style="padding-top:5%;">
                                 <label for="descricao" class="col-sm-3 col-form-label text-center"><strong> Conteúdo do card:</strong></label>
                                 <div class="form-group col-md-9">

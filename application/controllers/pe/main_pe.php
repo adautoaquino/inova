@@ -8,7 +8,7 @@ class main_pe extends CI_Controller
     {
         parent::__construct();
         $this->load->model('login_model');
-        $this->load->model('projetos/projetos_model');
+        $this->load->model('pe/pe_model');
         $this->load->library('session');
         $this->load->library('email');
     }
@@ -30,13 +30,30 @@ class main_pe extends CI_Controller
      */
     public function index()
     {
-        $this->load->view('pe/main_pe');
+        // Requisição tá sendo feita aqui :)
+        $data['dados_canvas'] = $this->pe_model->get_canvas();
+        $this->load->view('pe/main_pe', $data);
     }
 
     public function gpe()
 	{
 		$this->load->view('pe/gpe');
 	}
+
+/////////////////////////////////DELETAR//////////////////////////////////////////////////
+
+    public function deletar_canva($codcanva){
+        $retorno = $this->pe_model->deletar_canva($codcanva);
+        if ($retorno == 1){
+            echo "<script> alert('Deletado com sucesso!!');
+            window.location.assign('" . base_url() . "index.php/pe/main_pe');</script>";
+        } else{
+            echo "<script> alert('Não foi possível deletar...');
+            window.location.assign('".base_url()."index.php/pe/main_pe');</script>";
+        }
+    }
+
+/////////////////////////////////CRIAR//////////////////////////////////////////////////
 
     public function criar_parceria(){
         $parceria = $this->input->post('parceria');
@@ -51,11 +68,11 @@ class main_pe extends CI_Controller
         $retorno = $this->pe_model->criar_parceria($input);
         if ($retorno == 1) {
             echo "<script> alert('Parceria chave adicionada!!');
-            window.location.assign('" . base_url() . "index.php/projetos/main_pe/gpe');</script>
+            window.location.assign('" . base_url() . "index.php/pe/main_pe');</script>
 			";
         } else{
             echo "<script> alert('Não foi possível adicionar a paceria chave...');
-            window.location.assign('" . base_url() . "index.php/projetos/main_pe/gpe');</script>
+            window.location.assign('" . base_url() . "index.php/pe/main_pe');</script>
 			";
         }
     }
@@ -73,11 +90,11 @@ class main_pe extends CI_Controller
         $retorno = $this->pe_model->criar_atividades($input);
         if ($retorno == 1) {
             echo "<script> alert('Atividade chave adicionada!!');
-            window.location.assign('" . base_url() . "index.php/projetos/main_pe/gpe');</script>
+            window.location.assign('" . base_url() . "index.php/pe/main_pe');</script>
 			";
         } else{
             echo "<script> alert('Não foi possível adicionar a atividade chave...');
-            window.location.assign('" . base_url() . "index.php/projetos/main_pe/gpe');</script>
+            window.location.assign('" . base_url() . "index.php/pe/main_pe');</script>
 			";
         }
         
@@ -96,11 +113,11 @@ class main_pe extends CI_Controller
         $retorno = $this->pe_model->criar_recursos($input);
         if ($retorno == 1) {
             echo "<script> alert('Recurso chave adicionado!!');
-            window.location.assign('" . base_url() . "index.php/projetos/main_pe/gpe');</script>
+            window.location.assign('" . base_url() . "index.php/pe/main_pe');</script>
 			";
         } else{
             echo "<script> alert('Não foi possível adicionar o recurso chave...');
-            window.location.assign('" . base_url() . "index.php/projetos/main_pe/gpe');</script>
+            window.location.assign('" . base_url() . "index.php/pe/main_pe');</script>
 			";
         }
         
@@ -119,11 +136,11 @@ class main_pe extends CI_Controller
         $retorno = $this->pe_model->criar_proposta($input);
         if ($retorno == 1) {
             echo "<script> alert('Proposta de valor adicionada!!');
-            window.location.assign('" . base_url() . "index.php/projetos/main_pe/gpe');</script>
+            window.location.assign('" . base_url() . "index.php/pe/main_pe');</script>
 			";
         } else{
             echo "<script> alert('Não foi possível adicionar a proposta de valor...');
-            window.location.assign('" . base_url() . "index.php/projetos/main_pe/gpe');</script>
+            window.location.assign('" . base_url() . "index.php/pe/main_pe');</script>
 			";
         }
         
@@ -142,11 +159,11 @@ class main_pe extends CI_Controller
         $retorno = $this->pe_model->criar_relacionamento($input);
         if ($retorno == 1) {
             echo "<script> alert('Relacionamento com o cliente adicionado!!');
-            window.location.assign('" . base_url() . "index.php/projetos/main_pe/gpe');</script>
+            window.location.assign('" . base_url() . "index.php/pe/main_pe');</script>
 			";
         } else{
             echo "<script> alert('Não foi possível adicionar o relacionamento com o cliente...');
-            window.location.assign('" . base_url() . "index.php/projetos/main_pe/gpe');</script>
+            window.location.assign('" . base_url() . "index.php/pe/main_pe');</script>
 			";
         }
         
@@ -165,11 +182,11 @@ class main_pe extends CI_Controller
         $retorno = $this->pe_model->criar_segmento($input);
         if ($retorno == 1) {
             echo "<script> alert('Segmento de cliente adicionado!!');
-            window.location.assign('" . base_url() . "index.php/projetos/main_pe/gpe');</script>
+            window.location.assign('" . base_url() . "index.php/pe/main_pe');</script>
 			";
         } else{
             echo "<script> alert('Não foi possível adicionar o segmento de cliente...');
-            window.location.assign('" . base_url() . "index.php/projetos/main_pe/gpe');</script>
+            window.location.assign('" . base_url() . "index.php/pe/main_pe');</script>
 			";
         }
         
@@ -188,11 +205,11 @@ class main_pe extends CI_Controller
         $retorno = $this->pe_model->criar_canais($input);
         if ($retorno == 1) {
             echo "<script> alert('Canal de distribuição adicionado!!');
-            window.location.assign('" . base_url() . "index.php/projetos/main_pe/gpe');</script>
+            window.location.assign('" . base_url() . "index.php/pe/main_pe');</script>
 			";
         } else{
             echo "<script> alert('Não foi possível adicionar o canal de distribuição...');
-            window.location.assign('" . base_url() . "index.php/projetos/main_pe/gpe');</script>
+            window.location.assign('" . base_url() . "index.php/pe/main_pe');</script>
 			";
         }
         
@@ -211,11 +228,11 @@ class main_pe extends CI_Controller
         $retorno = $this->pe_model->criar_estrutura($input);
         if ($retorno == 1) {
             echo "<script> alert('Estrutura de custos adicionada!!');
-            window.location.assign('" . base_url() . "index.php/projetos/main_pe/gpe');</script>
+            window.location.assign('" . base_url() . "index.php/pe/main_pe');</script>
             ";
         } else {
             echo "<script> alert('Não foi possível adicionar a estrutura de custos...');
-            window.location.assign('" . base_url() . "index.php/projetos/main_pe/gpe');</script>
+            window.location.assign('" . base_url() . "index.php/pe/main_pe');</script>
             ";
         }
     }
@@ -233,11 +250,11 @@ class main_pe extends CI_Controller
         $retorno = $this->pe_model->criar_fontes($input);
         if ($retorno == 1) {
             echo "<script> alert('Fonte de receita adicionada!!');
-            window.location.assign('" . base_url() . "index.php/projetos/main_pe/gpe');</script>
+            window.location.assign('" . base_url() . "index.php/pe/main_pe');</script>
             ";
         } else {
             echo "<script> alert('Não foi possível adicionar a fonte de receita...');
-            window.location.assign('" . base_url() . "index.php/projetos/main_pe/gpe');</script>
+            window.location.assign('" . base_url() . "index.php/pe/main_pe');</script>
             ";
         }
     }

@@ -130,15 +130,22 @@
                     </div>
                     <br>
                     <div class="form row">
+                        <label for="goal" class="col-sm-3 col-form-label text-light text-center"><strong> Dias de duração do Projeto</strong></label>
+                        <div class="form-group col-md-4">
+                            <input type="number" class="form-control" name="goal" id="goal" onchange="data();" placeholder="0 dias"> <!-- eu tlgd que esse botão ta feio p kct mas depois eu resolvo  -->
+                        </div>
+                        <br>
+                    </div>
+                    <div class="form row">
                         <script>
                             function data() {
                                 var today = new Date();
                                 today.setHours(0, 0, 0, 0); // define a hora para meia-noite para garantir que estamos comparando apenas as datas
                                 var timeZoneOffset = -3 * 60; // define o fuso horário como -3 horas em relação ao UTC para fortaleza
-                                var goal = parseInt(document.getElementById('goal').value); // o valor de dias também pode ser somado à 1, caso voces não contem que hoje é dia util
+                                var goal = parseInt(document.getElementById('goal').value); // pegar o valor de dias dado e somar 1, porque se não ele conta hoje
                                 var uu = Math.ceil(goal / 4) - 1;
                                 var fds = goal + (uu * 2);
-                                var usDate = new Date(today.getTime() + (fds * 24 * 60 * 60 * 1000) + (timeZoneOffset * 60 * 1000)); // hoje + dias corridos passados, formato usado "DD/MM/YYYY"
+                                var usDate = new Date(today.getTime() + (fds * 24 * 60 * 60 * 1000) + (timeZoneOffset * 60 * 1000)); // hoje + dias corridos passados, formato usado "DD/MM/YYYY "
                                 var options = {
                                     year: 'numeric',
                                     month: 'medium',
@@ -151,10 +158,10 @@
                                 document.getElementById('data_prevista_termino').value = dataSemHora // atualiza o valor de data_prevista_termino com base no ID
                             };
                         </script>
-                        <input type="number" id="goal" name="goal"> <button type="button" onclick="data()">Processa</button>  <!-- eu tlgd que esse botão ta feio p kct mas depois eu resolvo  -->
+
                         <label for="data_prevista_termino" class="col-sm-3 col-form-label text-light text-center"><strong> Data Prevista Término</strong></label>
                         <div class="form-group col-md-4">
-                            <input type="date" required name="data_prevista_termino" value="<?php echo $info_projeto['data_prevista_termino'] ?>" required placeholder="dd/mm/aaaa" data-mask="99/99/9999" class="form-control" id="data_prevista_termino">
+                            <input type="date" required name="data_prevista_termino" value="<?php echo $info_projeto['data_prevista_termino'] ?>" required placeholder="dd/mm/aaaa" data-mask="00/00/0000" class="form-control" id="data_prevista_termino">
                         </div>
                         <br>
                     </div>
