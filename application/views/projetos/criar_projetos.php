@@ -132,11 +132,14 @@
                     <div class="form row">
                         <script>
                             function data() {
-                                var today = new Date();
+                                var today = new Date((document.getElementById('data_inicio').value));
                                 today.setHours(0, 0, 0, 0); // define a hora para meia-noite para garantir que estamos comparando apenas as datas
+                                today.setDate(today.getDate() + 1)
+
+
                                 var timeZoneOffset = -3 * 60; // define o fuso horário como -3 horas em relação ao UTC para fortaleza
                                 var goal = parseInt(document.getElementById('goal').value); // pegar o valor de dias dado e somar 1, porque se não ele conta hoje
-                                var uu = Math.ceil(goal / 4) - 1;
+                                var uu = Math.ceil(goal / 5);
                                 var fds = goal + (uu * 2);
                                 var usDate = new Date(today.getTime() + (fds * 24 * 60 * 60 * 1000) + (timeZoneOffset * 60 * 1000)); // hoje + dias corridos passados, formato usado "DD/MM/YYYY "
                                 var options = {
@@ -144,12 +147,19 @@
                                     month: 'medium',
                                     day: 'numeric',
                                 };
+                                var weekday = usDate.getDay();
+                                if (weekday = 0 && 6) {
+                                    us.setDate(today.getDate() + 2)
+                                }
                                 var us = usDate.toISOString('pt-BR', options); // transforma a data em iso se n o bixo n aceita
+
                                 const partesData = us.split('T'); // tira as horas da data iso
                                 const dataSemHora = partesData[0];
-                                //console.log(us, goal); essa parte é para depurar se o valor de us e goal ta saindo conforme esperado
+
+                                // console.log(usDate, weekday, us); debug
+
                                 document.getElementById('data_prevista_termino').value = dataSemHora // atualiza o valor de data_prevista_termino com base no ID
-                            };
+                            } // função de calcular a data
                         </script>
                         <label for="data_prevista_termino" class="col-sm-3 col-form-label text-light text-center"><strong> Data Prevista Término</strong></label>
                         <div class="form-group col-md-4">
