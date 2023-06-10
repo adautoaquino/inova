@@ -140,7 +140,7 @@
                     <div class="form row">
                         <script>
                             function data() {
-                                var today = new Date();
+                                var today = new Date((document.getElementById('data_inicio').value));
                                 today.setHours(0, 0, 0, 0); // define a hora para meia-noite para garantir que estamos comparando apenas as datas
                                 var timeZoneOffset = -3 * 60; // define o fuso horário como -3 horas em relação ao UTC para fortaleza
                                 var goal = parseInt(document.getElementById('goal').value); // pegar o valor de dias dado e somar 1, porque se não ele conta hoje
@@ -155,30 +155,23 @@
                                 var us = usDate.toISOString('pt-BR', options); // transforma a data em iso se n o bixo n aceita
                                 const partesData = us.split('T'); // tira as horas da data iso
                                 const dataSemHora = partesData[0];
-                                //console.log(us, goal); essa parte é para depurar se o valor de us e goal ta saindo conforme esperado
                                 document.getElementById('data_prevista_termino').value = dataSemHora // atualiza o valor de data_prevista_termino com base no ID
                             };
                         </script>
-
-                        <label for="data_prevista_termino" class="col-sm-3 col-form-label text-light text-center"><strong> Data Prevista Término</strong></label>
-                        <div class="form-group col-md-4">
-                            <input type="date" required name="data_prevista_termino" required placeholder="dd/mm/aaaa" data-mask="00/00/0000" class="form-control" id="data_prevista_termino">
-                        </div>
-                        <br>
                     </div>
                     <div class="form-group col-md-1">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="prioridade_microfase" value="1" id="prioridade_microfase1">
-                        <label class="col-sm-3 col-form-label text-light text-center" for="prioridade1"><b>Prioriade Mínima</b></label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="prioridade_microfase" value="2" id="prioridade_microfase2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="prioridade_microfase" value="1" id="prioridade_microfase1">
+                            <label class="col-sm-3 col-form-label text-light text-center" for="prioridade1"><b>Prioriade Mínima</b></label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="prioridade_microfase" value="2" id="prioridade_microfase2">
                             <label class="col-sm-3 col-form-label text-light text-center" for="prioridade2"><b>Prioriade Intermediária</b></label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="prioridade_microfase" value="3" id="prioridade_microfase3">
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="prioridade_microfase" value="3" id="prioridade_microfase3">
                             <label class="col-sm-3 col-form-label text-light text-center" for="prioridade2"><b>Prioriade Máxima</b></label>
-                    </div>
+                        </div>
                     </div>
                     <div class="form row" style="padding-top:5%">
                         <div class="col-md-2 offset-md-10 text-right">

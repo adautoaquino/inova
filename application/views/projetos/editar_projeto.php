@@ -132,7 +132,7 @@
                     <div class="form row">
                         <label for="goal" class="col-sm-3 col-form-label text-light text-center"><strong> Dias de duração do Projeto</strong></label>
                         <div class="form-group col-md-4">
-                            <input type="number" class="form-control" name="goal" id="goal" onchange="data();" placeholder="0 dias"> <!-- eu tlgd que esse botão ta feio p kct mas depois eu resolvo  -->
+                            <input type="number" class="form-control" name="goal" id="goal" onchange="data()" placeholder="0 dias"> <!-- eu tlgd que esse botão ta feio p kct mas depois eu resolvo  -->
                         </div>
                         <br>
                     </div>

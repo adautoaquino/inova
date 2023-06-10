@@ -38,7 +38,7 @@
             width: 100%;
             height: 100%;
             z-index: 9999;
-            background: url('<?php echo base_url() ?>images/logosemfundo.png') 50% 50% no-repeat;
+            background: url('<?php echo base_url() ?>images/inova_bckgrnd.jpeg') 50% 50% no-repeat;
             background-size: 30%;
         }
 
@@ -132,7 +132,7 @@
                     <div class="form row">
                         <label for="goal" class="col-sm-3 col-form-label text-light text-center"><strong> Dias de duração do Projeto</strong></label>
                         <div class="form-group col-md-4">
-                            <input type="number" class="form-control" name="goal" id="goal" onchange="data();" placeholder="0 dias"> <!-- eu tlgd que esse botão ta feio p kct mas depois eu resolvo  -->
+                            <input type="number" class="form-control" name="goal" id="goal" onchange="data()" placeholder="0 dias"> <!-- eu tlgd que esse botão ta feio p kct mas depois eu resolvo  -->
                         </div>
                         <br>
                     </div>
@@ -142,8 +142,6 @@
                                 var today = new Date((document.getElementById('data_inicio').value));
                                 today.setHours(0, 0, 0, 0); // define a hora para meia-noite para garantir que estamos comparando apenas as datas
                                 today.setDate(today.getDate() + 1)
-
-
                                 var timeZoneOffset = -3 * 60; // define o fuso horário como -3 horas em relação ao UTC para fortaleza
                                 var goal = parseInt(document.getElementById('goal').value); // pegar o valor de dias dado e somar 1, porque se não ele conta hoje
                                 var uu = Math.ceil(goal / 5);
@@ -159,12 +157,8 @@
                                     us.setDate(today.getDate() + 2)
                                 }
                                 var us = usDate.toISOString('pt-BR', options); // transforma a data em iso se n o bixo n aceita
-
                                 const partesData = us.split('T'); // tira as horas da data iso
                                 const dataSemHora = partesData[0];
-
-                                // console.log(usDate, weekday, us); debug
-
                                 document.getElementById('data_prevista_termino').value = dataSemHora // atualiza o valor de data_prevista_termino com base no ID
                             } // função de calcular a data
                         </script>

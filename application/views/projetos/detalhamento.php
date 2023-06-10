@@ -132,16 +132,16 @@
                                             <?php if ($microfase['ativo'] == 1) { ?>
                                                 <tr>
                                                     <td class="align-middle text-center">
-                                                    <?php 
-                                                if ($microfase['prioridade_microfase'] == 1){
-                                                    echo "Mínima";
-                                                }
-                                                if ($microfase['prioridade_microfase'] == 2){
-                                                    echo "Intermediária";
-                                                }
-                                                if ($microfase['prioridade_microfase'] == 3){
-                                                    echo "Máxima";
-                                                }?>
+                                                        <?php
+                                                        if ($microfase['prioridade_microfase'] == 1) {
+                                                            echo "Mínima";
+                                                        }
+                                                        if ($microfase['prioridade_microfase'] == 2) {
+                                                            echo "Intermediária";
+                                                        }
+                                                        if ($microfase['prioridade_microfase'] == 3) {
+                                                            echo "Máxima";
+                                                        } ?>
                                                     </td>
                                                     <td class="align-middle text-center"><?php echo $microfase['nome_microfase'] ?></td>
                                                     <td class="align-middle text-center"><?php $data_format = $microfase['data_inicio'];
@@ -222,40 +222,43 @@
                             <br>
                         </div>
                         <br>
-                        <div class="form row">
-                            <label for="data_prevista_termino" class="col-sm-3 col-form-label text-center"><strong> Fim Previsto</strong></label>
-                            <div class="form-group col-md-4">
-                                <input type="text" required readonly='readonly' value="<?php $data_format = $macrofase['data_prevista_termino'];
-                                                                                        $result = explode('-', $data_format);
-                                                                                        $dia = $result[2];
-                                                                                        $mes = $result[1];
-                                                                                        $ano = $result[0];
-                                                                                        echo "$dia/$mes/$ano"; ?>" name="data_prevista_termino" data-mask="99/99/9999" class="form-control" id="data_prevista_termino">
-                            </div>
-                        </div>
-                        <br>
-                        <div class="form row">
-                <label for="prioridade_macrofase" class="col-sm-3 col-form-label text-center"><b> Prioriade da Macrofase</b></label>
+                    </div>
+                    <br>
+                </div>
+                <div class="form row">
+                    <label for="data_prevista_termino" class="col-sm-3 col-form-label text-center"><strong> Fim Previsto</strong></label>
                     <div class="form-group col-md-4">
-                        <input type="text" readonly value="<?php 
-                                                        if ($macrofase['prioridade_macrofase'] == 1){
-                                                            echo "Prioridade Mínima";
-                                                        }
-                                                        if ($macrofase['prioridade_macrofase'] == 2){
-                                                            echo "Prioridade Intermediária";
-                                                        }
-                                                        if ($macrofase['prioridade_macrofase'] == 3){
-                                                            echo "Prioridade Máxima";
-                                                        }?>" name="prioridade_projeto" id="prioridade_projeto" class="form-control">
+                        <input type="text" required readonly='readonly' value="<?php $data_format = $macrofase['data_prevista_termino'];
+                                                                                $result = explode('-', $data_format);
+                                                                                $dia = $result[2];
+                                                                                $mes = $result[1];
+                                                                                $ano = $result[0];
+                                                                                echo "$dia/$mes/$ano"; ?>" name="data_prevista_termino" data-mask="99/99/9999" class="form-control" id="data_prevista_termino">
                     </div>
                 </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                        <a href="<?php echo base_url() ?>index.php/projetos/main_pj/criar_microfase/<?php echo $dados_projeto['codprojeto'] ?>/<?php echo $macrofase['codmacrofase'] ?>" class="btn btn-success">Criar Microfase</a>
+                <br>
+                <div class="form row">
+                    <label for="prioridade_macrofase" class="col-sm-3 col-form-label text-center"><b> Prioriade da Macrofase</b></label>
+                    <div class="form-group col-md-4">
+                        <input type="text" readonly value="<?php
+                                                            if ($macrofase['prioridade_macrofase'] == 1) {
+                                                                echo "Prioridade Mínima";
+                                                            }
+                                                            if ($macrofase['prioridade_macrofase'] == 2) {
+                                                                echo "Prioridade Intermediária";
+                                                            }
+                                                            if ($macrofase['prioridade_macrofase'] == 3) {
+                                                                echo "Prioridade Máxima";
+                                                            } ?>" name="prioridade_projeto" id="prioridade_projeto" class="form-control">
                     </div>
                 </div>
             </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                <a href="<?php echo base_url() ?>index.php/projetos/main_pj/criar_microfase/<?php echo $dados_projeto['codprojeto'] ?>/<?php echo $macrofase['codmacrofase'] ?>" class="btn btn-success">Criar Microfase</a>
+            </div>
+        </div>
+        </div>
         </div>
     <?php } ?>
 
@@ -328,18 +331,18 @@
                 </div>
                 <br>
                 <div class="form row">
-                <label for="prioridade_projeto" class="col-sm-3 col-form-label text-light text-center"><b> Prioriade do Projeto</b></label>
+                    <label for="prioridade_projeto" class="col-sm-3 col-form-label text-light text-center"><b> Prioriade do Projeto</b></label>
                     <div class="form-group col-md-4">
-                        <input type="text" readonly value="<?php 
-                                                        if ($dados_projeto['prioridade_projeto'] == 1){
-                                                            echo "Prioridade Mínima";
-                                                        }
-                                                        if ($dados_projeto['prioridade_projeto'] == 2){
-                                                            echo "Prioridade Intermediária";
-                                                        }
-                                                        if ($dados_projeto['prioridade_projeto'] == 3){
-                                                            echo "Prioridade Máxima";
-                                                        }?>" name="prioridade_projeto" id="prioridade_projeto" class="form-control">
+                        <input type="text" readonly value="<?php
+                                                            if ($dados_projeto['prioridade_projeto'] == 1) {
+                                                                echo "Prioridade Mínima";
+                                                            }
+                                                            if ($dados_projeto['prioridade_projeto'] == 2) {
+                                                                echo "Prioridade Intermediária";
+                                                            }
+                                                            if ($dados_projeto['prioridade_projeto'] == 3) {
+                                                                echo "Prioridade Máxima";
+                                                            } ?>" name="prioridade_projeto" id="prioridade_projeto" class="form-control">
                     </div>
                 </div>
             </div>
@@ -385,25 +388,25 @@
                             <div class="form row">
                                 <label for="data_inicio" class="col-sm-3 col-form-label text-center"><strong> Início</strong></label>
                                 <div class="form-group col-md-4">
-                                    <input type="date" placeholder="dd/mm/aaaa" value="" name="data_inicio" class="form-control" id="data_inicio">
+                                    <input type="date" placeholder="dd/mm/aaaa" name="data_inicio" class="form-control" required id="data_inicio_modal">
                                 </div>
                                 <br>
                             </div>
                             <br>
                             <div class="form row">
                                 <label for="goal" class="col-sm-3 col-form-label text-center"><strong> Dias de duração do Projeto</strong></label>
-                                <div class="form-group col-md-4">
-                                    <input type="number" class="form-control" name="goal" id="goal" onchange="data();" placeholder="0 dias"> <!-- eu tlgd que esse botão ta feio p kct mas depois eu resolvo  -->
+                                <div class="form-group col-md-1">
+                                    <input type="number" class="form-control" name="goal" id="goal_modal" onchange="data()" placeholder="0 dias">
                                 </div>
                             </div>
                             <br>
                             <div class="form row">
                                 <script>
                                     function data() {
-                                        var today = new Date();
+                                        var today = new Date((document.getElementById('data_inicio_modal').value));
                                         today.setHours(0, 0, 0, 0); // define a hora para meia-noite para garantir que estamos comparando apenas as datas
                                         var timeZoneOffset = -3 * 60; // define o fuso horário como -3 horas em relação ao UTC para fortaleza
-                                        var goal = parseInt(document.getElementById('goal').value); // pegar o valor de dias dado e somar 1, porque se não ele conta hoje
+                                        var goal = parseInt(document.getElementById('goal_modal').value); // pegar o valor de dias dado e somar 1, porque se não ele conta hoje
                                         var uu = Math.ceil(goal / 4) - 1;
                                         var fds = goal + (uu * 2);
                                         var usDate = new Date(today.getTime() + (fds * 24 * 60 * 60 * 1000) + (timeZoneOffset * 60 * 1000)); // hoje + dias corridos passados, formato usado "DD/MM/YYYY "
@@ -416,27 +419,27 @@
                                         const partesData = us.split('T'); // tira as horas da data iso
                                         const dataSemHora = partesData[0];
                                         //console.log(us, goal); essa parte é para depurar se o valor de us e goal ta saindo conforme esperado
-                                        document.getElementById('data_prevista_termino').value = dataSemHora // atualiza o valor de data_prevista_termino com base no ID
+                                        document.getElementById('data_prevista_termino_modal').value = dataSemHora // atualiza o valor de data_prevista_termino com base no ID
                                     };
                                 </script>
                                 <label for="data_prevista_termino" style="color: black;" class="col-sm-3 col-form-label text-center"><strong> Data Prevista Término</strong></label>
                                 <div class="form-group col-md-4">
-                                    <input type="date" required name="data_prevista_termino" required placeholder="dd/mm/aaaa" data-mask="00/00/0000" class="form-control" id="data_prevista_termino">
+                                    <input type="date" required name="data_prevista_termino" required placeholder="dd/mm/aaaa" data-mask="00/00/0000" class="form-control" id="data_prevista_termino_modal">
                                 </div>
                             </div>
                             <div class="form-group col-md-4">
-                            <div class="form-check" style="padding-left:50%">
-                                <input class="form-check-input" type="radio" name="prioridade_macrofase" value="1" id="prioridade1">
-                                <label class="col-sm-3 col-form-label text-center" for="prioridade1"><b>Prioriade Mínima</b></label>
-                            </div>
-                            <div class="form-check" style="padding-left:50%">
-                                <input class="form-check-input" type="radio" name="prioridade_macrofase" value="2" id="prioridade2"  checked>
-                                <label class="col-sm-3 col-form-label text-center" for="prioridade2"><b>Prioriade Intermediária</b></label>
-                            </div>
-                            <div class="form-check" style="padding-left:50%">
-                                <input class="form-check-input" type="radio" name="prioridade_macrofase" value="3" id="prioridade3">
-                                <label class="col-sm-3 col-form-label text-center" for="prioridade2"><b>Prioriade Máxima</b></label>
-                            </div>
+                                <div class="form-check" style="padding-left:50%">
+                                    <input class="form-check-input" type="radio" name="prioridade_macrofase" value="1" id="prioridade1">
+                                    <label class="col-sm-3 col-form-label text-center" for="prioridade1"><b>Prioriade Mínima</b></label>
+                                </div>
+                                <div class="form-check" style="padding-left:50%">
+                                    <input class="form-check-input" type="radio" name="prioridade_macrofase" value="2" id="prioridade2" checked>
+                                    <label class="col-sm-3 col-form-label text-center" for="prioridade2"><b>Prioriade Intermediária</b></label>
+                                </div>
+                                <div class="form-check" style="padding-left:50%">
+                                    <input class="form-check-input" type="radio" name="prioridade_macrofase" value="3" id="prioridade3">
+                                    <label class="col-sm-3 col-form-label text-center" for="prioridade2"><b>Prioriade Máxima</b></label>
+                                </div>
                             </div>
                             <br>
                             <div class="modal-footer">
@@ -476,16 +479,16 @@
                                     <?php if ($macrofase['ativo'] == 1) { ?>
                                         <tr>
                                             <td>
-                                            <?php 
-                                                if ($macrofase['prioridade_macrofase'] == 1){
+                                                <?php
+                                                if ($macrofase['prioridade_macrofase'] == 1) {
                                                     echo "Mínima";
                                                 }
-                                                if ($macrofase['prioridade_macrofase'] == 2){
+                                                if ($macrofase['prioridade_macrofase'] == 2) {
                                                     echo "Intermediária";
                                                 }
-                                                if ($macrofase['prioridade_macrofase'] == 3){
+                                                if ($macrofase['prioridade_macrofase'] == 3) {
                                                     echo "Máxima";
-                                                }?>
+                                                } ?>
                                             </td>
                                             <td><?php echo $macrofase['nome_macrofase'] ?></td>
                                             <td><?php

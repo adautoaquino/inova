@@ -122,61 +122,62 @@
                     </div>
                     <br>
                     <div class="form row">
-                        <label for="goal" class="col-sm-3 col-form-label text-light text-center"><strong> Dias de duração do Projeto</strong></label>
+                        <label for="goal" class="col-sm-3 col-form-label text-light text-center"><strong> Dias de duração do Projeto</strong> </label>
                         <div class="form-group col-md-4">
-                            <input type="number" class="form-control" name="goal" id="goal" onchange="data();" placeholder="0 dias"> <!-- eu tlgd que esse botão ta feio p kct mas depois eu resolvo  -->
+                            <input type="number" class="form-control" name="goal" id="goal" oninput="data()" placeholder="0 dias">
+                            <script>
+                                function data() {
+                                    var today = new Date((document.getElementById('data_inicio').value));
+                                    today.setHours(0, 0, 0, 0); // define a hora para meia-noite para garantir que estamos comparando apenas as datas
+                                    var timeZoneOffset = -3 * 60; // define o fuso horário como -3 horas em relação ao UTC para fortaleza
+                                    var goal = parseInt(document.getElementById('goal').value); // pegar o valor de dias dado e somar 1, porque se não ele conta hoje
+                                    var uu = Math.ceil(goal / 4) - 1;
+                                    var fds = goal + (uu * 2);
+                                    var usDate = new Date(today.getTime() + (fds * 24 * 60 * 60 * 1000) + (timeZoneOffset * 60 * 1000)); // hoje + dias corridos passados, formato usado "DD/MM/YYYY "
+                                    var options = {
+                                        year: 'numeric',
+                                        month: 'medium',
+                                        day: 'numeric',
+                                    };
+                                    var us = usDate.toISOString('pt-BR', options); // transforma a data em iso se n o bixo n aceita
+                                    const partesData = us.split('T'); // tira as horas da data iso
+                                    const dataSemHora = partesData[0];
+                                    //console.log(us, goal); essa parte é para depurar se o valor de us e goal ta saindo conforme esperado
+                                    document.getElementById('data_prevista_termino').value = dataSemHora; // atualiza o valor de data_prevista_termino com base no ID
+                                    console.log(partesData[0]);
+                                };
+                            </script>
                         </div>
                         <br>
                     </div>
                     <div class="form row">
-                        <script>
-                            function data() {
-                                var today = new Date();
-                                today.setHours(0, 0, 0, 0); // define a hora para meia-noite para garantir que estamos comparando apenas as datas
-                                var timeZoneOffset = -3 * 60; // define o fuso horário como -3 horas em relação ao UTC para fortaleza
-                                var goal = parseInt(document.getElementById('goal').value); // pegar o valor de dias dado e somar 1, porque se não ele conta hoje
-                                var uu = Math.ceil(goal / 4) - 1;
-                                var fds = goal + (uu * 2);
-                                var usDate = new Date(today.getTime() + (fds * 24 * 60 * 60 * 1000) + (timeZoneOffset * 60 * 1000)); // hoje + dias corridos passados, formato usado "DD/MM/YYYY "
-                                var options = {
-                                    year: 'numeric',
-                                    month: 'medium',
-                                    day: 'numeric',
-                                };
-                                var us = usDate.toISOString('pt-BR', options); // transforma a data em iso se n o bixo n aceita
-                                const partesData = us.split('T'); // tira as horas da data iso
-                                const dataSemHora = partesData[0];
-                                //console.log(us, goal); essa parte é para depurar se o valor de us e goal ta saindo conforme esperado
-                                document.getElementById('data_prevista_termino').value = dataSemHora // atualiza o valor de data_prevista_termino com base no ID
-                            };
-                        </script>
-
                         <label for="data_prevista_termino" class="col-sm-3 col-form-label text-light text-center"><strong> Nova Data Prevista Término</strong></label>
                         <div class="form-group col-md-4">
-                            <input type="date" required name="data_prevista_termino" value="<?= isset($dados) ? $dados['data_prevista_termino'] : "" ?>" required placeholder="dd/mm/aaaa" data-mask="00/00/0000" class="form-control" id="data_prevista_termino">
+                            <input type="date" required name="data_prevista_termino" value="<?= isset($dados) ? $dados['data_prevista_termino'] : "" ?>" required placeholder="dd/mm/aaaa" data-mask="00/00/0000" class="form-control" id='data_prevista_termino' </div>
+
                         </div>
                         <br>
-                    </div>
-                    <br>
-                    <div class="form-group col-md-1">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="prioridade_macrofase" value="1" id="prioridade_macrofase1">
-                        <label class="col-sm-3 col-form-label text-light text-center" for="prioridade1"><b>Prioriade Mínima</b></label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="prioridade_macrofase" value="2" id="prioridade_macrofase2">
-                            <label class="col-sm-3 col-form-label text-light text-center" for="prioridade2"><b>Prioriade Intermediária</b></label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="prioridade_macrofase" value="3" id="prioridade_macrofase3">
-                            <label class="col-sm-3 col-form-label text-light text-center" for="prioridade2"><b>Prioriade Máxima</b></label>
-                    </div>
-                    </div>
-                    <div class="form row" style="padding-top:5%">
-                        <div class="col-md-2 offset-md-10 text-right">
-                            <button type="submit" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-light"> Finalizar Edição</button>
+                        <div class="align-items-end">
+                            <div class="form-group col-md-1 ">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="prioridade_macrofase" value="1" id="prioridade_macrofase1">
+                                    <label class="col-sm-3 col-form-label text-light text-center" for="prioridade1"><b>Prioriade Mínima</b></label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="prioridade_macrofase" value="2" id="prioridade_macrofase2">
+                                    <label class="col-sm-3 col-form-label text-light text-center" for="prioridade2"><b>Prioriade Intermediária</b></label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="prioridade_macrofase" value="3" id="prioridade_macrofase3">
+                                    <label class="col-sm-3 col-form-label text-light text-center" for="prioridade2"><b>Prioriade Máxima</b></label>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                        <div class="form row" style="padding-top:5%">
+                            <div class="col-md-2 offset-md-10 text-right">
+                                <button type="submit" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-light"> Finalizar Edição</button>
+                            </div>
+                        </div>
 
                 </form>
             </div>
