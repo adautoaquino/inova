@@ -14,7 +14,7 @@
 
 </head>
 
-<body style="background-color: #c10000;">
+<body background="<?php echo base_url()?>images/fundo_login.jpeg">
     <style>
         .titulo {
             color: aqua;
@@ -34,8 +34,8 @@
             width: 100%;
             height: 100%;
             z-index: 9999;
-            background: url('../../images/logosemfundo.png') 50% 50% no-repeat;
-            background-size: 30%;
+            background: url('<?php echo base_url() ?>images/logo_inova.png') 50% 50% no-repeat;
+            background-size: 10%;
         }
 
         .rocket {
@@ -48,7 +48,7 @@
         }
     </style>
 
-    <div id="loader" class="loader" style=" background-color: #c10000;">
+    <div id="loader" class="loader" style=" background-color: #ffffff;">
         <div class="inner"></div>
     </div>
 
@@ -86,7 +86,7 @@
             </div>
         </div>
         <div class="row" style="padding-top:4%">
-            <div class=" offset-md-2 col-md-8 text-center" style="padding-bottom:4%">
+            <div class=" offset-md-1 col-md-10 text-center" style="padding-bottom:4%">
                 <div class="card bg-dark" style="width: 100%;">
                     <ul class="list-group list-group-flush">
                         <a href="<?php echo base_url() ?>index.php/projetos/main_pj/criar_projetos" class="list-group-item bg-dark" style="color:white"><b>Criar Projetos</b></a>

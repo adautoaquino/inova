@@ -38,8 +38,8 @@
             width: 100%;
             height: 100%;
             z-index: 9999;
-            background: url('../../images/inova_bckgrnd.jpeg') 50% 50% no-repeat;
-            background-size: 30%;
+            background: url('<?php echo base_url() ?>images/logo_inova.png') 50% 50% no-repeat;
+            background-size: 10%;
         }
 
         .rocket {
@@ -52,7 +52,7 @@
         }
     </style>
 
-    <div id="loader" class="loader" style=" background-color: #c10000;">
+    <div id="loader" class="loader" style=" background-color: white;">
         <div class="inner"></div>
     </div>
 

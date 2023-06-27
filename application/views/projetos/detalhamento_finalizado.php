@@ -18,7 +18,7 @@
 
 </head>
 
-<body style="background-color: #c10000;">
+<body background="<?php echo base_url()?>images/fundo_login.jpeg">
     <style>
         .titulo {
             color: aqua;
@@ -38,8 +38,8 @@
             width: 100%;
             height: 100%;
             z-index: 9999;
-            background: url('../../images/logosemfundo.png') 50% 50% no-repeat;
-            background-size: 30%;
+            background: url('<?php echo base_url() ?>images/logo_inova.png') 50% 50% no-repeat;
+            background-size: 10%;
         }
 
         .rocket {
@@ -52,7 +52,7 @@
         }
     </style>
 
-    <div id="loader" class="loader" style=" background-color: #c10000;">
+    <div id="loader" class="loader" style=" background-color: white;">
         <div class="inner"></div>
     </div>
 
@@ -226,26 +226,26 @@
     <?php } ?>
 
 
-    <div class="container text-center">
+    <div class="container text-center" style="background-color: white;">
 
         <div class="row" style="padding-top:2%">
             <div class=" offset-md-2 col-md-8 text-center" style="padding-bottom:4%">
                 <div class="form row" style="padding-top:5%;">
-                    <label for="nome" class="col-sm-3 col-form-label text-light text-center"><strong> Nome do Projeto</strong></label>
+                    <label for="nome" class="col-sm-3 col-form-label text-dark text-center"><strong> Nome do Projeto</strong></label>
                     <div class="form-group col-md-9">
                         <input type="text" required name="nome" readonly value="<?= $dados_projeto_finalizado['nome_projeto'] ?>" class="form-control" id="nome">
                     </div>
                 </div>
                 <br>
                 <div class="form row">
-                    <label for="descricao" class="col-sm-3 col-form-label text-light text-center"><strong> Descrição do Projeto</strong></label>
+                    <label for="descricao" class="col-sm-3 col-form-label text-dark text-center"><strong> Descrição do Projeto</strong></label>
                     <div class="form-group col-md-9">
                         <textarea rows="5" type="text" readonly name="descricao" class="form-control" id="descricao"><?= $dados_projeto_finalizado['descricao'] ?></textarea>
                     </div>
                 </div>
                 <br>
                 <div class="form row">
-                    <label for="responsavel" class="col-sm-3 col-form-label text-light"><strong> Responsável pelo Projeto</strong></label>
+                    <label for="responsavel" class="col-sm-3 col-form-label text-dark"><strong> Responsável pelo Projeto</strong></label>
                     <div class="form-group col-md-9">
                         <input type="text" readonly value="<?= $dados_projeto_finalizado['responsavel'] ?>" name="responsavel" class="form-control" id="responsavel">
                     </div>
@@ -253,7 +253,7 @@
                 </div>
                 <br>
                 <div class="form row">
-                    <label for="responsavel" class="col-sm-3 col-form-label text-light"><strong> Projetistas do Projeto</strong></label>
+                    <label for="responsavel" class="col-sm-3 col-form-label text-dark"><strong> Projetistas do Projeto</strong></label>
                     <div class="form-group col-md-9">
                         <input type="text" readonly value="<?= $dados_projeto_finalizado['projetistas_projetos'] ?>" name="projetistas_projetos" class="form-control" id="projetistas_projetos">
                     </div>
@@ -261,7 +261,7 @@
                 </div>
                 <br>
                 <div class="form row">
-                    <label for="responsavel" class="col-sm-3 col-form-label text-light"><strong> Patrocinador Do Projeto</strong></label>
+                    <label for="responsavel" class="col-sm-3 col-form-label text-dark"><strong> Patrocinador Do Projeto</strong></label>
                     <div class="form-group col-md-9">
                         <input type="text" readonly value="<?= $dados_projeto_finalizado['patrocinador_projeto'] ?>" name="patrocinador_projeto" class="form-control" id="patrocinador_projeto">
                     </div>
@@ -269,7 +269,7 @@
                 </div>
                 <br>
                 <div class="form row">
-                    <label for="data_inicio" class="col-sm-3 col-form-label text-light"><strong> Data de Início</strong></label>
+                    <label for="data_inicio" class="col-sm-3 col-form-label text-dark"><strong> Data de Início</strong></label>
                     <div class="form-group col-md-4">
                         <input type="text" readonly value="<?php $data_format = $dados_projeto_finalizado['data_inicio'];
                                                             $result = explode('-', $data_format);
@@ -282,7 +282,7 @@
                 </div>
                 <br>
                 <div class="form row">
-                    <label for="data_prevista_termino" class="col-sm-3 col-form-label text-light text-center"><strong> Data de Término</strong></label>
+                    <label for="data_prevista_termino" class="col-sm-3 col-form-label text-dark text-center"><strong> Data de Término</strong></label>
                     <div class="form-group col-md-4">
                         <input type="text" readonly value="<?php $data_format = $dados_projeto_finalizado['data_prevista_termino'];
                                                             $result = explode('-', $data_format);
