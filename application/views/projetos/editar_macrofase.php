@@ -18,7 +18,7 @@
 
 </head>
 
-<body style="background-color: #c10000;">
+<body background="<?php echo base_url()?>images/fundo_login.jpeg">
     <style>
         .titulo {
             color: aqua;
@@ -79,26 +79,26 @@
             </div>
         </nav>
     </header>
-    <div class="container text-center">
+    <div class="container text-center" style="background-color: white;">
         <div class="row" style="padding-top:2%">
             <div class=" offset-md-2 col-md-8 text-center" style="padding-bottom:4%">
                 <form method="post" action="<?php echo base_url() ?>index.php/projetos/main_pj/editar_macrofase/<?php echo $dados['codmacrofase'] ?>">
                     <div class="form row" style="padding-top:5%;">
-                        <label for="nome" class="col-sm-3 col-form-label text-light text-center"><strong> Novo Nome da Macrofase</strong></label>
+                        <label for="nome" class="col-sm-3 col-form-label text-dark text-center"><strong> Novo Nome da Macrofase</strong></label>
                         <div class="form-group col-md-9">
                             <input type="text" required placeholder="Macrofase" required name="nome" value="<?= isset($dados) ? $dados['nome_macrofase'] : "" ?>" class="form-control" id="nome">
                         </div>
                     </div>
                     <br>
                     <div class="form row">
-                        <label for="descricao" class="col-sm-3 col-form-label text-light text-center"><strong> Nova Descrição da Macrofase</strong></label>
+                        <label for="descricao" class="col-sm-3 col-form-label text-dark text-center"><strong> Nova Descrição da Macrofase</strong></label>
                         <div class="form-group col-md-9">
                             <textarea rows="5" type="text" required placeholder="Escreva novamente um pouco sobre a macrofase..." name="descricao" class="form-control" id="descricao"><?= isset($dados) ? $dados['descricao'] : "" ?></textarea>
                         </div>
                     </div>
                     <br>
                     <div class="form row">
-                        <label for="responsavel" class="col-sm-3 col-form-label text-light"><strong> Novo Responsável pela Macrofase</strong></label>
+                        <label for="responsavel" class="col-sm-3 col-form-label text-dark"><strong> Novo Responsável pela Macrofase</strong></label>
                         <div class="form-group col-md-9">
                             <input type="text" required placeholder=" Novo responsável" required name="responsavel" value="<?= isset($dados) ? $dados['responsavel'] : "" ?>" class="form-control" id="responsavel">
                         </div>
@@ -106,7 +106,7 @@
                     </div>
                     <br>
                     <div class="form row">
-                        <label for="responsavel" class="col-sm-3 col-form-label text-light"><strong> Projetistas Da Macrofase</strong></label>
+                        <label for="responsavel" class="col-sm-3 col-form-label text-dark"><strong> Projetistas da Macrofase</strong></label>
                         <div class="form-group col-md-9">
                             <input type="text" required placeholder=" Projetistas Macro" required name="projetistas_macro" value="<?= isset($dados) ? $dados['projetistas_macro'] : "" ?>" class="form-control" id="projetistas_macro">
                         </div>
@@ -114,7 +114,7 @@
                     </div>
                     <br>
                     <div class="form row">
-                        <label for="data_inicio" class="col-sm-3 col-form-label text-light"><strong> Nova Data de Início</strong></label>
+                        <label for="data_inicio" class="col-sm-3 col-form-label text-dark"><strong> Nova Data de Início</strong></label>
                         <div class="form-group col-md-4">
                             <input type="date" required placeholder="dd/mm/aaaa" required name="data_inicio" value="<?= isset($dados) ? $dados['data_inicio'] : "" ?>" class="form-control" id="data_inicio">
                         </div>
@@ -122,7 +122,7 @@
                     </div>
                     <br>
                     <div class="form row">
-                        <label for="goal" class="col-sm-3 col-form-label text-light text-center"><strong> Dias de duração do Projeto</strong> </label>
+                        <label for="goal" class="col-sm-3 col-form-label text-dark text-center"><strong> Dias de duração do Projeto</strong> </label>
                         <div class="form-group col-md-4">
                             <input type="number" class="form-control" name="goal" id="goal" oninput="data()" placeholder="0 dias">
                             <script>
@@ -151,7 +151,7 @@
                         <br>
                     </div>
                     <div class="form row">
-                        <label for="data_prevista_termino" class="col-sm-3 col-form-label text-light text-center"><strong> Nova Data Prevista Término</strong></label>
+                        <label for="data_prevista_termino" class="col-sm-3 col-form-label text-dark text-center"><strong> Nova Data Prevista Término</strong></label>
                         <div class="form-group col-md-4">
                             <input type="date" required name="data_prevista_termino" value="<?= isset($dados) ? $dados['data_prevista_termino'] : "" ?>" required placeholder="dd/mm/aaaa" data-mask="00/00/0000" class="form-control" id='data_prevista_termino' </div>
 
@@ -161,21 +161,21 @@
                             <div class="form-group col-md-1 ">
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="prioridade_macrofase" value="1" id="prioridade_macrofase1">
-                                    <label class="col-sm-3 col-form-label text-light text-center" for="prioridade1"><b>Prioriade Mínima</b></label>
+                                    <label class="col-sm-3 col-form-label text-dark text-center" for="prioridade1"><b>Prioriade Mínima</b></label>
                                 </div>
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="prioridade_macrofase" value="2" id="prioridade_macrofase2">
-                                    <label class="col-sm-3 col-form-label text-light text-center" for="prioridade2"><b>Prioriade Intermediária</b></label>
+                                    <label class="col-sm-3 col-form-label text-dark text-center" for="prioridade2"><b>Prioriade Intermediária</b></label>
                                 </div>
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="prioridade_macrofase" value="3" id="prioridade_macrofase3">
-                                    <label class="col-sm-3 col-form-label text-light text-center" for="prioridade2"><b>Prioriade Máxima</b></label>
+                                    <label class="col-sm-3 col-form-label text-dark text-center" for="prioridade2"><b>Prioriade Máxima</b></label>
                                 </div>
                             </div>
                         </div>
                         <div class="form row" style="padding-top:5%">
                             <div class="col-md-2 offset-md-10 text-right">
-                                <button type="submit" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-light"> Finalizar Edição</button>
+                                <button type="submit" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" class="btn btn-danger"> Finalizar Edição</button>
                             </div>
                         </div>
 

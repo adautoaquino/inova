@@ -196,7 +196,7 @@
                         <br>
                         <div class="form row">
                             <label for="responsavel" class="col-sm-3 col-form-label text-center"><strong> Responsável</strong></label>
-                            <div class="form-group col-md-9">
+                            <div class="form-group col-md-7">
                                 <input type="text" required readonly='readonly' value="<?php echo $macrofase['responsavel'] ?>" name="responsavel" class="form-control" id="responsavel">
                             </div>
                             <br>
@@ -210,7 +210,7 @@
                         </div>
                         <br>
                         <div class="form row">
-                            <label for="data_inicio" class="col-sm-3 col-form-label  text-center"><strong> Início</strong></label>
+                            <label for="data_inicio" class="col-sm-3 col-form-label text-center"><strong> Início</strong></label>
                             <div class="form-group col-md-4">
                                 <input type="text" required readonly='readonly' value="<?php $data_format = $macrofase['data_inicio'];
                                                                                         $result = explode('-', $data_format);
@@ -219,39 +219,35 @@
                                                                                         $ano = $result[0];
                                                                                         echo "$dia/$mes/$ano"; ?>" name="data_inicio" class="form-control" id="data_inicio">
                             </div>
-                            <br>
                         </div>
                         <br>
+                        <div class="form row">
+                        <label for="data_prevista_termino" class="col-sm-3 col-form-label text-center"><strong> Fim Previsto</strong></label>
+                        <div class="form-group col-md-4">
+                            <input type="text" required readonly='readonly' value="<?php $data_format = $macrofase['data_prevista_termino'];
+                                                                                    $result = explode('-', $data_format);
+                                                                                    $dia = $result[2];
+                                                                                    $mes = $result[1];
+                                                                                    $ano = $result[0];
+                                                                                    echo "$dia/$mes/$ano"; ?>" name="data_prevista_termino" data-mask="99/99/9999" class="form-control" id="data_prevista_termino">
+                        </div>
+                        <br>
+                        <div class="form row">
+                        <label for="prioridade_macrofase" class="col-sm-3 col-form-label text-center"><strong> Prioriade da Macrofase</strong></label>
+                        <div class="form-group col-md-4">
+                            <input type="text" readonly value="<?php
+                                                                if ($macrofase['prioridade_macrofase'] == 1) {
+                                                                    echo "Prioridade Mínima";
+                                                                }
+                                                                if ($macrofase['prioridade_macrofase'] == 2) {
+                                                                    echo "Prioridade Intermediária";
+                                                                }
+                                                                if ($macrofase['prioridade_macrofase'] == 3) {
+                                                                    echo "Prioridade Máxima";
+                                                                } ?>" name="prioridade_projeto" id="prioridade_projeto" class="form-control">
+                        </div>
                     </div>
-                    <br>
-                </div>
-                <div class="form row">
-                    <label for="data_prevista_termino" class="col-sm-3 col-form-label text-center"><strong> Fim Previsto</strong></label>
-                    <div class="form-group col-md-4">
-                        <input type="text" required readonly='readonly' value="<?php $data_format = $macrofase['data_prevista_termino'];
-                                                                                $result = explode('-', $data_format);
-                                                                                $dia = $result[2];
-                                                                                $mes = $result[1];
-                                                                                $ano = $result[0];
-                                                                                echo "$dia/$mes/$ano"; ?>" name="data_prevista_termino" data-mask="99/99/9999" class="form-control" id="data_prevista_termino">
-                    </div>
-                </div>
-                <br>
-                <div class="form row">
-                    <label for="prioridade_macrofase" class="col-sm-3 col-form-label text-center"><b> Prioriade da Macrofase</b></label>
-                    <div class="form-group col-md-4">
-                        <input type="text" readonly value="<?php
-                                                            if ($macrofase['prioridade_macrofase'] == 1) {
-                                                                echo "Prioridade Mínima";
-                                                            }
-                                                            if ($macrofase['prioridade_macrofase'] == 2) {
-                                                                echo "Prioridade Intermediária";
-                                                            }
-                                                            if ($macrofase['prioridade_macrofase'] == 3) {
-                                                                echo "Prioridade Máxima";
-                                                            } ?>" name="prioridade_projeto" id="prioridade_projeto" class="form-control">
-                    </div>
-                </div>
+                </div>  
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>

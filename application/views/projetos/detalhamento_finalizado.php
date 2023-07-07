@@ -297,51 +297,53 @@
         </div>
 
         <div class="row" style="padding-top:1%; padding-bottom:2%;">
-            <div class="card bg-dark" style="width: 100%;">
-                <div class="table-responsive">
-                    <table class="table table-dark table-striped">
-                        <thead>
-                            <tr>
-                                <th colspan="4">Macrofases do Projeto</th>
-                            </tr>
-                            <?php if (count($macrofases_finalizado) > 0) { ?>
+            <div class=" offset-md-1 col-md-10 text-center">        
+                <div class="card bg-dark" style="width: 100%;">
+                    <div class="table-responsive">
+                        <table class="table table-dark table-striped">
+                            <thead>
                                 <tr>
-                                    <th>Macrofase</th>
-                                    <th>Início</th>
-                                    <th>Previsão de Fim</th>
-                                    <th>Ações</th>
+                                    <th colspan="4">Macrofases do Projeto</th>
                                 </tr>
-                            <?php } else {
-                                echo "<tr><th style='color:red; font-size:80%'>Nenhum Resultado Encontrado</th></td>";
-                            } ?>
-                        </thead>
-                        <?php if (count($macrofases_finalizado) > 0) { ?>
-                            <tbody>
-                                <?php foreach ($macrofases_finalizado as $macrofase) { ?>
+                                <?php if (count($macrofases_finalizado) > 0) { ?>
                                     <tr>
-                                        <td><?php echo $macrofase['nome_macrofase'] ?></td>
-                                        <td><?php
-                                            $data_format = $macrofase['data_inicio'];
-                                            $result = explode('-', $data_format);
-                                            $dia = $result[2];
-                                            $mes = $result[1];
-                                            $ano = $result[0];
-                                            echo "$dia/$mes/$ano"; ?></td>
-                                        <td><?php
-                                            $data_format = $macrofase['data_prevista_termino'];
-                                            $result = explode('-', $data_format);
-                                            $dia = $result[2];
-                                            $mes = $result[1];
-                                            $ano = $result[0];
-                                            echo "$dia/$mes/$ano"; ?></td>
-                                        <td>
-                                            <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_<?php echo $macrofase['codmacrofase'] ?>">Detalhar</button>
-                                        </td>
+                                        <th>Macrofase</th>
+                                        <th>Início</th>
+                                        <th>Previsão de Fim</th>
+                                        <th>Ações</th>
                                     </tr>
-                                <?php } ?>
-                            </tbody>
-                        <?php } ?>
-                    </table>
+                                <?php } else {
+                                    echo "<tr><th style='color:red; font-size:80%'>Nenhum Resultado Encontrado</th></td>";
+                                } ?>
+                            </thead>
+                            <?php if (count($macrofases_finalizado) > 0) { ?>
+                                <tbody>
+                                    <?php foreach ($macrofases_finalizado as $macrofase) { ?>
+                                        <tr>
+                                            <td><?php echo $macrofase['nome_macrofase'] ?></td>
+                                            <td><?php
+                                                $data_format = $macrofase['data_inicio'];
+                                                $result = explode('-', $data_format);
+                                                $dia = $result[2];
+                                                $mes = $result[1];
+                                                $ano = $result[0];
+                                                echo "$dia/$mes/$ano"; ?></td>
+                                            <td><?php
+                                                $data_format = $macrofase['data_prevista_termino'];
+                                                $result = explode('-', $data_format);
+                                                $dia = $result[2];
+                                                $mes = $result[1];
+                                                $ano = $result[0];
+                                                echo "$dia/$mes/$ano"; ?></td>
+                                            <td>
+                                                <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#Modal_<?php echo $macrofase['codmacrofase'] ?>">Detalhar</button>
+                                            </td>
+                                        </tr>
+                                    <?php } ?>
+                                </tbody>
+                            <?php } ?>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
