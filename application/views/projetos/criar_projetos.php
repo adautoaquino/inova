@@ -79,7 +79,7 @@
             </div>
         </nav>
     </header>
-    <div class="container text-center" style="background-color: white;">
+    <div class="container text-center" style="background-color: dark;">
         <div class="row" style="padding-top:2%">
             <div class=" offset-md-2 col-md-8 text-center" style="padding-bottom:4%">
                 <form method="post" action="criar_projetos">
@@ -106,7 +106,7 @@
                     </div>
                     <br>
                     <div class="form row">
-                        <label for="responsavel" class="col-sm-3 col-form-label text-dark"><strong>Projetistas Do Projeto</strong></label>
+                        <label for="responsavel" class="col-sm-3 col-form-label text-dark"><strong>Projetistas do Projeto</strong></label>
                         <div class="form-group col-md-9">
                             <input type="text" required placeholder="Projetistas" required name="projetistas_projetos" class="form-control" id="projetistas_projetos">
                         </div>

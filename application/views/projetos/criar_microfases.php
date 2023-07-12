@@ -80,7 +80,7 @@
         </nav>
     </header>
 
-    <div class="container text-center" style="background-color: white;">
+    <div class="container text-center" style="background-color: dark;">
         <div class="row" style="padding-top:2%">
             <div class=" offset-md-2 col-md-8 text-center" style="padding-bottom:4%">
                 <form method="post" action="<?php echo base_url() ?>index.php/projetos/main_pj/criar_microfase/<?php echo $codprojeto ?>">

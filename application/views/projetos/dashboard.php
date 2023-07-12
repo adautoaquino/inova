@@ -213,12 +213,12 @@
         colorByPoint: true,
         data: [{
             name: 'Finalizados no Prazo',
-            y: <?php echo $dados['finalizado_no_prazo']?>,
+            y: <?php echo $dados['finalizado_no_prazo']?>,  color: 'green',
             sliced: true,
             selected: true
         }, {
             name: 'Finalizados com Atraso',
-            y: <?php echo $dados['finalizado_atrasado']?>
+            y: <?php echo $dados['finalizado_atrasado']?>,  color: '#920000',
         }]
     }]
 });
@@ -258,12 +258,12 @@ Highcharts.chart('grafico_projetos_rodando', {
         colorByPoint: true,
         data: [{
             name: 'Rodando no Prazo',
-            y: <?php echo $dados_rodando['rodando_no_prazo']?>,
+            y: <?php echo $dados_rodando['rodando_no_prazo']?>, color: 'green',
             sliced: true,
             selected: true
         }, {
             name: 'Rodando com Atraso',
-            y: <?php echo $dados_rodando['rodando_atrasado']?>
+            y: <?php echo $dados_rodando['rodando_atrasado']?>, color: '#920000'
         }]
     }]
 });

@@ -92,7 +92,7 @@
                         <table class="table table-dark table-striped">
                             <thead>
                                 <tr>
-                                    <th colspan="8">Projetos Rodando</th>
+                                    <th colspan="10">Projetos Rodando</th>
                                 </tr>
                                 <tr class="align-middle">
                                     <th>Prioridade</th>
