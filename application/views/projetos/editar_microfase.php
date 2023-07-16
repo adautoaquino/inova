@@ -129,26 +129,47 @@
                         <br>
                     </div>
                     <div class="form row">
-                        <script>
-                            function data() {
-                                var today = new Date();
+                    <script>
+                           function data() {
+                                var today = new Date((document.getElementById('data_inicio').value));
                                 today.setHours(0, 0, 0, 0); // define a hora para meia-noite para garantir que estamos comparando apenas as datas
-                                var timeZoneOffset = -3 * 60; // define o fuso horário como -3 horas em relação ao UTC para fortaleza
+                                
+                                today.setDate(today.getDate()+1) // como mais tarde eu defino as horas para 00:00, essa função impede o dia de voltar
                                 var goal = parseInt(document.getElementById('goal').value); // pegar o valor de dias dado e somar 1, porque se não ele conta hoje
-                                var uu = Math.ceil(goal / 4) - 1;
-                                var fds = goal + (uu * 2);
-                                var usDate = new Date(today.getTime() + (fds * 24 * 60 * 60 * 1000) + (timeZoneOffset * 60 * 1000)); // hoje + dias corridos passados, formato usado "DD/MM/YYYY "
+                                if ((goal >= 5) && (goal < 10)){
+                                    var uu = Math.floor(goal / 5) ;
+                                    var fds = goal + (uu * 2);
+                                    console.log("Maior que 5")
+                                } if (goal >= 10){
+                                    var uu = Math.floor(goal / 5)
+                                    var semideia = goal / uu 
+                                    var fds = goal + (uu * 2)  
+                                    console.log("maior que 10")
+                                }if(goal <5){
+                                    var fds = goal
+                                }
+                                
+                                const usDate = new Date(today.getTime() + (fds * 24 * 60 * 60 * 1000)) // hoje + dias corridos passados, formato usado "DD/MM/YYYY "
                                 var options = {
                                     year: 'numeric',
                                     month: 'medium',
                                     day: 'numeric',
                                 };
-                                var us = usDate.toISOString('pt-BR', options); // transforma a data em iso se n o bixo n aceita
+                                
+                                var weekday = usDate.getDay();
+                                if ((weekday == 0) || (weekday == 6)){
+                                    var datafinal = new Date(usDate.getTime() + (2 * 24 * 60 * 60 * 1000));
+                                } else {
+                                    var datafinal = usDate;
+                                }
+                                var ddf = datafinal.getDay()
+                                console.log(fds,uu )
+                                var us = datafinal.toISOString('pt-BR', options); // transforma a data em iso se n o bixo n aceita
                                 const partesData = us.split('T'); // tira as horas da data iso
                                 const dataSemHora = partesData[0];
-                                //console.log(us, goal); essa parte é para depurar se o valor de us e goal ta saindo conforme esperado
                                 document.getElementById('data_prevista_termino').value = dataSemHora // atualiza o valor de data_prevista_termino com base no ID
-                            };
+
+                            } // função de calcular a data
                         </script>
 
                         <label for="data_prevista_termino" class="col-sm-3 col-form-label text-dark text-center"><strong> Nova Data Prevista Término</strong></label>
