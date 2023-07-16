@@ -79,7 +79,7 @@
             </div>
         </nav>
     </header>
-    <div class="container text-center" style="background-color: white;">
+    <div class="container text-center" style="background-color: dark;">
         <div class="row" style="padding-top:2%">
             <div class=" offset-md-2 col-md-8 text-center" style="padding-bottom:4%">
                 <form method="post" action="../../main_pj/editar_microfase/<?php echo $dados_microfase['codmicrofase'] ?>">
@@ -146,15 +146,11 @@
                 </form>
             </div>
         </div>
-        <div class="row" style="padding-bottom:5%">
-            <div class="col-md-1 offset-md-10 text-right">
-                <button class="btn btn-dark" onclick="history.back()">Voltar</button>
-            </div>
+        <div class="modal-footer" style="padding-bottom:5%">
+            <button class="btn btn-dark" onclick="history.back()">Voltar</button>
+            <a href="<?php echo base_url() ?>index.php/projetos/main_pj/editar_microfase/<?php echo $codmicrofase?>" class="btn btn-danger">Editar Microfase</a>
         </div>
     </div>
-    <footer>
-
-    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 </body>

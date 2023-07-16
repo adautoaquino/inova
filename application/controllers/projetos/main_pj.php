@@ -48,6 +48,7 @@ class main_pj extends CI_Controller
 	public function detalhar_projeto($codprojeto)
 	{
 		$data['dados_projeto'] = $this->projetos_model->get_dados_projeto($codprojeto);
+		$data['codprojeto'] = $codprojeto;
 		$data['macrofases'] = $this->projetos_model->get_macrofases_projeto($codprojeto);
 		$data['microfases'] = $this->projetos_model->get_microfases_projeto($codprojeto);
 		$this->load->view('Projetos/detalhamento', $data);
@@ -70,6 +71,7 @@ class main_pj extends CI_Controller
 	public function detalhar_microfase($codmicrofase)
 	{
 		$data['dados_microfase'] = $this->projetos_model->get_microfase($codmicrofase);
+		$data['codmicrofase'] = $codmicrofase;
 		$this->load->view('projetos/detalhar_microfase', $data);
 	}
 

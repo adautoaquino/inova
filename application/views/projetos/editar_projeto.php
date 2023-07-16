@@ -79,7 +79,7 @@
             </div>
         </nav>
     </header>
-    <div class="container text-center" style="background-color: white;">
+    <div class="container text-center" style="background-color: dark;">
         <div class="row" style="padding-top:2%">
             <div class=" offset-md-2 col-md-8 text-center" style="padding-bottom:4%">
                 <form method="post" action="../editar_projeto/<?php echo $codprojeto ?>">
