@@ -148,7 +148,18 @@
                                         </td>
                                         <td><a href="detalhar_projeto/<?php echo $projeto['codprojeto'] ?>" class="btn btn-sm btn-warning">Detalhes</a></td>
                                         <td><a href="editar_projeto/<?php echo $projeto['codprojeto'] ?>" class="btn btn-sm btn-light">Editar</a></td>
-                                        <td><a href="finalizar_projeto/<?php echo $projeto['codprojeto'] ?>" class="btn btn-sm btn-success">Finalizar</a></td>
+                                        <td><a onclick="alerta()" class ="btn btn-sm btn-light">Finalizar</a></td>
+                                        <script>
+                                        function alerta(){
+                                            var text = "Tem certeza que deseja deletar?\n Clique em ok para sim, cancelar para não."
+                                            if(confirm(text) == true){
+                                                window.location.href = "finalizar_projeto/<?php echo $projeto['codprojeto']?>"
+                                            }
+                                            else{
+                                                alert("Projeto mantido!")
+                                            }
+                                        }
+                                        </script>
                                     </tr>
                                 <?php } ?>
                             </tbody>
