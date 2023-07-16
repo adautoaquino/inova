@@ -74,6 +74,9 @@
                         <li class="nav-item">
                             <a class="nav-link " style="color: white" href="<?php echo base_url() ?>index.php/projetos/main_pj/dashboard"><b>Dashboard de Indicadores</b></a>
                         </li>
+                        <li class="nav-item">
+                            <a  class="nav-link" style="color : white" href="<?php echo base_url() ?>index.php/pe/main_pe"><b>Planejamento estratégico</b></a>
+                        </li>
                     </ul>
                 </div>
             </div>
